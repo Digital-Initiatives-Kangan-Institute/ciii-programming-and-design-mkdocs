@@ -1,1 +1,13 @@
-site_name: My Docs
+site_name: Programming & Design
+nav:
+  - Python:
+    - Resources:
+      - Intro to Python & Edison: python/resources/python-edison-intro.md
+    - Tasks:
+      - Task1: index.md
+
+  - Design:
+    - Test: index.md
+theme: readthedocs
+extra_css:
+  - extra/style.css

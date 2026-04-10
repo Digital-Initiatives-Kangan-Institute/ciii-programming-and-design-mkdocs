@@ -1,0 +1,4 @@
+#!/bin/bash
+pip install mkdocs
+pip install mkdocs-material
+pip install mkdocs-enumerate-headings-plugin

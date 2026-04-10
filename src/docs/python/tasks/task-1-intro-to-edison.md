@@ -1,5 +1,5 @@
 # Task 1 - Introduction to Edison
-## 1.1 Analyse
+## Analyse
 Copy the below code into EdPy. By reading the code have a guess at what the Edison will do. 
 
 Download the code to your Edison and describe what the Edison does. Is it similar to what you guessed above? 
@@ -78,8 +78,8 @@ while True:
 
 Be mindful to maintain the lines and tabs (indentation) when pasting into the EdPy editor 
 
-## 1.2 Spin Right
+## Spin Right
 Edit the code so that the Edison only spins to the right.  Program the Edison and test. 
 
-## 1.3 Increase Speed
+## Increase Speed
 Edit the code again so that the Edison spins faster.  Program and observe the result. 

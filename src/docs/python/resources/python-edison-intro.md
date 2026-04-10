@@ -64,19 +64,49 @@ while True:
 ### 1.6.1 Setup code  
 All Edison programs must contain the setup code.  The Setup section tells the Edison how it should set itself up.  This means what version it is and what units it should use.  For example, should it measure distance in cm or seconds. 
 
-Line 2 of the setup code starts with a ‘#’ (hash) character. When a line starts with this character, it is called a ‘comment line.’ Any characters that come after the ‘#’ are ignored by the compiler. The text following after the # is used to document code so that other people can understand the program. Line 9 contains another comment line which will also be ignored by the EdPy compiler.  Comments are used to communicate with other programmers, not the computer. 
+- Line 1 of the setup code starts with a ‘#’ (hash) character. When a line starts with this character, it is called a ‘comment line.’ Any characters that come after the ‘#’ are ignored by the compiler. The text following after the # is used to document code so that other people can understand the program. Line 9 contains another comment line which will also be ignored by the EdPy compiler.  Comments are used to communicate with other programmers, not the computer. 
+```py linenums="0"
+#-------------Setup----------------#
+```
 
-- Line 3 contains the ‘import’ command. This tells Python to ‘import’ another library of pre-written Python code. In line 4 of the setup, we are importing all the built-in Edison Python commands, in other words, all the EdPy commands. These built-in commands will all start with the prefix ‘Ed.’ and allow us to program the Edison robot in Python.  The import allows the compiler/computer to understand how to interface with the Edison robot.  
+- Line 2 contains the ‘import’ command. This tells Python to ‘import’ another library of pre-written Python code. In line 4 of the setup, we are importing all the built-in Edison Python commands, in other words, all the EdPy commands. These built-in commands will all start with the prefix ‘Ed.’ and allow us to program the Edison robot in Python.  The import allows the compiler/computer to understand how to interface with the Edison robot.  
+```py linenums="0"
+import Ed
+```
 
-- Line 4 defines the built-in Edison variable that relates to the version of Edison you are using.  
+- Line 3 defines the built-in Edison variable that relates to the version of Edison you are using.  
+```py linenums="0"
+Ed.EdisonVersion = Ed.V3
+```
+
+- Line 5 defines the built-in Edison variable that relates to the distance units used by the robot: inches, cm or time (in seconds). If you want to use inches, you should change this line to: Ed.DistanceUnits = Ed.INCH If you are using an Edison V1, then you must select Ed.TIME for the distance units: Ed.DistanceUnits = Ed.TIME 
+```py linenums="0"
+Ed.DistanceUnits = Ed.TIME
+```
+
+- Line 6 defines the built-in Edison variable which relates to how fast or slow Edison plays a musical tune. See the documentation section for the different speeds that can be set. 
+```py linenums="0"
+Ed.Tempo = Ed.TEMPO_MEDIUM
+```
 
 - Look at the character sets in the sample code that are written in all capitals, such as V1, V2, CM and INCH. In Python, the convention is that any variable name written in all caps is a ‘constant’. Constants are variables that maintain the same value everywhere in your program and are used as a reference point throughout the program. EdPy has a range of helpful built-in constants.  These are similar to pre-defined settings that our program will use with the Edison. 
 
-- Line 6 defines the built-in Edison variable that relates to the distance units used by the robot: inches, cm or time (in seconds). If you want to use inches, you should change this line to: Ed.DistanceUnits = Ed.INCH If you are using an Edison V1, then you must select Ed.TIME for the distance units: Ed.DistanceUnits = Ed.TIME 
-
-- Line 7 defines the built-in Edison variable which relates to how fast or slow Edison plays a musical tune. See the documentation section for the different speeds that can be set. 
-
 ### 1.6.2 Instructional Code 
-Lines 10 to 20 are telling the Edison to do something – giving the Edison instructions to perform.  Can you make a guess at what the Edison will do from reading the code? 
+Lines 9-19 are telling the Edison to do something – giving the Edison instructions to perform.  Can you make a guess at what the Edison will do from reading the code? 
 
-Code is ideally written in a way that is understandable by reading it.  The above code is a fairly decent example. 
+```py linenums="0"
+#--------Your code below-----------
+while True:
+    Ed.PlayBeep()
+    Ed.LeftLed(Ed.OFF)
+    Ed.RightLed(Ed.ON)
+    Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 350)
+    Ed.TimeWait(20, Ed.TIME_MILLISECONDS)
+    Ed.PlayBeep()
+    Ed.LeftLed(Ed.ON)
+    Ed.RightLed(Ed.OFF)
+    Ed.Drive(Ed.SPIN_LEFT, Ed.SPEED_5, 350)
+    Ed.TimeWait(20, Ed.TIME_MILLISECONDS)
+```
+
+Code is ideally written in a way that is understandable by reading it. The above code is a fairly decent example. 

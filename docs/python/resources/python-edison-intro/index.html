@@ -221,19 +221,19 @@
 <nav aria-label="Structure of an EdPy program" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-code">
+<a class="md-nav__link" href="#setup-lines-1-7">
 <span class="md-ellipsis">
       
-        Setup code
+        Setup (Lines 1-7)
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#instructional-code">
+<a class="md-nav__link" href="#instructional-lines-8-19">
 <span class="md-ellipsis">
       
-        Instructional Code
+        Instructional (Lines 8-19)
       
     </span>
 </a>
@@ -403,13 +403,24 @@ It's recommended that you use the Chrome browser to open the above coding enviro
 <h2 id="downloading-a-simple-program-to-the-edison"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Downloading a simple program to the Edison</h2>
 <p>The Edison is programmed via an editor which is found at <a href="https://www.edpyapp.com/v3/">https://www.edpyapp.com/v3/</a> (use Chrome to open). </p>
 <h3 id="connect-edison-to-the-computer-using-the-usb-cable"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.1</span> Connect Edison to the computer using the USB cable</h3>
-<p>Connect Edison to the computer using the USB cable:</p>
-<p><img alt="Edison Plugged In" src="../../assets/edison-plugged-50.jpg"/></p>
+<p>Connect Edison to the computer using the USB cable attached underneath the Edison robot:
+<img alt="Edison Plugged In" src="../../assets/edison-plugged-50.jpg" width="512"/></p>
 <h3 id="upload-the-python-code-to-the-edison"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.2</span> Upload the Python code to the Edison</h3>
 <p>Press the ‘Program’ button in the upper right corner of the EdPy app, In the pop-up window select ‘Edison V3 – Paired’ and click ‘Connect’:</p>
 <p><img alt="Program Button" src="../../assets/edpy-upload-cmp.gif"/></p>
 <h2 id="structure-of-an-edpy-program"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Structure of an EdPy program</h2>
-<p>Programming the Edison consists of two main parts.  The Setup part and the Instructional code.  Let's look at the code below which you'll use in Task 1. </p>
+<p>Programming the Edison consists of two main parts. The Setup part and the Instructional code. </p>
+<h3 id="setup-lines-1-7"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Setup (Lines 1-7)</h3>
+<p>All Edison programs must contain the setup code. The Setup section tells the Edison how it should set itself up. This means what version it is and what units it should use. For example, should it measure distance in cm or seconds. </p>
+<h3 id="instructional-lines-8-19"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Instructional (Lines 8-19)</h3>
+<p>The instructional code is telling the Edison to do something – giving the Edison instructions to perform.  Can you make a guess at what the Edison will do from reading the code? </p>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
+<p class="annotate">Click on each (1) in the code below to expand information about each line.</p>
+<ol>
+<li>I contain additional information for you to learn.</li>
+</ol>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -428,12 +439,12 @@ It's recommended that you use the Chrome browser to open the above coding enviro
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------#(1)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span> <span class="c1">#(2)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span> <span class="c1">#(3)</span>
 
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME</span> <span class="c1">#(4)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span> <span class="c1">#(5)</span>
 
 <span class="c1">#--------Your code below-----------</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -448,56 +459,34 @@ It's recommended that you use the Chrome browser to open the above coding enviro
     <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
     <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="setup-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.1</span> Setup code</h3>
-<p>All Edison programs must contain the setup code.  The Setup section tells the Edison how it should set itself up.  This means what version it is and what units it should use.  For example, should it measure distance in cm or seconds. </p>
-<ul>
+<ol>
 <li>
-<p>Line 1 of the setup code starts with a ‘#’ (hash) character. When a line starts with this character, it is called a ‘comment line.’ Any characters that come after the ‘#’ are ignored by the compiler. The text following after the # is used to document code so that other people can understand the program. Line 9 contains another comment line which will also be ignored by the EdPy compiler.  Comments are used to communicate with other programmers, not the computer. 
-<div class="highlight"><pre><span></span><code><span class="c1">#-------------Setup----------------#</span>
-</code></pre></div></p>
+<p>This code starts with a ‘#’ (hash) character. When a line starts with this character, it is called a ‘comment line.’ Any characters that come after the ‘#’ are ignored by the compiler. </p>
+<p>The text following after the # is used to document code so that other people can understand the program. Comments are used to communicate with other programmers, not the computer. </p>
 </li>
 <li>
-<p>Line 2 contains the ‘import’ command. This tells Python to ‘import’ another library of pre-written Python code. In line 4 of the setup, we are importing all the built-in Edison Python commands, in other words, all the EdPy commands. These built-in commands will all start with the prefix ‘Ed.’ and allow us to program the Edison robot in Python.  The import allows the compiler/computer to understand how to interface with the Edison robot.<br/>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-</code></pre></div></p>
+<p>This tells Python to <code>import</code> another library of pre-written Python code. In this instance we are importing all the built-in Edison Python commands, in other words, all the EdPy commands.</p>
+<p>The import allows the compiler/computer to understand how to interface with the Edison robot.</p>
 </li>
 <li>
-<p>Line 3 defines the built-in Edison variable that relates to the version of Edison you are using.<br/>
-<div class="highlight"><pre><span></span><code><span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-</code></pre></div></p>
+<p>This line defines the built-in Edison variable that relates to the version of Edison you are using.</p>
 </li>
 <li>
-<p>Line 5 defines the built-in Edison variable that relates to the distance units used by the robot: inches, cm or time (in seconds). If you want to use inches, you should change this line to: Ed.DistanceUnits = Ed.INCH If you are using an Edison V1, then you must select Ed.TIME for the distance units: Ed.DistanceUnits = Ed.TIME 
-<div class="highlight"><pre><span></span><code><span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME</span>
-</code></pre></div></p>
+<p>This line defines the built-in Edison variable that relates to the distance units used by the robot: <code>inches</code>, <code>cm</code> or <code>time</code> (in seconds). </p>
+<p>If you want to use <code>inches</code>, you should change this line to: <code>Ed.DistanceUnits = Ed.INCH</code> </p>
+<p>If you are using an Edison V1, then you must select <code>Ed.TIME</code> for the distance units: <code>Ed.DistanceUnits = Ed.TIME</code>.</p>
 </li>
 <li>
-<p>Line 6 defines the built-in Edison variable which relates to how fast or slow Edison plays a musical tune. See the documentation section for the different speeds that can be set. 
-<div class="highlight"><pre><span></span><code><span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-</code></pre></div></p>
+<p>This line defines the built-in Edison variable which relates to how fast or slow Edison plays a musical tune. Check EdPy documentation for the different speeds that can be set.</p>
 </li>
-<li>
-<p>Look at the character sets in the sample code that are written in all capitals, such as V1, V2, CM and INCH. In Python, the convention is that any variable name written in all caps is a ‘constant’. Constants are variables that maintain the same value everywhere in your program and are used as a reference point throughout the program. EdPy has a range of helpful built-in constants.  These are similar to pre-defined settings that our program will use with the Edison. </p>
-</li>
-</ul>
-<h3 id="instructional-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6.2</span> Instructional Code</h3>
-<p>Lines 9-19 are telling the Edison to do something – giving the Edison instructions to perform.  Can you make a guess at what the Edison will do from reading the code? </p>
-<div class="highlight"><pre><span></span><code><span class="c1">#--------Your code below-----------</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">LeftLed</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">OFF</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">RightLed</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">ON</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">LeftLed</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">ON</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">RightLed</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">OFF</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-</code></pre></div>
-<p>Code is ideally written in a way that is understandable by reading it. The above code is a fairly decent example. </p>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Python Constants</p>
+<p>Look at the character sets in the sample code that are written in all capitals, such as <code>V1</code>, <code>V2</code>, <code>CM</code> and <code>INCH</code>. In Python, the convention is that any variable name written in all caps is a <code>constant</code>. </p>
+<p>Constants are variables that maintain the same value everywhere in your program and are used as a reference point throughout the program. EdPy has a range of helpful built-in constants.  These are similar to pre-defined settings that our program will use with the Edison. </p>
+</div>
 <h2 id="task-attempt"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Task Attempt</h2>
-<p>Attempt <a href="../../tasks/task-1-intro-to-edison/">Task 1 - Intro to Edison</a></p>
+<p><a class="md-button" href="../../tasks/task-1-intro-to-edison/">Attempt Task 1 - Intro to Edison</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -533,7 +522,7 @@ It's recommended that you use the Chrome browser to open the above coding enviro
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 </body>
 </html>

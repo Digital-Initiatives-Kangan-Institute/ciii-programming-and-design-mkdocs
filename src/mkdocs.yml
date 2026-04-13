@@ -8,6 +8,7 @@ nav:
     - Tasks:
       - Task 1 - Intro to Edison: python/tasks/task-1-intro-to-edison.md
       - Task 2 - Variables: python/tasks/task-2-variables.md
+      - Task 3 - Functions: python/tasks/task-3-functions.md
 
   - Design:
     - Test: index.md

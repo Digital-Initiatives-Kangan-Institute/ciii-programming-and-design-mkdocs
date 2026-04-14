@@ -28,4 +28,4 @@
 
 ## Random Beeping
 !!! abstract "Instructions"
-    Using the code from the previous task, use `Ed.PlayMyBeep(8000)` to beep the amount of times of the randomly generated number. You _must_ use a `while` loop for this.
+    Using the code you wrote from the previous task, use `Ed.PlayMyBeep(8000)` to beep the amount of times of the randomly generated number. You _must_ use a `while` loop for this.

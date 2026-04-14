@@ -1,5 +1,5 @@
 site_name: Programming & Design
-site_url: https://digital-initiatives-kangan-institute.github.io/ciii-programming-and-design-mkdocs
+site_url: https://digital-initiatives-kangan-institute.github.io/docs-prg-design
 nav:
   - Python:
     - Resources:

@@ -37,3 +37,7 @@ For each of the tasks below, **copy** the code into **EdPy** and follow the inst
 ## Alternative Flashing
 !!! abstract "Instructions"
     Using the code from earlier, make the LEDs flash alternately. That is when the left light is turned on, the right is turned off, and vice-versa.
+
+## LED Function
+!!! abstract "Instructions"
+    Using the code from earlier, put the code that flashes the LEDs into a function and run from the function.

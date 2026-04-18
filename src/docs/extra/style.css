@@ -3,16 +3,7 @@
 }
 
 .md-main {
-    background-color: rgb(245, 245, 245);
-}
-
-.md-main__inner {
-    border-radius: 5px;
-
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 10px;
-
-    padding: 1rem;
+    background-color: rgb(255, 255, 255);
 }
 
 .md-content {

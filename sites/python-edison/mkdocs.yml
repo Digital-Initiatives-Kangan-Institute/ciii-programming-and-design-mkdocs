@@ -16,6 +16,7 @@ nav:
       - Variables: python/resources/python-variables.md
       - Iteration - Event Loop: python/resources/iteration-event-loop.md
       - Selection if / else / elif: python/resources/selection-if-else-elif.md
+      - Selection in the Event Loop: python/resources/selection-event-loop.md
     - Tasks:
       - Task 1 - Intro to Edison: python/tasks/task-1-intro-to-edison.md
       - Task 2 - Variables: python/tasks/task-2-variables.md

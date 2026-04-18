@@ -59,10 +59,11 @@ We can see here that two condition are being processed (`lines 14` and `21`). Th
 
 On the other hand, the variable `beep_thrice` is set to `False`, this makes the selection statement at `line 21` evaluate to `False`. therefore, the code from `lines 22` to `27` do not execute.
 
-Notice that the syntax is similar to the event loop. There is a colon ( `:` ) at the end of the line. Code to be executed if the statement is `true` is indented, just like the event loop.
+!!! note
+    Notice that the syntax is similar to the event loop. There is a colon ( `:` ) at the end of the line. Code to be executed if the statement is `true` is indented, just like the event loop.
 
-- What happens if you change `beep_twice` to `False`?
-- What happens if make both `beep_twice` and `beep_thrice` to `True`?
+    - What happens if you change `beep_twice` to `False`?
+    - What happens if make both `beep_twice` and `beep_thrice` to `True`?
 
 ## Selection - Else
 
@@ -103,7 +104,10 @@ This will make the Edison beep three times.
 
 On `line 18` we have an `else` statement which runs code to make the Edison beep three times. This happens because at `line 13` the `if` statement evaluates to `false`. The program then goes to the `else` statement at `line 18` and executes the code there. 
 
-If we change `beep_twice` to `True` we'll have the opposite happen. Notice that only one set of code can be executed just like in the flowchart, where it's either doing things based on the `true` or `false` side of the decision.
+If we change `beep_twice` to `True` we'll have the opposite happen. 
+
+!!! note
+    Notice that only one set of code can be executed just like in the flowchart, where it's either doing things based on the `true` or `false` side of the decision.
 
 ```py
 #-------------Setup----------------

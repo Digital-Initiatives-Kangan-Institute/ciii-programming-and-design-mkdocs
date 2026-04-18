@@ -17,6 +17,9 @@ nav:
       - Task 1 - Basic 3D Design: design/tasks/task-1-basic-tinkercad.md
       - Task 2 - Basic 3D Modeling: design/tasks/task-2-basic-modeling.md
       - Task 3 - Develop and Deliver: design/tasks/task-3-develop-deliver.md
+    - Class Activities:
+      - Activity 1 - Double Diamond - Discover: design/tasks/class/class-activity-1-double-diamond-discover.md
+      - Activity 2 - Double Diamond - Define: design/tasks/class/class-activity-2-double-diamond-define.md
   # Add additional navigation below this point:
 
 # Do not touch anything below this line unless you knwo what you are doing.
@@ -38,6 +41,7 @@ plugins:
       increment_across_pages: true
       restart_increment_after: 
         - design/tasks/task-1-basic-tinkercad.md
+        - design/tasks/class/class-activity-1-double-diamond-discover.md
 
 extra:
   generator: false

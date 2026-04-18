@@ -1,5 +1,11 @@
 site_name: Digital Initiatives MkDocs Portal
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
 site_url: https://robocoportal.netlify.app
+
+# Do not touch anything below this line unless you knwo what you are doing.
 nav:
   - Portal: index.md
 
@@ -18,7 +24,6 @@ theme:
 
 extra:
   generator: false
-copyright: Digital Initiatives - Bendigo Kangan Institute
 
 plugins: []
 

@@ -1,7 +1,15 @@
 site_name: Python Edison
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
 site_url: https://python-edison.netlify.app
+
 nav:
+  # The Return to Portal item should always be the first item in the navigation.
   - Return to Portal: https://robocoportal.netlify.app/
+
+  # Add additional navigation below this point:
   - Python:
     - Resources:
       - Intro to Python & Edison: python/resources/python-edison-intro.md
@@ -17,6 +25,7 @@ nav:
       - Task 8 - For Loops: python/tasks/task-8-for-loops.md
       - Task 9 - Lists: python/tasks/task-9-lists.md
 
+# Do not touch anything below this line unless you knwo what you are doing.
 theme:
   name: material
   palette:
@@ -38,7 +47,6 @@ plugins:
 
 extra:
   generator: false
-copyright: Digital Initiatives - Bendigo Kangan Institute
 
 markdown_extensions:
   - pymdownx.highlight:

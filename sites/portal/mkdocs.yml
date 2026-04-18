@@ -1,7 +1,7 @@
 site_name: Digital Initiatives MkDocs Portal
 site_url: https://robocoportal.netlify.app
 nav:
-  - Home: index.md
+  - Portal: index.md
 
 theme:
   name: material
@@ -29,6 +29,3 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
-
-extra_css:
-  - extra/style.css

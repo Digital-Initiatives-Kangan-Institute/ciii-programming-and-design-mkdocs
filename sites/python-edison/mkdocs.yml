@@ -3,11 +3,11 @@ site_name: Python Edison
 # This text shows in the footer.
 copyright: Digital Initiatives - Bendigo Kangan Institute
 
-site_url: https://python-edison.netlify.app
+site_url: https://bki-di-python-edison.netlify.app
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
-  - Return to Portal: https://robocoportal.netlify.app/
+  - Return to Portal: https://bki-di-portal.netlify.app/
 
   # Add additional navigation below this point:
   - Python:

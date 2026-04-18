@@ -9,8 +9,15 @@ nav:
   # The Return to Portal item should always be the first item in the navigation.
   - Return to Portal: https://robocoportal.netlify.app/
 
+  - Design Thinking:
+    - Resources:
+      - 3D Printing Intro: design/resources/3d-printing-intro.md
+      - FDM Printing: design/resources/fdm-printing.md
+    - Tasks:
+      - Task 1 - Basic 3D Design: design/tasks/task-1-basic-tinkercad.md
+      - Task 2 - Basic 3D Modeling: design/tasks/task-2-basic-modeling.md
+      - Task 3 - Develop and Deliver: design/tasks/task-3-develop-deliver.md
   # Add additional navigation below this point:
-  - Home: index.md
 
 # Do not touch anything below this line unless you knwo what you are doing.
 theme:
@@ -30,7 +37,7 @@ plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after: 
-        - python/tasks/task-1-intro-to-edison.md
+        - design/tasks/task-1-basic-tinkercad.md
 
 extra:
   generator: false

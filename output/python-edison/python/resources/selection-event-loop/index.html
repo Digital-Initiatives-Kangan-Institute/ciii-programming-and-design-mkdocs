@@ -153,6 +153,18 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../python-functions/">
+<span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../iteration-event-loop/">
 <span class="md-ellipsis">
     
@@ -440,9 +452,9 @@
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<h1 id="selection-in-the-event-loop"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Selection in the Event Loop</h1>
+<h1 id="selection-in-the-event-loop"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> Selection in the Event Loop</h1>
 <p>We can do more interesting things if we combine what we know with the <strong>event loop</strong> and <strong>selection</strong>. </p>
-<h2 id="selection-with-the-keypad"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> Selection with the Keypad</h2>
+<h2 id="selection-with-the-keypad"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1</span> Selection with the Keypad</h2>
 <p>We can run selection statements inside the event loops to get the Edison to respond to events. In the below example the Edison will keep checking for the triangle button to be pressed. When the circle (round) button is pressed it will play a beep. Remember to start the actual program by pressing triangle first:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -482,7 +494,7 @@
 <p>Notice the indentation: <code>line 12</code> is indented to indicate that it belongs to the while loop on <code>line 11</code>. <code>Lines 13-16</code> is indented again to indicate that it belongs to the selection statement on <code>line 12</code>.</p>
 <p>This indentation is very important in Python as it dictates the structure of the code/program.</p>
 </div>
-<h2 id="selection-with-indentation"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> Selection with Indentation</h2>
+<h2 id="selection-with-indentation"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2</span> Selection with Indentation</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -520,8 +532,8 @@
 <p>With a slight change to the program at <code>line 15</code>, we see completely different behaviour from the Edison.</p>
 <p>In this case the Edison will beep all the time because <code>lines 15</code> and <code>16</code> belong to the while statement at <code>line 11</code>. This means that on every loop / iteration <code>lines 15</code> and <code>16</code> will run.</p>
 </div>
-<h2 id="more-interactions"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3</span> More Interactions</h2>
-<h3 id="obstacle-detection"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.1</span> Obstacle Detection</h3>
+<h2 id="more-interactions"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3</span> More Interactions</h2>
+<h3 id="obstacle-detection"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.1</span> Obstacle Detection</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -557,7 +569,7 @@
 <p>It's important for the <strong>obstacle detection beam</strong> to be turned <strong>on</strong> before we use it (<code>line 11</code>). Inside the loop we are checking the value of the beam every single iteration (<code>line 14</code>).</p>
 <p>Before you upload this program to the Edison, have a guess at what the Edison does when running this program.</p>
 </div>
-<h3 id="clap-sensing"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.2</span> Clap Sensing</h3>
+<h3 id="clap-sensing"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.2</span> Clap Sensing</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -596,7 +608,7 @@
 <p class="admonition-title">Note</p>
 <p><code>Line 10</code> is used to clear the Edison of previous clap detections.</p>
 </div>
-<h3 id="light-levels"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.3</span> Light Levels</h3>
+<h3 id="light-levels"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.3</span> Light Levels</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -637,7 +649,7 @@
 
     <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="random-numbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.4</span> Random Numbers</h3>
+<h3 id="random-numbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.4</span> Random Numbers</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bki-di-python-edison.netlify.app/python/resources/python-variables/" rel="canonical"/>
-<link href="../python-edison-intro/" rel="prev"/>
-<link href="../python-functions/" rel="next"/>
+<link href="https://bki-di-python-edison.netlify.app/python/resources/python-functions/" rel="canonical"/>
+<link href="../python-variables/" rel="prev"/>
+<link href="../iteration-event-loop/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Variables - Python Edison</title>
+<title>Functions - Python Edison</title>
 <link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#python-variables">
+<a class="md-skip" href="#python-functions">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Variables
+              Functions
             
           </span>
 </div>
@@ -140,13 +140,25 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-variables/">
+<span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    Variables
+    Functions
   
 
     
@@ -157,7 +169,7 @@
 <span class="md-ellipsis">
     
   
-    Variables
+    Functions
   
 
     
@@ -170,59 +182,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-is-a-program">
+<a class="md-nav__link" href="#calling-a-function">
 <span class="md-ellipsis">
       
-        What is a Program?
+        Calling a Function
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#variables">
+<a class="md-nav__link" href="#defining-a-function">
 <span class="md-ellipsis">
       
-        Variables
-      
-    </span>
-</a>
-<nav aria-label="Variables" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#settings-values-to-variables">
-<span class="md-ellipsis">
-      
-        Settings values to variables
+        Defining a Function
       
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-attempt">
+<a class="md-nav__link" href="#parameters">
 <span class="md-ellipsis">
       
-        Task Attempt
+        Parameters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#output-returning-values">
+<span class="md-ellipsis">
+      
+        Output - Returning Values
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../python-functions/">
-<span class="md-ellipsis">
-    
-  
-    Functions
-  
-
-    
-  </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../iteration-event-loop/">
@@ -425,48 +421,23 @@
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<h1 id="python-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Python Variables</h1>
-<h2 id="what-is-a-program"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> What is a Program?</h2>
-<p>A program is a set of instructions that a computer can execute to perform a specific task. In Python, a program is typically written in a text file with a .py extension. When you run the program, the Python interpreter reads the code and executes it line by line. Generally, a program requires input, processing, and output. The input is the data that the program will work with, the processing is the logic and calculations performed on that data, and the output is the result of the program's execution.</p>
-<p><img alt="What computers do flow" src="../../assets/what-compuers-do.png"/></p>
-<h2 id="variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Variables</h2>
-<p>In Python, variables are used to store data values. A variable is essentially a name that references a specific piece of data (like a number, string, or list). You can assign a value to a variable using the assignment operator =, and then use that variable later in your code. </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-
-<span class="c1">#--------Your code below-----------</span>
-
-<span class="n">length</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+<h1 id="python-functions"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Python Functions</h1>
+<p>Functions are a core concept of programming. Functions allow us to group code together and tag that code with a name. This allows us to reuse code and avoid repeating ourselves.</p>
+<p>Functions also break up our code into smaller, more manageable pieces. This is important for debugging and testing. Functions also allow us to create libraries of code that we can use in other programs. This is important for sharing code and collaborating with others. It can be useful to think of functions as mini-programs that we can call from of main program when we need them.</p>
+<h2 id="calling-a-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> Calling a Function</h2>
+<p>We can then <strong>call</strong> that function. Calling a function means executing the code that was grouped together. Importantly, we can call the same function many times.</p>
+<p>We have already used functions previously. For example, the <code>Ed.Drive()</code> function is a built-in function. Python has already grouped together or, <strong>defined</strong>, the code that prints to the screen. We then call the <code>Ed.Drive()</code> function thus executing some predefined code.</p>
+<p>Notice that <code>Ed.Drive()</code> has brackets/parenthesis <code>()</code> after it. This part of the syntax of calling a function. The brackets are used to pass in any information that the function needs to do its job. For example, the <code>Ed.Drive()</code> function needs to know; type of movement, speed and amount. We can pass this information in as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> 
 </code></pre></div></td></tr></table></div>
-<p>In the above code: </p>
-<ul>
-<li>Line 7 - Sets the distance type to cm </li>
-<li>Line 12 - Sets a variable named distance to the value of <code>10</code></li>
-<li>Line 13 - Moves the Edison forwards at <code>speed 5</code>, <code>10cm</code></li>
-</ul>
-<p>Notice in <code>line 13</code> that the Edison moves a distance of <code>10cm</code> because the length variable was created a set to 10 previously.</p>
-<h3 id="settings-values-to-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> Settings values to variables</h3>
-<p>Setting values to variables is a fundamental part of programming in Python. You use the assignment operator = to give a variable a value.  Recalling the value only requires you to use the name of the variable. </p>
-<p>You can set multiple variables and use them to set up other variables.</p>
+<p>What are some other built-in functions? That we have used?</p>
+<h2 id="defining-a-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Defining a Function</h2>
+<p>We can also define our own functions. This is done using the def keyword. Like other control structures in Python, we add a colon : to the end of the line and indented lines below belong to the structure. The syntax is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">function_name</span><span class="p">():</span> 
+    <span class="c1"># code to be executed </span>
+</code></pre></div></td></tr></table></div>
+<p>The function_name is the name we want to give our function and, therefore, what we call it by. A function name should describe the purpose of the function. The code that is indented below the function name is the code that will be executed when we call the function.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -480,9 +451,15 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
 
 <span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
 
@@ -490,14 +467,99 @@
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
 <span class="c1">#--------Your code below-----------</span>
 
-<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">length_3</span> <span class="o">=</span> <span class="n">length_1</span> <span class="o">+</span> <span class="n">length_2</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
+<span class="c1"># spins to the left 90deg and then to the right 90deg</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">small_dance</span><span class="p">():</span> 
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> 
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>     
+
+<span class="c1"># moves forward 10cm </span>
+<span class="k">def</span><span class="w"> </span><span class="nf">forward_10</span><span class="p">():</span>  
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> 
+
+<span class="n">small_dance</span><span class="p">()</span>
+<span class="n">forward_10</span><span class="p">()</span>
+<span class="n">small_dance</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p>In the above we now have three variables. <code>length_1</code> and <code>length_2</code> are set to <code>10</code> and <code>5</code> respectively.  <code>length_3</code> is the sum of <code>length_1</code> and <code>length_2</code>. </p>
-<p>Based off <code>line 14</code>, how far will the Edison travel?</p>
-<p>Variables can be called multiple times:</p>
+<p>To call the above functions, we simply use the function name followed by brackets:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">small_dance</span><span class="p">()</span> 
+
+<span class="n">forward_10</span><span class="p">()</span> 
+
+<span class="n">small_dance</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Functions can be called multiple times which saves a us replicating the code used every time the function is called. In the above the Edison will do <code>small_dance()</code> twice, but the code for <code>small_dance()</code> only needs to written once (<code>lines 11–14</code>).</p>
+<p>Does a function need to be defined before it is called? Why?</p>
+<p><a class="md-button" href="../../tasks/task-3-functions/">Attempt Task 3</a></p>
+<h2 id="parameters"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Parameters</h2>
+<p>Functions can also take in information. This is done by adding parameters to the function definition. Think of parameters as the inputs to our mini-programs. Parameters are variables that are passed into the function when it is called. This allows us to make our functions more flexible and reusable. The syntax for adding parameters is as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">function_name</span><span class="p">(</span><span class="n">parameter1</span><span class="p">,</span> <span class="n">parameter2</span><span class="p">):</span> 
+    <span class="c1"># code to be executed</span>
+</code></pre></div></td></tr></table></div>
+<p>The parameters are separated by commas. We can then use these parameters in the code that is executed when the function is called. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># moves forward by amount in cm</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span> 
+
+<span class="c1"># spins to the left and then to the right by left_amount and right_amount respectively</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">small_dance</span><span class="p">(</span><span class="n">left_amount</span><span class="p">,</span> <span class="n">right_amount</span><span class="p">):</span> 
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_amount</span><span class="p">)</span> 
+  <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_amount</span><span class="p">)</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">small_dance</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+<span class="n">small_dance</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><a class="md-button" href="../../tasks/task-4-functions-params-returns/">Attempt Task 4</a></p>
+<h2 id="output-returning-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Output - Returning Values</h2>
+<p>Just like a program a function can have an output. This is done using the <strong>return</strong> keyword. The <strong>return</strong> keyword is used to output a value from a function. This can be thought of as a signal or message being sent back to where the function was called. </p>
+<p>This allows us to use or store the result of a function to use later.  </p>
+<p>An example of this in a pre-built function is the <code>Ed.ReadKeypad()</code> function. <code>Ed.ReadKeypad()</code> detects if any buttons on the Edison are pressed. It returns a key value if something is pressed or <code>NONE</code> if nothing is pressed. For example: </p>
+<p>The <strong>return</strong> keyword is used to output a value from a function. This allows us to use or store the result of a function to use later. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadKeypad</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ed</span><span class="o">.</span><span class="n">KEYPAD_ROUND</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>This will play a beep when the round button on the Edison is pressed. Don't worry about the syntax and how it does it, we'll revisit that at a later date.</p>
+<p>What's important here is that on <code>line 11</code>, <code>Ed.ReadKeypad()</code> returns a value, if the value is <code>Ed.KEYPAD_ROUND</code>, we then make a decision to play a beep sound.</p>
+<p>We can also make our custom functions return values. This is useful if we need calculations done and want the result. For example, from a previous example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -532,9 +594,7 @@
 <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
 <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>This time the Edison moves three separate times.  Notice that we make the Edison wait in between each move.</p>
-<p>How long is the Edison waiting after each move? </p>
-<p>We can make the Edison do a little dance:</p>
+<p>We can obtain <code>length_3</code> by using a function rather than just adding <code>length_1</code> and <code>length_2</code> on <code>line 11</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -552,30 +612,27 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
 
 <span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
 
 <span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
 <span class="c1">#--------Your code below-----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_nums</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
-<span class="n">left_spin</span> <span class="o">=</span> <span class="mi">180</span>
-<span class="n">right_spin</span> <span class="o">=</span> <span class="mi">360</span>
-<span class="n">wait_time</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
+<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">length_3</span> <span class="o">=</span> <span class="n">add_nums</span><span class="p">(</span><span class="n">length_1</span><span class="p">,</span> <span class="n">length_2</span><span class="p">)</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_1</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_2</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>There are 2 things to note: </p>
-<p>We've changed the names of the three "length" variables to left_spin, right_spin and wait_time.  It's important and useful to name variables with names that are descriptive. </p>
-<p>Line 16 spins the Edison to the left but uses the right_spin variable.  The reverse is true of line 18.  Why does this work?  What will actually happen?</p>
-<h2 id="task-attempt"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Task Attempt</h2>
-<p><a class="md-button" href="../../tasks/task-2-variables/">Attempt Task 2 - Variables</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -583,7 +640,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Intro to Python &amp; Edison" class="md-footer__link md-footer__link--prev" href="../python-edison-intro/">
+<a aria-label="Previous: Variables" class="md-footer__link md-footer__link--prev" href="../python-variables/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -592,17 +649,17 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                Intro to Python &amp; Edison
+                Variables
               </div>
 </div>
 </a>
-<a aria-label="Next: Functions" class="md-footer__link md-footer__link--next" href="../python-functions/">
+<a aria-label="Next: Iteration - Event Loop" class="md-footer__link md-footer__link--next" href="../iteration-event-loop/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Functions
+                Iteration - Event Loop
               </div>
 </div>
 <div class="md-footer__button md-icon">

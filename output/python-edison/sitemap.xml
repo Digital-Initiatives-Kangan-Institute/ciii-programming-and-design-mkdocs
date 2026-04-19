@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bki-di-python-edison.netlify.app/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/resources/iteration-event-loop/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/resources/python-edison-intro/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
+    </url>
+    <url>
+         <loc>https://bki-di-python-edison.netlify.app/python/resources/python-functions/</loc>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/resources/python-variables/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/resources/selection-event-loop/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/resources/selection-if-else-elif/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-1-intro-to-edison/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-2-variables/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-3-functions/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-4-functions-params-returns/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-5-event-loop/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-6-selection/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-7-loops-with-conditions/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-8-for-loops/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
     <url>
          <loc>https://bki-di-python-edison.netlify.app/python/tasks/task-9-lists/</loc>
-         <lastmod>2026-04-18</lastmod>
+         <lastmod>2026-04-19</lastmod>
     </url>
 </urlset>

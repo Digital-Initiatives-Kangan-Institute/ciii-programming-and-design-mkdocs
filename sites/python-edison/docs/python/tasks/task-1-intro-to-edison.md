@@ -12,16 +12,8 @@ For each of the tasks below, **copy** the code into **EdPy** and follow the inst
 
     ```py
     #-------------Setup----------------
-    import Ed 
-    
-    Ed.EdisonVersion = Ed.V3 
-    
-    
-    Ed.DistanceUnits = Ed.CM 
-    Ed.Tempo = Ed.TEMPO_MEDIUM 
-    
-    
-    #--------Your code below----------- import Ed
+
+    import Ed
 
     Ed.EdisonVersion = Ed.V3
     Ed.DistanceUnits = Ed.CM
@@ -29,57 +21,12 @@ For each of the tasks below, **copy** the code into **EdPy** and follow the inst
 
     #--------Your code below-----------
 
-    song=Ed.TuneString(23, "c4,d6,e7,g4,f2")
+    Ed.Drive(Ed.FORWARD, Ed.SPEED_FULL, 30)
 
+    Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_1, 180)
+    Ed.Drive(Ed.SPIN_LEFT, Ed.SPEED_1, 90)
 
-    while True: 
-        Ed.PlayBeep() 
-        Ed.LeftLed(Ed.OFF) 
-        Ed.RightLed(Ed.ON) 
-        
-    #    Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 350) 
-    #    Ed.TimeWait(20, Ed.TIME_MILLISECONDS) 
-    #    Ed.PlayBeep() 
-    #    Ed.LeftLed(Ed.ON) 
-    #    Ed.RightLed(Ed.OFF) 
-    #    Ed.Drive(Ed.SPIN_LEFT, Ed.SPEED_5, 350) 
-    #    Ed.TimeWait(20, Ed.TIME_MILLISECONDS) 
-        Ed.Drive(Ed.FORWARD, 10, 20)
-        Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 90)
-        Ed.PlayBeep() 
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
-        Ed.Drive(Ed.FORWARD, 10, 10)
-        Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 90)
-        Ed.PlayBeep() 
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
-        Ed.Drive(Ed.FORWARD, 10, 20)
-        Ed.Drive(Ed.SPIN_LEFT, Ed.SPEED_5, 90)
-        Ed.PlayBeep() 
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
-        Ed.Drive(Ed.FORWARD, 10, 10)
-        Ed.Drive(Ed.SPIN_LEFT, Ed.SPEED_5, 90)
-        Ed.PlayBeep()  
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
-        Ed.Drive(Ed.FORWARD, 10, 20)
-        Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 90)
-        Ed.PlayBeep() 
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
-        Ed.Drive(Ed.FORWARD, 10, 10)
-        Ed.Drive(Ed.SPIN_RIGHT, Ed.SPEED_5, 90)
-        Ed.PlayBeep()  
-        Ed.PlayTune(song)
-    #    while Ed.ReadMusicEnd() == Ed.MUSIC_NOT_FINISHED:
-    #        pass
+    Ed.Drive(Ed.FORWARD, Ed.SPEED_FULL, 30)
     ```
 
 ## Spin Right

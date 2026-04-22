@@ -42,7 +42,7 @@ New pages will appear here as they become available.
 ### Diploma
 
 <div class="grid-layout">
-    <a class="grid-item" href="#">
+    <a class="grid-item" href="https://bki-di-nextjs.netlify.app">
         <div class="thumbnail">
             <img src="./assets/nextjs.png" />
         </div>

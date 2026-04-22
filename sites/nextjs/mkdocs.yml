@@ -8,6 +8,8 @@ nav:
   - Return to Portal: https://bki-di-portal.netlify.app/
 
   # Add additional navigation below this point:
+  - Resources:
+    - NextJS Introduction: pages/resources/nextjs-introduction.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

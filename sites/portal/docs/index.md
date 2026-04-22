@@ -13,7 +13,7 @@ New pages will appear here as they become available.
 
 ## Sites
 
-### Certificate III
+### Certificate III in Information Technology
 
 <div class="grid-layout">
     <a class="grid-item" href="https://bki-di-python-edison.netlify.app">
@@ -39,7 +39,7 @@ New pages will appear here as they become available.
     </a>
 </div>
 
-### Diploma
+### Diploma of Information Technology
 
 <div class="grid-layout">
     <a class="grid-item" href="https://bki-di-nextjs.netlify.app">

@@ -2,10 +2,25 @@
     background-color: rgb(245, 245, 245);
 }
 
+#banner {
+    background-color: white;
+    padding: 1rem;
+
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+    font-size: 1rem;
+}
+
 .grid-layout {
     display: grid;
+
+    flex-wrap: wrap;
+
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .grid-item {
@@ -13,19 +28,25 @@
     border-radius: 10px;
 
     box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+    transition: transform 0.25s;
+}
+.grid-item:hover {
+    transform: scale(102%);
 }
 
 .grid-item img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    max-height: 200px;
+    max-height: 100px;
     width: 100%;
 
     object-fit: cover;
 }
 
 .grid-item .details {
+    color: black;
     background-color: white;
     padding: 1rem;
 

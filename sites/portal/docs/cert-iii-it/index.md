@@ -11,12 +11,12 @@ Welcome to the Digital Initiatives portal. Click on any of the cards below to op
 New pages will appear here as they become available.
 </p>
 
-## Sites
+### Certificate III in Information Technology
 
 <div class="grid-layout">
     <a class="grid-item" href="https://bki-di-python-edison.netlify.app">
         <div class="thumbnail">
-            <img src="./assets/edison-plugged-50.jpg" />
+            <img src="../assets/edison-plugged-50.jpg" />
         </div>
 
         <div class="details">
@@ -27,7 +27,7 @@ New pages will appear here as they become available.
 
     <a class="grid-item" href="https://bki-di-design-thinking.netlify.app">
         <div class="thumbnail">
-            <img src="./assets/tinkercad-buttonbox.png" />
+            <img src="../assets/tinkercad-buttonbox.png" />
         </div>
 
         <div class="details">

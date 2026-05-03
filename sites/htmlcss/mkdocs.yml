@@ -1,4 +1,4 @@
-site_name: htmlcss
+site_name: Build Simple Webpages
 
 # This text shows in the footer.
 copyright: Digital Initiatives - Bendigo Kangan Institute
@@ -8,6 +8,11 @@ nav:
   - Return to Portal: https://bki-di-portal.netlify.app/
 
   # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - Intro to HTML: pages/resources/intro-to-html.md
+    - Tasks:
+      - Task 1 - Elements: pages/tasks/task-1-elements.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

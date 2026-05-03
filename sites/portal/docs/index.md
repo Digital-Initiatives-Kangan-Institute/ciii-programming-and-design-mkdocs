@@ -36,7 +36,7 @@ New pages will appear here as they become available.
         </div>
     </a>
 
-    <a class="grid-item" href="https://bki-di-build-simple-webpages.netlify.app">
+    <a class="grid-item construction" href="https://bki-di-build-simple-webpages.netlify.app">
         <div class="thumbnail">
             <img src="./assets/build-simple-webpages.png" />
         </div>

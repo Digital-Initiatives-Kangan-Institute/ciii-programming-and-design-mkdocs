@@ -24,6 +24,9 @@
 }
 
 .grid-item {
+    display: flex;
+    flex-direction: column;
+    
     position: relative;
 
     border: 1px solid rgb(198, 198, 198);
@@ -88,6 +91,8 @@
 }
 
 .grid-item .details {
+    flex: 1;
+
     color: black;
     background-color: white;
     padding: 1rem;

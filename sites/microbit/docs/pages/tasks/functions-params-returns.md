@@ -1,4 +1,4 @@
-# Task 4 - Functions, Parameters, and Returns
+# Functions, Parameters, and Returns Tasks
 
 ## Using Parameters
 

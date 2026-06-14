@@ -1,4 +1,4 @@
-# Task 9 - Lists
+# Lists Tasks
 
 ## What does this do?
 
@@ -33,4 +33,3 @@ for value in values:
 
 !!! abstract "Instructions"
     Upgrade the secret number game from the previous task.  Use a list to keep track of the user's guesses and print them at the end of the game.
-

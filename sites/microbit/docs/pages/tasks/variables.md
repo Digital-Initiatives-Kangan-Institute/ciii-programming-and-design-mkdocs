@@ -1,4 +1,4 @@
-# Task 2 - Variables
+# Variables Tasks
 
 ## Fixing Code
 

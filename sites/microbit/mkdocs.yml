@@ -10,23 +10,27 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - Introduction to Microbits and variables: pages/resources/01-intro-variables.md
-      - Functions: pages/resources/02-functions.md
-      - Event Loop: pages/resources/03-event-loop.md
-      - Selection: pages/resources/04-selection-if-else-elif.md
-      - Selection in Event Loop:  pages/resources/05-selection-event-loop.md
-      - Loops and conditions:  pages/resources/06-loops.md
-      - Lists: pages/resources/07-lists.md
+      - Introduction to Microbits and variables: pages/resources/intro-variables.md
+      - Functions: pages/resources/functions.md
+      - Event Loop: pages/resources/event-loop.md
+      - Selection: pages/resources/selection-if-else-elif.md
+      - Selection in Event Loop:  pages/resources/selection-event-loop.md
+      - Loops and conditions:  pages/resources/loops.md
+      - DataTypes - Strings and Numbers: pages/resources/datatypes.md
+      - Strings: pages/resources/strings.md
+      - Lists: pages/resources/lists.md
+      - File Manipulation: pages/resources/file-manipulation.md
     - Tasks:
-      - Task 1 - Introduction to micro:bit: pages/tasks/task-1-intro-to-microbit.md
-      - Task 2 - Variables: pages/tasks/task-2-variables.md
-      - Task 3 - Functions: pages/tasks/task-3-functions.md
-      - Task 4 - Functions, Parameters, and Returns: pages/tasks/task-4-functions-params-returns.md
-      - Task 5 - Event Loop: pages/tasks/task-5-event-loop.md
-      - Task 6 - Selection: pages/tasks/task-6-selection.md
-      - Task 7 - Loops with Conditions: pages/tasks/task-7-loops-with-conditions.md
-      - Task 8 - For Loops: pages/tasks/task-8-for-loops.md
-      - Task 9 - Lists: pages/tasks/task-9-lists.md
+      - Introduction to micro:bit: pages/tasks/intro-to-microbit.md
+      - Variables: pages/tasks/variables.md
+      - Functions: pages/tasks/functions.md
+      - Functions, Parameters, and Returns: pages/tasks/functions-params-returns.md
+      - Event Loop: pages/tasks/event-loop.md
+      - Selection: pages/tasks/selection.md
+      - Loops with Conditions: pages/tasks/loops-with-conditions.md
+      - For Loops: pages/tasks/for-loops.md
+      - Lists: pages/tasks/lists.md
+      - File Manipulation: pages/tasks/file-manipulation.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -48,7 +52,7 @@ plugins:
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
       restart_increment_after: 
-        -  pages/tasks/task-1-intro-to-microbit.md
+        -  pages/tasks/intro-to-microbit.md
 
 extra:
   generator: false

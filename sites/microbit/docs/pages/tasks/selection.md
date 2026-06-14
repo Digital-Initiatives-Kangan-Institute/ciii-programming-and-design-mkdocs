@@ -1,4 +1,4 @@
-# Task 6 - Selection
+# Selection Tasks
 
 ## What does this do?
 
@@ -30,4 +30,3 @@ else:
 
 !!! abstract "Instructions"
     Modify the code to read a number from the user using `input()` and display the corresponding image based on the value entered.
-

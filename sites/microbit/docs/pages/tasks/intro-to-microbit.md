@@ -1,4 +1,4 @@
-# Task 1 - Introduction to micro:bit
+# Introduction to micro:bit Tasks
 
 ## Analyse
 

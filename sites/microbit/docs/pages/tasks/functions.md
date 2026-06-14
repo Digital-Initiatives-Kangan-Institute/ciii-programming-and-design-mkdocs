@@ -1,4 +1,4 @@
-# Task 3 - Functions (micro:bit)
+# Functions Tasks
 
 ## Show an Image Multiple Times
 

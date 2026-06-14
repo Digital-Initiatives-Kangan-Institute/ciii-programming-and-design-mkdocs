@@ -1,4 +1,4 @@
-# Task 7 - Loops with Conditions
+# Loops with Conditions Tasks
 
 ## What does this do?
 
@@ -35,4 +35,3 @@ Change the code to use a different range or condition.
 
 !!! abstract "Instructions"
     Add a counter to keep track of how many guesses the user has made and display it when they guess the correct number.
-

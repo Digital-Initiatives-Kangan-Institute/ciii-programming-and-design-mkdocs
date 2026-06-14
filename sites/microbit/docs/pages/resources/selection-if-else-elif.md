@@ -238,4 +238,4 @@ Write a program that takes an input `name`.
 If `name` is `Mohammed` print and display "Teach me IoT".  
 If `name` is `Lewis` print and display "Teach me web".  
 If `name` is `Anh` print and display "Don't teach me Cyber".  
-Otherwise, for any other name print and display "Hello [name]"
+Otherwise, for any other name print and display "Hello \[name\]"

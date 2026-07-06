@@ -1,0 +1,36 @@
+window.SITES_DATA = {
+  "courses": [
+    { "id": "cert3-in-it", "label": "Cert 3 in IT" },
+    { "id": "diploma-of-it", "label": "Diploma of IT" }
+  ],
+  "sites": [
+    {
+      "href": "/python-edison",
+      "img": "./_assets/edison-plugged-50.jpg",
+      "title": "Python - Edison",
+      "description": "Introduction to Python programming through structured, hands-on activities using the Edison robot.",
+      "courses": ["cert3-in-it"]
+    },
+    {
+      "href": "/design",
+      "img": "./_assets/tinkercad-buttonbox.png",
+      "title": "Design Thinking",
+      "description": "Explore human-centered design principles, ideation, techniques, and the end-to-end design process.",
+      "courses": ["cert3-in-it"]
+    },
+    {
+      "href": "/htmlcss",
+      "img": "./_assets/build-simple-webpages.png",
+      "title": "Build Simple Webpages",
+      "description": "Introduction to HTML focused through building, editing, and linking webpages into a complete website.",
+      "courses": ["cert3-in-it"]
+    },
+    {
+      "href": "/microbit",
+      "img": "./_assets/microbit.png",
+      "title": "Micro:bit",
+      "description": "Introduction to Programming via Python and Micro:bits",
+      "courses": ["cert3-in-it"]
+    }
+  ]
+};

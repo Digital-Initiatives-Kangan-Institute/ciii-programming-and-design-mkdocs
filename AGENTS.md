@@ -198,7 +198,26 @@ Task pages contain hands-on exercises. Structure:
 
 ### Important: Do Not Build Locally
 
-The `build/` directory contains **only portal files** (`index.html`, `sites.js`, `_assets/`). Do **not** run mkdocs build — the individual sites are built automatically on the Cloudflare Worker at deploy time. Never create site subdirectories under `build/`.
+The `build/` directory contains **only portal files** (`index.html`, `sites.js`, `_assets/`). Do **not** run mkdocs build targeting `build/` — the individual sites are built automatically on the Cloudflare Worker at deploy time. Never create site subdirectories under `build/`.
+
+### Build and Verify (for AI Agents)
+
+When an AI agent needs to verify a site builds correctly, build into a temporary folder, verify, then delete it:
+
+```bash
+# Build into a tmp folder within the project
+./.venv/bin/mkdocs build \
+  --config-file sites/<slug>/mkdocs.yml \
+  --site-dir tmp/<slug>-test-build 2>&1
+
+# Verify the pages exist
+find tmp/<slug>-test-build/pages -type f -name index.html | sort
+
+# Clean up
+rm -rf tmp/<slug>-test-build
+```
+
+Never leave temporary build artifacts in the project directory.
 
 ### Scripts
 

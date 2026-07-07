@@ -10,12 +10,14 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - HTML and CSS: pages/resources/html-css.md
-      - JavaScript: pages/resources/javascript.md
-      - AI Tools and Dev Environment:
-        - Local AI Models: pages/resources/ai-tools/local-ai-models.md
-        - AI Coding Assistants: pages/resources/ai-tools/coding-assistants.md
-        - CLI, IDE, and Project Setup: pages/resources/ai-tools/cli-ide-setup.md
+      - HTML and CSS:
+        - HTML Fundamentals: pages/resources/html-css/html-fundamentals.md
+        - CSS Fundamentals: pages/resources/html-css/css-fundamentals.md
+      - JavaScript:
+        - Variables and Control Flow: pages/resources/javascript/variables-and-control-flow.md
+        - Functions: pages/resources/javascript/functions.md
+        - Events and the DOM: pages/resources/javascript/events-and-dom.md
+        - Async JavaScript and Fetch: pages/resources/javascript/async-and-fetch.md
       - Web Architecture:
         - Data, APIs, and the Frontend: pages/resources/architecture/data-apis-frontend.md
         - Mock APIs: pages/resources/architecture/mock-apis.md
@@ -29,10 +31,16 @@ nav:
         - Events: pages/resources/nextjs/events.md
         - Arrow Functions: pages/resources/nextjs/arrow-functions.md
         - Hooks: pages/resources/nextjs/hooks.md
+
     - Tasks:
+      - Profile Page: pages/tasks/profile-page.md
+      - Style Your Profile: pages/tasks/style-your-profile.md
       - Cafe Website: pages/tasks/cafe-website.md
+      - Data and Decisions: pages/tasks/data-and-decisions.md
+      - Build a Calculator: pages/tasks/build-a-calculator.md
       - JavaScript Interactivity: pages/tasks/javascript-interactivity.md
-      - Setting Up AI Tools: pages/tasks/setting-up-ai-tools.md
+      - Interactive Gallery: pages/tasks/interactive-gallery.md
+      - Weather Widget: pages/tasks/weather-widget.md
       - Building a Login Page: pages/tasks/building-login-page.md
       - NextJS Application: pages/tasks/nextjs-application.md
 

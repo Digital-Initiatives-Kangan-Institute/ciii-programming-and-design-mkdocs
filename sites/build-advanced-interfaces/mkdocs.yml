@@ -12,9 +12,23 @@ nav:
     - Resources:
       - HTML and CSS: pages/resources/html-css.md
       - JavaScript: pages/resources/javascript.md
-      - AI Tools and Dev Environment: pages/resources/ai-tools.md
-      - Web Architecture: pages/resources/web-architecture.md
-      - NextJS Fundamentals: pages/resources/nextjs-fundamentals.md
+      - AI Tools and Dev Environment:
+        - Local AI Models: pages/resources/ai-tools/local-ai-models.md
+        - AI Coding Assistants: pages/resources/ai-tools/coding-assistants.md
+        - CLI, IDE, and Project Setup: pages/resources/ai-tools/cli-ide-setup.md
+      - Web Architecture:
+        - Data, APIs, and the Frontend: pages/resources/architecture/data-apis-frontend.md
+        - Mock APIs: pages/resources/architecture/mock-apis.md
+        - Building a Login Page: pages/resources/architecture/building-login-page.md
+        - SSR and Frameworks: pages/resources/architecture/ssr-and-frameworks.md
+      - NextJS:
+        - Routing: pages/resources/nextjs/routing.md
+        - Layouts: pages/resources/nextjs/layouts.md
+        - TypeScript: pages/resources/nextjs/typescript.md
+        - Components: pages/resources/nextjs/components.md
+        - Events: pages/resources/nextjs/events.md
+        - Arrow Functions: pages/resources/nextjs/arrow-functions.md
+        - Hooks: pages/resources/nextjs/hooks.md
     - Tasks:
       - Cafe Website: pages/tasks/cafe-website.md
       - JavaScript Interactivity: pages/tasks/javascript-interactivity.md

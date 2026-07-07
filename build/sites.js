@@ -34,7 +34,7 @@ window.SITES_DATA = {
     },
     {
       "href": "/build-advanced-interfaces",
-      "img": "./_assets/build-simple-webpages.png",
+      "img": "./_assets/build-advanced-interfaces.png",
       "title": "Build Advanced Interfaces",
       "description": "Build modern web applications with HTML, CSS, JavaScript, Next.js, and AI-assisted development tools.",
       "courses": ["diploma-of-it"]

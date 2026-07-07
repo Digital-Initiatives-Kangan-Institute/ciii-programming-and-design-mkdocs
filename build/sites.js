@@ -31,6 +31,13 @@ window.SITES_DATA = {
       "title": "Micro:bit",
       "description": "Introduction to Programming via Python and Micro:bits",
       "courses": ["cert3-in-it"]
+    },
+    {
+      "href": "/build-advanced-interfaces",
+      "img": "./_assets/build-simple-webpages.png",
+      "title": "Build Advanced Interfaces",
+      "description": "Build modern web applications with HTML, CSS, JavaScript, Next.js, and AI-assisted development tools.",
+      "courses": ["diploma-of-it"]
     }
   ]
 };

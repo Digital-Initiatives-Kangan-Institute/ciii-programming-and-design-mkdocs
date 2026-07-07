@@ -1,0 +1,62 @@
+site_name: Build Advanced Interfaces
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - HTML and CSS: pages/resources/html-css.md
+      - JavaScript: pages/resources/javascript.md
+      - AI Tools and Dev Environment: pages/resources/ai-tools.md
+      - Web Architecture: pages/resources/web-architecture.md
+      - NextJS Fundamentals: pages/resources/nextjs-fundamentals.md
+    - Tasks:
+      - Cafe Website: pages/tasks/cafe-website.md
+      - JavaScript Interactivity: pages/tasks/javascript-interactivity.md
+      - Setting Up AI Tools: pages/tasks/setting-up-ai-tools.md
+      - Building a Login Page: pages/tasks/building-login-page.md
+      - NextJS Application: pages/tasks/nextjs-application.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - toc.integrate 
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      restart_increment_after: 
+        - pages/tasks/cafe-website.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

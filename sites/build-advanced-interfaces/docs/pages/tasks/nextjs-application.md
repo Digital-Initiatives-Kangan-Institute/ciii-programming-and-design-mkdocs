@@ -90,24 +90,11 @@ Build a multi-page Next.js application with components, routing, and state manag
     ```
 
 ??? hint "Hint - Dynamic Route Handler"
-    In `app/blog/[slug]/page.tsx`:
-
-    ```typescript
-    import { posts } from "@/data/posts";
-    import { notFound } from "next/navigation";
-
-    export default function BlogPost({ params }: { params: { slug: string } }) {
-        const post = posts.find(p => p.slug === params.slug);
-        if (!post) return notFound();
-
-        return (
-            <main>
-                <h1>{post.title}</h1>
-                <p>{post.content}</p>
-            </main>
-        );
-    }
-    ```
+    - Create the file `app/blog/[slug]/page.tsx`. The `[slug]` folder name tells Next.js this is a dynamic route.
+    - Import your posts data from the data file and `notFound` from `next/navigation`.
+    - The page component receives `params` as a prop. Use `params.slug` to find the matching post in your array.
+    - If no post matches, call `notFound()` to show the default 404 page.
+    - Otherwise, render the post's `title` and `content` in your JSX.
 
 ---
 
@@ -136,16 +123,14 @@ Build a multi-page Next.js application with components, routing, and state manag
         return (
             <div style={{ marginTop: "2rem", textAlign: "center" }}>
                 <h2>Counter: {count}</h2>
-                <button onClick={() => setCount(count + 1)}>Increment</button>
-                <button onClick={() => setCount(count - 1)}>Decrement</button>
-                <button onClick={() => setCount(0)}>Reset</button>
-                {count >= 10 && <p>You reached 10!</p>}
+                {/* TODO: Add an Increment button that calls setCount(count + 1) */}
+                {/* TODO: Add a Decrement button that calls setCount(count - 1) */}
+                {/* TODO: Add a Reset button that calls setCount(0) */}
+                {/* TODO: Show a message when count >= 10 */}
             </div>
         );
     }
     ```
-
-    Remember to add `"use client"` at the top since `useState` requires client-side rendering.
 
 ---
 
@@ -169,9 +154,9 @@ Build a multi-page Next.js application with components, routing, and state manag
     }
 
     async function getUsers(): Promise<User[]> {
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
-        if (!res.ok) throw new Error("Failed to fetch users");
-        return res.json();
+        // TODO: Fetch from https://jsonplaceholder.typicode.com/users
+        // Check if the response is ok; throw an Error if not
+        // Return the parsed JSON
     }
 
     export default async function UsersPage() {
@@ -180,32 +165,20 @@ Build a multi-page Next.js application with components, routing, and state manag
         return (
             <main>
                 <h1>Users</h1>
-                <ul>
-                    {users.map(user => (
-                        <li key={user.id}>
-                            <strong>{user.name}</strong> — {user.email}
-                            <br />
-                            <small>Company: {user.company.name}</small>
-                        </li>
-                    ))}
-                </ul>
+                {/* TODO: Map over users and display name, email, and company */}
             </main>
         );
     }
     ```
 
 ??? hint "Hint - Loading State"
-    Create `app/users/loading.tsx` to show a loading indicator while the data is being fetched:
-
-    ```typescript
-    export default function Loading() {
-        return <p>Loading users...</p>;
-    }
-    ```
+    Next.js automatically shows a loading UI if you create a `loading.tsx` file in the same directory as your page.
+    
+    Create `app/users/loading.tsx` and export a default component that returns a simple loading message (e.g., a `<p>` tag with text like "Loading users..."). Next.js will display this component while the data is being fetched, without any additional configuration.
 
 ---
 
-## Requirements Checklist
+## Requirements
 
 - Next.js project created and running locally
 - Three static pages (Home, About, Contact) with shared navigation

@@ -48,57 +48,12 @@ Build a complete login page using HTML, CSS, and JavaScript with fetch to commun
     Create a `style.css` file to make the login form look professional. Center the form on the page, style the inputs, and make the button attractive.
 
 ??? hint "Hint - Click to expand"
-    ```css
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: #f0f2f5;
-        font-family: Arial, sans-serif;
-    }
-
-    .login-container {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        width: 320px;
-    }
-
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.25rem;
-        font-weight: bold;
-    }
-
-    .form-group input {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    button {
-        width: 100%;
-        padding: 0.75rem;
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-
-    button:hover {
-        background-color: #303f9f;
-    }
-    ```
+    - Centre the form vertically and horizontally: use `display: flex` on the body with `justify-content: center`, `align-items: center`, and `min-height: 100vh`. Give the body a light background colour.
+    - Create a `.login-container` class: white `background`, `padding`, `border-radius`, `box-shadow`, and a fixed `width` around 320px.
+    - Each `.form-group` needs `margin-bottom` for spacing.
+    - Labels should be `display: block` and `font-weight: bold` with a small `margin-bottom`.
+    - Inputs: full width (`width: 100%`), `padding`, a light `border`, `border-radius`, and `box-sizing: border-box` to include padding in the width.
+    - Button: full width, `padding`, indigo background, white text, no border, `border-radius`, `cursor: pointer`. Darken slightly on `:hover`.
 
 ---
 
@@ -120,40 +75,17 @@ Build a complete login page using HTML, CSS, and JavaScript with fetch to commun
         const password = document.getElementById("password").value.trim();
         const messageDiv = document.getElementById("message");
 
-        // Client-side validation
-        if (!username || !password) {
-            messageDiv.textContent = "Please fill in both fields.";
-            messageDiv.style.color = "red";
-            return;
-        }
+        // TODO: Check if username or password is empty
+        // If empty, show a red error message and use return to stop
 
-        // Send to API
-        fetch("https://jsonplaceholder.typicode.com/posts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        })
-        .then(function(response) {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("Login failed");
-            }
-        })
-        .then(function(data) {
-            messageDiv.textContent = "Login successful! Welcome.";
-            messageDiv.style.color = "green";
-            console.log("Response:", data);
-        })
-        .catch(function(error) {
-            messageDiv.textContent = "Invalid credentials. Please try again.";
-            messageDiv.style.color = "red";
-        });
+        // TODO: Use fetch() to POST the username and password to:
+        // https://jsonplaceholder.typicode.com/posts
+        // Use method: "POST", Content-Type header, and JSON.stringify the body
+
+        // TODO: If response.ok is true, parse the JSON and show a green success message
+        // If not ok, throw an Error
+
+        // TODO: Use .catch() to show a red error message
     });
     ```
 
@@ -168,22 +100,8 @@ Build a complete login page using HTML, CSS, and JavaScript with fetch to commun
     Enhance the login page by adding a loading state. While the fetch request is in progress, disable the button and show "Logging in..." text. Re-enable it when the request completes.
 
 ??? hint "Hint - Click to expand"
-    Before the fetch call:
-
-    ```javascript
-    const button = document.querySelector("button");
-    button.disabled = true;
-    button.textContent = "Logging in...";
-    ```
-
-    In the `.finally()` block:
-
-    ```javascript
-    .finally(function() {
-        button.disabled = false;
-        button.textContent = "Login";
-    });
-    ```
+    - Before the `fetch` call, select the button element and disable it by setting `button.disabled = true`. Change its `textContent` to indicate loading (e.g., "Logging in...").
+    - Use a `.finally()` block after your `.then()` and `.catch()` chains to re-enable the button and restore its original text. `.finally()` runs regardless of whether the request succeeded or failed, which is perfect for cleaning up the loading state.
 
 ---
 
@@ -193,21 +111,6 @@ Build a complete login page using HTML, CSS, and JavaScript with fetch to commun
     After a successful login, store the user's username in `localStorage` and display a welcome message instead of the login form on subsequent visits.
 
 ??? hint "Hint - Click to expand"
-    Storing on login success:
-
-    ```javascript
-    localStorage.setItem("username", username);
-    ```
-
-    Checking on page load:
-
-    ```javascript
-    document.addEventListener("DOMContentLoaded", function() {
-        const savedUser = localStorage.getItem("username");
-        if (savedUser) {
-            document.querySelector(".login-container").innerHTML =
-                "<h1>Welcome back, " + savedUser + "!</h1>" +
-                "<button onclick='localStorage.clear(); location.reload();'>Logout</button>";
-        }
-    });
-    ```
+    - After a successful login, store the username using `localStorage.setItem("username", username)`.
+    - On page load, use a `DOMContentLoaded` event listener to check if a username is already saved with `localStorage.getItem("username")`.
+    - If a username exists, replace the content of the login container with a welcome message and a logout button. The logout button can call `localStorage.removeItem("username")` then reload the page with `location.reload()`.

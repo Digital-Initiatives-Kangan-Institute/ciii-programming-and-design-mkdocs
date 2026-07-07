@@ -74,12 +74,10 @@ Practice JavaScript variables, data types, conditionals, and loops by solving a 
     4. The first character of your city
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    console.log(`Hello, ${name}! You are ${age} years old.`);
-    console.log(name.toUpperCase());
-    console.log(name.length);
-    console.log(city[0]);
-    ```
+    - Template literals use backticks and `${}` to embed variables: `` `Hello, ${name}!` ``
+    - To convert a string to uppercase, use the `.toUpperCase()` method.
+    - The `.length` property gives you the number of characters in a string.
+    - You can access individual characters using bracket notation: `string[index]` — remember that indexing starts at 0.
 
 ---
 
@@ -100,17 +98,14 @@ Practice JavaScript variables, data types, conditionals, and loops by solving a 
     ```javascript
     let score = 85;
 
-    if (score >= 90) {
-        console.log("A");
-    } else if (score >= 80) {
-        console.log("B");
-    } else if (score >= 70) {
-        console.log("C");
-    } else if (score >= 60) {
-        console.log("D");
-    } else {
-        console.log("F");
-    }
+    // Write an if/else if/else chain to check the score:
+    // 90-100 → "A"
+    // 80-89  → "B"
+    // 70-79  → "C"
+    // 60-69  → "D"
+    // Below 60 → "F"
+
+    // Test with scores: 95, 82, 74, 61, 45
     ```
 
 ??? question "Hint"
@@ -130,41 +125,31 @@ Practice JavaScript variables, data types, conditionals, and loops by solving a 
     Test with different values for age and isVerified.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    let age = 20;
-    let isVerified = true;
-
-    if (age < 18) {
-        console.log("Access denied — must be 18 or older.");
-    } else if (!isVerified) {
-        console.log("Access denied — account not verified.");
-    } else {
-        console.log("Access granted.");
-    }
-    ```
+    - Use an `if` statement to check the first condition (age < 18). If true, log an "Access denied" message that mentions the age requirement.
+    - Use `else if` to check the second condition (isVerified is false). Remember the `!` (NOT) operator to check if something is false.
+    - Use `else` for the case where both conditions pass — log "Access granted".
+    - Test with different values: try age = 16, try isVerified = false, try both valid.
 
 ---
 
 ## Task 5: Loops — Multiplication Table
 
 !!! abstract "Instructions"
-    Use a `for` loop to print the multiplication table for the number 7 (from 1 × 7 to 12 × 7).
+    Use a `for` loop to print the multiplication table for the number 7 (from 1 x 7 to 12 x 7).
 
     Example output:
     ```
-    1 × 7 = 7
-    2 × 7 = 14
-    3 × 7 = 21
+    1 x 7 = 7
+    2 x 7 = 14
+    3 x 7 = 21
     ...
     ```
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    let number = 7;
-    for (let i = 1; i <= 12; i++) {
-        console.log(`${i} × ${number} = ${i * number}`);
-    }
-    ```
+    - Set up a variable for the number (e.g., `let number = 7`).
+    - Use a `for` loop with `let i = 1; i <= 12; i++`.
+    - Inside the loop, use a template literal to format the output: `` `${i} x ${number} = ${i * number}` ``
+    - Print each line with `console.log()`.
 
 ---
 
@@ -181,38 +166,10 @@ Practice JavaScript variables, data types, conditionals, and loops by solving a 
     Use a `for` loop or `for...of` loop.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    let numbers = [23, 5, 88, 12, 47, 3, 64, 19];
-
-    // Print each number
-    for (let num of numbers) {
-        console.log(num);
-    }
-
-    // Only numbers > 20
-    console.log("Numbers > 20:");
-    for (let num of numbers) {
-        if (num > 20) {
-            console.log(num);
-        }
-    }
-
-    // Sum
-    let sum = 0;
-    for (let num of numbers) {
-        sum += num;
-    }
-    console.log("Sum:", sum);
-
-    // Largest
-    let largest = numbers[0];
-    for (let num of numbers) {
-        if (num > largest) {
-            largest = num;
-        }
-    }
-    console.log("Largest:", largest);
-    ```
+    - **Print each number:** Use a `for...of` loop (`for (let num of numbers)`) and log each one.
+    - **Numbers greater than 20:** Inside your loop, add an `if` statement that checks `num > 20` before logging.
+    - **Sum:** Create a variable `sum` starting at 0. Inside the loop, add each number to it with `sum += num`. Log the sum after the loop.
+    - **Largest number:** Start with `let largest = numbers[0]`. Inside the loop, compare each number to `largest` — if it's bigger, update `largest`. Log the result after the loop.
 
 ---
 
@@ -228,21 +185,13 @@ Practice JavaScript variables, data types, conditionals, and loops by solving a 
     5. Find the index of `22`
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    let arr = [4, 15, 8, 22, 7, 31, 12];
+    - To add to the end of an array, use `.push(item)`.
+    - To remove the last item, use `.pop()`. You don't need to pass anything.
+    - To add to the start, use `.unshift(item)`.
+    - To check if an array contains a value, use `.includes(value)` — it returns `true` or `false`.
+    - To find the position of a value, use `.indexOf(value)`. It returns the index (starting at 0), or -1 if not found.
 
-    arr.push(55);
-    console.log("After push:", arr);
-
-    arr.pop();
-    console.log("After pop:", arr);
-
-    arr.unshift(1);
-    console.log("After unshift:", arr);
-
-    console.log("Includes 15?", arr.includes(15));
-    console.log("Index of 22:", arr.indexOf(22));
-    ```
+    Log the array after each step so you can see the changes.
 
 ---
 

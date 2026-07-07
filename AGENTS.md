@@ -192,6 +192,15 @@ Task pages contain hands-on exercises. Structure:
 - Never use `- [ ]` checklist syntax — it does not render in this version of markdown. Use plain `-` bulleted lists instead.
 - `index.md` in the root of `docs/` is NOT listed in `nav` — it's the landing page shown when the site first loads. Keep it minimal.
 
+### Task Page Rules
+
+Tasks are exercises for students to solve. Do not give away the answer:
+
+- **Starter code** (`??? code "click to expand"`) should provide structure only — skeletons, HTML shells, or placeholder `// TODO` comments. Never provide a fully working implementation that the student can copy-paste.
+- **Hints** (`??? hint`, `??? tip`, `??? question`) should use descriptive text and guiding questions. Mention property names, method names, or technique names — but never provide complete working code blocks.
+- If the task asks the student to "write a function that...", the starter code should show the function signature and perhaps a comment, not the function body.
+- CSS hints are particularly prone to giving away answers — describe what properties to use (e.g. "use `display: flex` with `justify-content: center`") rather than showing a complete CSS rule.
+
 ---
 
 ## Build System
@@ -205,10 +214,10 @@ The `build/` directory contains **only portal files** (`index.html`, `sites.js`,
 When an AI agent needs to verify a site builds correctly, build into a temporary folder, verify, then delete it:
 
 ```bash
-# Build into a tmp folder within the project
+# Build into a tmp folder
 ./.venv/bin/mkdocs build \
   --config-file sites/<slug>/mkdocs.yml \
-  --site-dir tmp/<slug>-test-build 2>&1
+  --site-dir "$(pwd)/tmp/<slug>-test-build" 2>&1
 
 # Verify the pages exist
 find tmp/<slug>-test-build/pages -type f -name index.html | sort

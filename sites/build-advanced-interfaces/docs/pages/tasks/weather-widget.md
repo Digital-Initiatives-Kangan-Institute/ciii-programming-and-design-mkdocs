@@ -128,20 +128,20 @@ Practice async JavaScript and fetch by building a weather widget that displays c
 ??? code "Starter"
     ```javascript
     async function getWeather(city) {
+        // 1. Look up the city in the cities object (use toLowerCase())
         const coords = cities[city.toLowerCase()];
-        if (!coords) {
-            throw new Error(`City "${city}" not found.`);
-        }
 
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&current_weather=true`;
+        // 2. If coords is undefined, throw an Error with a message
 
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`API error: ${response.status}`);
-        }
+        // 3. Build the URL string using coords.lat and coords.lon
 
-        const data = await response.json();
-        return data.current_weather;
+        // 4. Use await fetch() to get the response
+
+        // 5. Check response.ok — throw an Error if not ok
+
+        // 6. Parse the JSON with await response.json()
+
+        // 7. Return data.current_weather
     }
     ```
 
@@ -161,7 +161,7 @@ Practice async JavaScript and fetch by building a weather widget that displays c
 
     1. Shows the weather display area (remove `hidden` class)
     2. Shows the city name (capitalise the first letter)
-    3. Shows the temperature with the unit (°C)
+    3. Shows the temperature with the unit (C)
     4. Shows the wind speed with the unit (km/h)
     5. Shows a weather description based on the `weathercode`
 
@@ -176,31 +176,11 @@ Practice async JavaScript and fetch by building a weather widget that displays c
     - 95, 96, 99: Thunderstorm
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    function getWeatherDescription(code) {
-        if (code === 0) return "Clear sky";
-        if (code >= 1 && code <= 3) return "Partly cloudy";
-        if (code === 45 || code === 48) return "Fog";
-        if (code >= 51 && code <= 55) return "Drizzle";
-        if (code >= 61 && code <= 65) return "Rain";
-        if (code >= 71 && code <= 75) return "Snow";
-        if (code >= 80 && code <= 82) return "Rain showers";
-        if (code >= 95 && code <= 99) return "Thunderstorm";
-        return "Unknown";
-    }
-
-    function displayWeather(city, weather) {
-        document.getElementById("cityName").textContent =
-            city.charAt(0).toUpperCase() + city.slice(1);
-        document.getElementById("temperature").textContent =
-            `Temperature: ${weather.temperature}°C`;
-        document.getElementById("wind").textContent =
-            `Wind: ${weather.windspeed} km/h`;
-        document.getElementById("description").textContent =
-            getWeatherDescription(weather.weathercode);
-        document.getElementById("weatherDisplay").classList.remove("hidden");
-    }
-    ```
+    - Create a helper function `getWeatherDescription(code)` that returns a human-readable string for each weather code range. Look at the weather code table above and use `if` statements to check the ranges.
+    - Create a `displayWeather(city, weather)` function that:
+      - Capitalises the city name (use `charAt(0).toUpperCase()` with `slice(1)` for the rest).
+      - Updates the `textContent` of the temperature, wind, and description elements with the data from the `weather` object (the API returns `temperature`, `windspeed`, and `weathercode`).
+      - Removes the `"hidden"` class from the weather display area to make it visible.
 
 ---
 
@@ -217,35 +197,12 @@ Practice async JavaScript and fetch by building a weather widget that displays c
     6. Hide the loading message when done (in `finally`)
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    document.getElementById("searchBtn").addEventListener("click", async function() {
-        const city = document.getElementById("cityInput").value.trim();
-        const loading = document.getElementById("loading");
-        const error = document.getElementById("error");
-        const display = document.getElementById("weatherDisplay");
-
-        if (!city) {
-            error.textContent = "Please enter a city name.";
-            error.classList.remove("hidden");
-            return;
-        }
-
-        // Reset state
-        error.classList.add("hidden");
-        display.classList.add("hidden");
-        loading.classList.remove("hidden");
-
-        try {
-            const weather = await getWeather(city);
-            displayWeather(city, weather);
-        } catch (err) {
-            error.textContent = err.message;
-            error.classList.remove("hidden");
-        } finally {
-            loading.classList.add("hidden");
-        }
-    });
-    ```
+    - Add a `click` event listener to the search button. Use `async` on the callback function so you can `await` inside it.
+    - Get the trimmed city value from the input. If empty, show the error element (remove its `"hidden"` class) with an appropriate message, then `return`.
+    - Before fetching: hide the error and weather display, show the loading element.
+    - Use a `try` block to `await getWeather(city)` and pass the result to `displayWeather()`.
+    - Use a `catch` block to show the error message (from `err.message`) in the error element.
+    - Use a `finally` block to hide the loading element (it runs whether the request succeeded or failed).
 
 ---
 
@@ -255,13 +212,9 @@ Practice async JavaScript and fetch by building a weather widget that displays c
     Allow the user to press the Enter key in the city input to trigger the search (without clicking the button).
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    document.getElementById("cityInput").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            document.getElementById("searchBtn").click();
-        }
-    });
-    ```
+    - Add a `keydown` event listener to the city input element.
+    - Check if `event.key` is `"Enter"`.
+    - If it is, you can trigger the search by calling `.click()` on the search button element.
 
 ---
 
@@ -271,76 +224,12 @@ Practice async JavaScript and fetch by building a weather widget that displays c
     Style the weather widget to look like a real weather app card. Use flexbox for centring and layout.
 
 ??? hint "Hint - CSS"
-    ```css
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        font-family: Arial, sans-serif;
-    }
-
-    .widget {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        width: 350px;
-        text-align: center;
-    }
-
-    .search {
-        display: flex;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .search input {
-        flex: 1;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    button {
-        padding: 0.5rem 1rem;
-        background-color: #667eea;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #5a6fd6;
-    }
-
-    #weatherDisplay {
-        background: #f8f9fa;
-        padding: 1rem;
-        border-radius: 8px;
-    }
-
-    #temperature {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin: 0.5rem 0;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    #error {
-        color: #e53935;
-    }
-
-    #loading {
-        color: #666;
-    }
-    ```
+    - **Body:** Use `display: flex`, `justify-content: center`, `align-items: center`, and `min-height: 100vh` to centre the widget vertically and horizontally. Add a gradient `background` for visual appeal.
+    - **Widget card:** Give it a white `background`, `padding`, `border-radius`, and `box-shadow` for depth. Set a fixed `width` around 350px.
+    - **Search area:** Use `display: flex` with `gap` to put the input and button side by side. Let the input grow with `flex: 1`.
+    - **Button:** Match the gradient colours — use a purple/blue `background-color`, white text, no border, rounded corners, and `cursor: pointer`. Darken on `:hover`.
+    - **Weather display:** Give it a light background and padding. Make the temperature large with `font-size`.
+    - **Hidden/Error/Loading:** Use a `.hidden` class with `display: none`. Style `#error` in red and `#loading` in grey.
 
 ---
 

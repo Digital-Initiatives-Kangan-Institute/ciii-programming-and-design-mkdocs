@@ -55,27 +55,12 @@ Take the profile page you built in the previous task and style it with CSS. This
 Use an **element selector** for the `<header>`, and a **class** for the tagline.
 
 ??? hint "Hint - Click to expand"
-    ```html
-    <!-- In your HTML -->
-    <header>
-        <h1>Your Name</h1>
-        <p class="tagline">A short tagline about yourself</p>
-    </header>
-    ```
+    - To style the header, use an **element selector** (`header { ... }`).
+    - Set `background-color`, `color` (for text), `padding`, and `text-align: center`.
+    - Add `class="tagline"` to your tagline `<p>` in the HTML.
+    - Use a **class selector** (`.tagline { ... }`) to make the tagline italic (`font-style: italic`) and slightly smaller (`font-size`).
 
-    ```css
-    header {
-        background-color: #3f51b5;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-    }
-
-    .tagline {
-        font-style: italic;
-        font-size: 1.1rem;
-    }
-    ```
+    The instructions give you the hex colour `#3f51b5` — use it for the background.
 
 ---
 
@@ -92,24 +77,11 @@ Use an **element selector** for the `<header>`, and a **class** for the tagline.
     - Add a hover effect that changes the background colour of each link
 
 ??? hint "Hint - Click to expand"
-    ```css
-    nav {
-        background-color: #303f9f;
-        display: flex;
-        justify-content: center;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 1rem 1.5rem;
-        display: inline-block;
-    }
-
-    nav a:hover {
-        background-color: #5c6bc0;
-    }
-    ```
+    - Make the `<nav>` element a flex container with `display: flex` and use `justify-content: center` to centre the links.
+    - Set a dark background colour on `nav`.
+    - Target the links with `nav a` and remove the default underline using `text-decoration: none`. Make the text white and add padding.
+    - For the hover effect, use `nav a:hover` and change the `background-color` to a slightly lighter shade.
+    - Use `display: inline-block` on the links so padding works correctly.
 
 ---
 
@@ -125,20 +97,9 @@ Use an **element selector** for the `<header>`, and a **class** for the tagline.
     - Give each section margin below it, padding inside, and rounded corners with `border-radius`
 
 ??? hint "Hint - Click to expand"
-    ```css
-    main {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-
-    section {
-        background: white;
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-    ```
+    - Limit the width of `<main>` with `max-width` and centre it using `margin`. Use a top margin of `2rem` and `auto` for the left/right values.
+    - For each `<section>`, set a white `background`, add `padding` inside, space them apart with `margin-bottom`, and soften the corners with `border-radius`.
+    - Add horizontal padding to `<main>` so the content doesn't touch the edges on small screens.
 
 ---
 
@@ -155,27 +116,11 @@ Use an **element selector** for the `<header>`, and a **class** for the tagline.
     - Add alternating row colours for readability
 
 ??? hint "Hint - Click to expand"
-    ```css
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid #ddd;
-        padding: 0.75rem;
-        text-align: left;
-    }
-
-    th {
-        background-color: #3f51b5;
-        color: white;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-    ```
+    - Make the table full-width with `width: 100%`.
+    - Use `border-collapse: collapse` to merge adjacent cell borders into one.
+    - Apply `border`, `padding`, and `text-align: left` to both `th` and `td` elements.
+    - Give `th` a background colour (e.g. the indigo `#3f51b5`) with white text.
+    - For alternating row colours, use the pseudo-class `:nth-child(even)` on `tr` and set a light background colour.
 
 ---
 
@@ -192,47 +137,12 @@ Use an **element selector** for the `<header>`, and a **class** for the tagline.
     - Add a hover effect to the button
 
 ??? hint "Hint - Click to expand"
-    ```css
-    form div {
-        margin-bottom: 1rem;
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0.25rem;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-family: inherit;
-        font-size: 0.95rem;
-    }
-
-    input:focus, textarea:focus {
-        outline: none;
-        border-color: #3f51b5;
-        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
-    }
-
-    button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 0.75rem 2rem;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-
-    button:hover {
-        background-color: #303f9f;
-    }
-    ```
+    - Give each form `<div>` some `margin-bottom` for spacing.
+    - Make labels bold with `font-weight: bold` and use `display: block` so they sit above the input. Add a small `margin-bottom`.
+    - Make inputs and textareas full-width (`width: 100%`), add `padding` and a light `border`. Use `border-radius` for rounded corners and `box-sizing: border-box` so padding doesn't break the width. Set `font-family: inherit` so they match the page.
+    - For the focus effect, use the `:focus` pseudo-class. Change the `border-color` to your theme colour and remove the default `outline`. Consider adding a subtle `box-shadow` for a glow effect.
+    - Style the button: remove the default `border`, set `background-color` and `color`, add `padding`, `border-radius`, and `cursor: pointer`.
+    - Use `button:hover` to darken the background colour slightly.
 
 ---
 

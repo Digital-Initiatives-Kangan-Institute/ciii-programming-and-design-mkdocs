@@ -47,19 +47,18 @@ Practice events and DOM manipulation by building an interactive image gallery. U
 ## Task 1: Select All Elements
 
 !!! abstract "Instructions"
-    In `gallery.js`, use `querySelector` or `getElementById` to select all the DOM elements you will need. Store them in variables.
+    In `gallery.js`, use `querySelector` or `getElementById` to select all the DOM elements you will need. Store them in variables (use `const`).
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    const imageUrlInput = document.getElementById("imageUrl");
-    const imageTitleInput = document.getElementById("imageTitle");
-    const addBtn = document.getElementById("addBtn");
-    const gallery = document.getElementById("gallery");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxTitle = document.getElementById("lightboxTitle");
-    const closeBtn = document.getElementById("closeBtn");
-    ```
+    Use `document.getElementById()` to select the following elements. Store each in a variable:
+
+    - The two input fields (`imageUrl`, `imageTitle`)
+    - The Add button (`addBtn`)
+    - The gallery container (`gallery`)
+    - The lightbox and its contents (`lightbox`, `lightboxImage`, `lightboxTitle`)
+    - The close button (`closeBtn`)
+
+    Look at the HTML `id` attributes to find the right IDs to use.
 
 ---
 
@@ -75,41 +74,14 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     Clear the input fields after adding. Do not add if either field is empty.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    addBtn.addEventListener("click", function() {
-        let url = imageUrlInput.value.trim();
-        let title = imageTitleInput.value.trim();
-
-        if (!url || !title) {
-            alert("Please fill in both fields.");
-            return;
-        }
-
-        // Create the gallery item
-        let item = document.createElement("div");
-        item.classList.add("gallery-item");
-
-        let img = document.createElement("img");
-        img.src = url;
-        img.alt = title;
-
-        let caption = document.createElement("p");
-        caption.textContent = title;
-
-        let deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
-        deleteBtn.classList.add("delete-btn");
-
-        item.appendChild(img);
-        item.appendChild(caption);
-        item.appendChild(deleteBtn);
-        gallery.appendChild(item);
-
-        // Clear inputs
-        imageUrlInput.value = "";
-        imageTitleInput.value = "";
-    });
-    ```
+    - Add a `click` event listener to the Add button.
+    - Get the trimmed values from both inputs. If either is empty, show an alert and `return` to stop.
+    - Create a new `<div>` with `document.createElement("div")` and add the class `"gallery-item"` using `classList.add()`.
+    - Create an `<img>`, set its `src` to the URL and `alt` to the title.
+    - Create a `<p>` and set its `textContent` to the title.
+    - Create a `<button>`, set its text to "Delete", and give it the class `"delete-btn"`.
+    - Append the img, p, and button to the div, then append the div to the gallery.
+    - Clear both input fields by setting their `value` to `""`.
 
 ---
 
@@ -119,11 +91,8 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     Make the "Delete" button on each gallery item remove that item from the page. Add the event listener inside the same function that creates the item.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    deleteBtn.addEventListener("click", function() {
-        item.remove();
-    });
-    ```
+    - Add a `click` event listener to the delete button (do this inside the same function where you create the button, so you have access to the item variable).
+    - Inside the listener, call `.remove()` on the gallery item element you created.
 
 ---
 
@@ -133,13 +102,9 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     When a user clicks on an image, open a lightbox (full-size overlay) showing the image. The lightbox should display the image and its title. The lightbox is already in the HTML — you just need to show it and populate its content.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    img.addEventListener("click", function() {
-        lightboxImage.src = url;
-        lightboxTitle.textContent = title;
-        lightbox.classList.remove("hidden");
-    });
-    ```
+    - Add a `click` event listener to the image element (do this after creating the img).
+    - Inside, set the `src` of `lightboxImage` to the image URL and the `textContent` of `lightboxTitle` to the title.
+    - Remove the `"hidden"` class from the lightbox element using `classList.remove()`.
 
 ---
 
@@ -148,23 +113,12 @@ Practice events and DOM manipulation by building an interactive image gallery. U
 !!! abstract "Instructions"
     Close the lightbox when:
 
-    - The user clicks the × button
+    - The user clicks the x button
     - The user clicks the dark background outside the image
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    // Close button
-    closeBtn.addEventListener("click", function() {
-        lightbox.classList.add("hidden");
-    });
-
-    // Click outside the image
-    lightbox.addEventListener("click", function(event) {
-        if (event.target === lightbox) {
-            lightbox.classList.add("hidden");
-        }
-    });
-    ```
+    - **Close button:** Add a `click` event listener to the close button. Inside, add the `"hidden"` class back to the lightbox using `classList.add()`.
+    - **Click outside the image:** Add a `click` event listener to the lightbox itself. In the handler, check if `event.target` is the lightbox (not the image inside it). If it is, hide the lightbox.
 
 ---
 
@@ -174,13 +128,9 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     Allow users to close the lightbox by pressing the `Escape` key.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            lightbox.classList.add("hidden");
-        }
-    });
-    ```
+    - Add a `keydown` event listener to `document`.
+    - In the handler, check if `event.key` is `"Escape"`.
+    - If it is, add the `"hidden"` class to the lightbox to hide it.
 
 ---
 
@@ -190,12 +140,8 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     If an image URL is invalid (the image fails to load), replace it with a placeholder message. Use the `error` event on the image element.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    img.addEventListener("error", function() {
-        img.src = "https://via.placeholder.com/300x200?text=Image+Not+Found";
-        img.alt = "Image not found";
-    });
-    ```
+    - Add an `error` event listener to the image element (add it where you create the img).
+    - When the image fails to load, set its `src` to a placeholder image URL (e.g., `https://via.placeholder.com/300x200?text=Image+Not+Found`) and update the `alt` text to indicate the image was not found.
 
 ---
 
@@ -211,102 +157,23 @@ Practice events and DOM manipulation by building an interactive image gallery. U
     - Delete buttons should be small and red
 
 ??? hint "Hint - CSS"
-    ```css
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
-    #gallery-controls {
-        display: flex;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-    }
-
-    #gallery-controls input {
-        flex: 1;
-        padding: 0.5rem;
-    }
-
-    #gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .gallery-item {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 0.5rem;
-        width: 200px;
-        text-align: center;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .delete-btn {
-        background-color: #e53935;
-        color: white;
-        border: none;
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .lightbox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .lightbox img {
-        max-width: 80%;
-        max-height: 70vh;
-        border-radius: 4px;
-    }
-
-    .lightbox p {
-        color: white;
-        margin-top: 1rem;
-        font-size: 1.2rem;
-    }
-
-    #closeBtn {
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-        color: white;
-        font-size: 2.5rem;
-        cursor: pointer;
-    }
-
-    .hidden {
-        display: none;
-    }
-    ```
+    - **Body:** Set a `font-family`, `max-width` around 1000px, use `margin: 0 auto` to centre, and add `padding`.
+    - **Gallery controls:** Use `display: flex` with `gap` to lay out the inputs and button in a row. Let the inputs grow with `flex: 1`.
+    - **Gallery grid:** Use `display: flex` with `flex-wrap: wrap` and `gap` for a responsive grid.
+    - **Gallery items:** Add `border`, `border-radius`, `padding`, and a fixed `width`. Centre the text.
+    - **Images inside items:** Set `width: 100%`, a fixed `height`, and `object-fit: cover` so they crop nicely. Add `cursor: pointer` to indicate they're clickable.
+    - **Delete button:** Use a red `background-color` with white text, remove the border, add padding and `border-radius`.
+    - **Lightbox:** Use `position: fixed` to cover the full screen (`top: 0; left: 0; width: 100%; height: 100%`). Set a dark semi-transparent `background` (e.g., `rgba(0,0,0,0.85)`). Use flexbox to centre the content.
+    - **Close button:** Position it with `position: absolute; top: 1rem; right: 2rem`. Make it large and white.
+    - **Hidden class:** Use `display: none` to hide elements.
 
 ---
 
 ## Requirements
 
-- Use `addEventListener` for at least 4 different event types (click, keydown, etc.)
+- Use `addEventListener` for at least 4 different event types (click, keydown, error, etc.)
 - Use `document.createElement()` to add elements
 - Use `element.remove()` to delete elements
 - Use `classList.add()` and `classList.remove()` to toggle visibility
 - Handle the image `error` event for broken URLs
-- The lightbox closes with both the × button and the Escape key
+- The lightbox closes with both the x button and the Escape key

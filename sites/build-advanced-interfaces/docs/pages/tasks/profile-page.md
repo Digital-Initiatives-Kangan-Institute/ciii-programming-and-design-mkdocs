@@ -86,13 +86,11 @@ Build a personal profile page using the HTML elements you have learned. This pag
     - Include an `alt` attribute describing the image
 
 ??? hint "Hint - Click to expand"
-    ```html
-    <p>
-        Hi, I'm a <strong>web development student</strong> at BKI.
-        I enjoy <em>building things</em> with code.
-    </p>
-    <img src="https://via.placeholder.com/150" alt="Profile photo">
-    ```
+    To bold text, wrap it in `<strong>` or `<b>` tags. To italicise text, use `<em>` or `<i>` tags. Both go inside your `<p>` element.
+
+    For images: `<img src="URL" alt="description">`. The `src` attribute holds the image URL and `alt` provides a text description if the image cannot load.
+
+    Try using `https://via.placeholder.com/150` as your placeholder image URL.
 
 ---
 
@@ -145,20 +143,11 @@ Build a personal profile page using the HTML elements you have learned. This pag
             <input type="text" id="name" name="name" required>
         </div>
 
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+        <!-- Add your email field here (type="email", required) -->
 
-        <div>
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject">
-        </div>
+        <!-- Add your subject field here (type="text") -->
 
-        <div>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-        </div>
+        <!-- Add your message textarea here (rows="4") -->
 
         <button type="submit">Send Message</button>
     </form>

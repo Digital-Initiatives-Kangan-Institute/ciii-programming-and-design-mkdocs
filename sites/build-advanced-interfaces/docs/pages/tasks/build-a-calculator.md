@@ -31,22 +31,20 @@ Practice writing functions by building a simple calculator that can add, subtrac
 ??? code "Starter"
     ```javascript
     function add(a, b) {
-        return a + b;
+        // Return the sum of a and b
     }
 
     function subtract(a, b) {
-        return a - b;
+        // Return the difference of a and b
     }
 
     function multiply(a, b) {
-        return a * b;
+        // Return the product of a and b
     }
 
     function divide(a, b) {
-        if (b === 0) {
-            return "Error: Cannot divide by zero";
-        }
-        return a / b;
+        // Return a / b
+        // If b is 0, return the error string "Error: Cannot divide by zero"
     }
     ```
 
@@ -62,19 +60,9 @@ Practice writing functions by building a simple calculator that can add, subtrac
     3. `isEven(n)` — returns `true` if `n` is even, `false` otherwise.
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    function percentage(value, percent) {
-        return value * (percent / 100);
-    }
-
-    function square(n) {
-        return n * n;
-    }
-
-    function isEven(n) {
-        return n % 2 === 0;
-    }
-    ```
+    - **percentage(value, percent):** To find x% of a value, multiply the value by `(percent / 100)`. Return the result.
+    - **square(n):** Multiply n by itself and return it.
+    - **isEven(n):** A number is even if it's divisible by 2 with no remainder. Use the modulo operator `%` — `n % 2 === 0` returns `true` for even numbers. Return the result of that comparison.
 
 ---
 
@@ -90,21 +78,10 @@ Practice writing functions by building a simple calculator that can add, subtrac
     ```
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    function operate(a, b, operation) {
-        if (operation === "add") {
-            return add(a, b);
-        } else if (operation === "subtract") {
-            return subtract(a, b);
-        } else if (operation === "multiply") {
-            return multiply(a, b);
-        } else if (operation === "divide") {
-            return divide(a, b);
-        } else {
-            return "Unknown operation";
-        }
-    }
-    ```
+    - Your `operate` function should take three parameters: `a`, `b`, and `operation`.
+    - Use `if`/`else if` to check the value of `operation` against the strings `"add"`, `"subtract"`, `"multiply"`, and `"divide"`.
+    - For each match, call the corresponding function (e.g., `add(a, b)`) and return the result.
+    - Add an `else` at the end to return a fallback message like `"Unknown operation"`.
 
 ---
 
@@ -128,16 +105,11 @@ Practice writing functions by building a simple calculator that can add, subtrac
     ```
 
 ??? hint "Hint - Click to expand"
-    ```javascript
-    function processCalculations(calcs) {
-        let results = [];
-        for (let calc of calcs) {
-            let result = operate(calc.a, calc.b, calc.operation);
-            results.push(result);
-        }
-        return results;
-    }
-    ```
+    - Create an empty array to hold results (e.g., `let results = []`).
+    - Loop through the input array using `for...of`.
+    - For each calculation object, call `operate(calc.a, calc.b, calc.operation)`.
+    - Push the result into your results array with `.push()`.
+    - Return the results array after the loop.
 
 ---
 
@@ -165,8 +137,8 @@ Practice writing functions by building a simple calculator that can add, subtrac
             <select id="operation">
                 <option value="add">+ Add</option>
                 <option value="subtract">- Subtract</option>
-                <option value="multiply">× Multiply</option>
-                <option value="divide">÷ Divide</option>
+                <option value="multiply">x Multiply</option>
+                <option value="divide">/ Divide</option>
             </select>
         </div>
 
@@ -178,23 +150,17 @@ Practice writing functions by building a simple calculator that can add, subtrac
             <button id="calculateBtn">Calculate</button>
         </div>
 
-        <h2>Result: <span id="result">—</span></h2>
+        <h2>Result: <span id="result">-</span></h2>
     </div>
 
     <script src="calculator.js"></script>
     ```
 
 ??? hint "Hint - JavaScript"
-    ```javascript
-    document.getElementById("calculateBtn").addEventListener("click", function() {
-        let a = Number(document.getElementById("num1").value);
-        let b = Number(document.getElementById("num2").value);
-        let operation = document.getElementById("operation").value;
-
-        let result = operate(a, b, operation);
-        document.getElementById("result").textContent = result;
-    });
-    ```
+    - Add a `click` event listener to the button with id `calculateBtn`.
+    - Use `document.getElementById()` to get the values from `num1`, `num2`, and `operation`. Remember that input values are strings — use `Number()` to convert the number inputs.
+    - Call your `operate()` function with the three values.
+    - Set the `textContent` of the element with id `result` to the returned value.
 
 ---
 

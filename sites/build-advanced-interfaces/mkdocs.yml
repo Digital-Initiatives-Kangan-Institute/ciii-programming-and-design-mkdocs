@@ -39,6 +39,12 @@ nav:
         - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
       - Component Libraries:
         - Mantine UI: pages/resources/mantine/mantine.md
+      - MQTT:
+        - MQTT Overview: pages/resources/mqtt/mqtt-overview.md
+        - Connecting to HiveMQ: pages/resources/mqtt/connecting-to-hivemq.md
+        - Publishing and Subscribing: pages/resources/mqtt/publishing-and-subscribing.md
+        - Working with JSON: pages/resources/mqtt/working-with-json.md
+        - Real-Time Chat with MQTT: pages/resources/mqtt/mqtt-chat-example.md
       - Supabase:
         - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
         - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md

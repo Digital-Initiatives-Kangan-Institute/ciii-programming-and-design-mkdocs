@@ -1,6 +1,6 @@
 # Content Management with Supabase
 
-Beyond storing data, Supabase can function as a content management system (CMS). This means managing the content your front end displays without needing to redeploy your application.
+Beyond storing data, Supabase can function as a **headless CMS**. In a headless CMS, the content management backend is decoupled from the front-end presentation — content lives in the database and is delivered through an API. This means you can manage the content your front end displays without needing to redeploy your application.
 
 ---
 

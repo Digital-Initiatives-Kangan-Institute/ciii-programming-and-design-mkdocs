@@ -1,6 +1,6 @@
 # Introduction to Supabase
 
-Supabase is an open-source platform that provides a database, authentication, and APIs. It can serve as the backend for your web application, including acting as a content management system.
+Supabase is an open-source platform that provides a database, authentication, and APIs. It can serve as the backend for your web application, including acting as a **headless CMS** — a content management system where the content lives separately from the front end and is delivered through an API.
 
 ---
 

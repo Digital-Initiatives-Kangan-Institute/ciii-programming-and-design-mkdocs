@@ -45,6 +45,13 @@ window.SITES_DATA = {
       "title": "Version Control",
       "description": "Learn Git and version control workflows through the VS Code interface.",
       "courses": ["diploma-of-it"]
+    },
+    {
+      "href": "/ai-tools",
+      "img": "./_assets/ai-tools.png",
+      "title": "AI-Assisted Development",
+      "description": "Use AI chatbots and agents to plan, build, and debug software effectively.",
+      "courses": ["diploma-of-it"]
     }
   ]
 };

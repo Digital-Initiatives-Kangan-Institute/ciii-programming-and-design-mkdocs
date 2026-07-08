@@ -1,4 +1,4 @@
-site_name: Version Control
+site_name: AI-Assisted Development
 
 # This text shows in the footer.
 copyright: Digital Initiatives - Bendigo Kangan Institute
@@ -10,26 +10,23 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - What is Version Control: pages/resources/version-control/what-is-vc.md
-      - Git with VS Code: pages/resources/version-control/git-in-vscode.md
-      - Branching Strategy: pages/resources/version-control/branching-strategy.md
-      - Git Tools and Clients: pages/resources/version-control/git-tools.md
-      - What is GitHub: pages/resources/version-control/what-is-github.md
-      - .gitignore: pages/resources/version-control/gitignore.md
-      - Merge Conflicts: pages/resources/version-control/merge-conflicts.md
+      - What is AI-Assisted Development: pages/resources/what-is-ai-assisted-dev.md
+      - AI Chatbots: pages/resources/ai-chatbots.md
+      - AI Agents: pages/resources/ai-agents.md
+      - Plan Mode in Agents: pages/resources/plan-mode.md
+      - AGENTS.md: pages/resources/agent-project-files.md
+      - Writing Effective Prompts: pages/resources/writing-effective-prompts.md
 
     - Tasks:
-      - Initialise and Commit: pages/tasks/initialise-and-commit.md
-      - Branch and Merge: pages/tasks/branch-and-merge.md
-      - Daily Workflow: pages/tasks/daily-workflow.md
-      - Working with a dev Branch: pages/tasks/working-with-dev.md
-      - Pull Request Workflow: pages/tasks/pull-request-workflow.md
+      - Plan a Feature with a Chatbot: pages/tasks/plan-with-chatbot.md
+      - Complete a Task with an AI Agent: pages/tasks/task-with-agent.md
+      - Prompt Writing Practice: pages/tasks/prompt-writing-practice.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
   palette:
-    primary: blue
+    primary: cyan
   features:
     - toc.integrate
     - navigation.sections
@@ -43,7 +40,7 @@ plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:
-        - pages/tasks/initialise-and-commit.md
+        - pages/tasks/plan-with-chatbot.md
 
 extra:
   generator: false

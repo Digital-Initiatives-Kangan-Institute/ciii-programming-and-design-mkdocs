@@ -89,6 +89,7 @@
         h2 {
             font-weight: normal;
             color: rgb(60, 60, 60);
+            transition: opacity 0.15s ease;
         }
 
         #banner {
@@ -112,6 +113,24 @@
             margin: 0;
         }
 
+        #noscript {
+            display: flex;
+            justify-content: center;
+
+            background-color: white;
+            padding: 2rem;
+
+            border: 1px solid rgb(198, 198, 198);
+            border-radius: 10px;
+
+            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+            font-size: 1.1rem;
+        }
+        #noscript p {
+            margin: 0;
+        }
+
         .grid-layout {
             display: grid;
 
@@ -132,10 +151,15 @@
 
             box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
 
-            transition: transform 0.25s !important;
+            transition: transform 0.25s ease, opacity 0.2s ease;
         }
         .grid-item:hover {
             transform: scale(102%);
+        }
+        .grid-item.animating-out {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
         }
 
         .construction::before {
@@ -245,6 +269,10 @@
     </header>
 
     <main>
+        <noscript id="noscript">
+            <p>JavaScript is required to view this page.</p>
+        </noscript>
+
         <div id="banner">
             <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
             <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access to these pages.</p>
@@ -295,11 +323,26 @@
 
             function applyFilter(filter) {
                 cards.forEach(function (card) {
-                    card.classList.toggle('hidden', card.getAttribute('data-courses').split(' ').indexOf(filter) === -1);
+                    var shouldHide = card.getAttribute('data-courses').split(' ').indexOf(filter) === -1;
+                    if (shouldHide) {
+                        card.classList.add('hidden');
+                        card.classList.remove('animating-out');
+                    } else {
+                        if (card.classList.contains('hidden')) {
+                            card.classList.remove('hidden');
+                            card.classList.add('animating-out');
+                            void card.offsetWidth;
+                            card.classList.remove('animating-out');
+                        }
+                    }
                 });
                 var course = coursesById[filter];
-                if (course) {
-                    heading.textContent = course.fullname;
+                if (course && heading.textContent !== course.fullname) {
+                    heading.style.opacity = '0';
+                    setTimeout(function () {
+                        heading.textContent = course.fullname;
+                        heading.style.opacity = '1';
+                    }, 150);
                 }
             }
 
@@ -322,6 +365,8 @@
                 var data = window.SITES_DATA;
                 courseIds = data.courses.map(function (c) { return c.id; });
                 renderSelect(data.courses);
+
+                heading.textContent = data.courses[0].fullname;
 
                 data.sites.forEach(function (site) {
                     var card = renderCard(site);

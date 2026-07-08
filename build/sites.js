@@ -1,7 +1,7 @@
 window.SITES_DATA = {
   "courses": [
-    { "id": "cert3-in-it", "label": "Cert 3 in IT" },
-    { "id": "diploma-of-it", "label": "Diploma of IT" }
+    { "id": "cert3-in-it", "label": "Cert 3 in IT", "fullname": "Certificate III in Information Technology" },
+    { "id": "diploma-of-it", "label": "Diploma of IT", "fullname": "Diploma of Information Technology" }
   ],
   "sites": [
     {

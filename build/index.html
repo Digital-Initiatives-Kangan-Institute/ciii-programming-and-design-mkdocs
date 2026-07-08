@@ -280,8 +280,12 @@
                 return a;
             }
 
+            var heading = document.querySelector('section h2');
+            var coursesById = {};
+
             function renderSelect(courses) {
                 courses.forEach(function (c) {
+                    coursesById[c.id] = c;
                     var opt = document.createElement('option');
                     opt.value = c.id;
                     opt.textContent = c.label;
@@ -293,6 +297,10 @@
                 cards.forEach(function (card) {
                     card.classList.toggle('hidden', card.getAttribute('data-courses').split(' ').indexOf(filter) === -1);
                 });
+                var course = coursesById[filter];
+                if (course) {
+                    heading.textContent = course.fullname;
+                }
             }
 
             function routeFromHash() {

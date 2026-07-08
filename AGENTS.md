@@ -18,6 +18,7 @@ This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Ea
 | `python-edison` | Python Edison | deep orange | cert3-in-it |
 | `nextjs` | NextJS | black | — |
 | `test-site` | Test Site | green | — |
+| `version-control` | Version Control | blue | cert3-in-it, diploma-of-it |
 | `build-advanced-interfaces` | Build Advanced Interfaces | indigo | diploma-of-it |
 
 ---

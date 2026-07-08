@@ -1,289 +1,106 @@
 # Functions
 
-Functions are the core organisational unit in JavaScript. They let you group code into reusable, named blocks. In Next.js, every component is a function — so mastering functions is essential.
+Functions are reusable blocks of code that perform a specific task. They help you avoid repetition and keep your code organised.
 
 ---
 
-## What Are Functions?
+## What is a Function?
 
-A function is a block of code that performs a specific task. You define it once and can call it many times.
+A function is a named set of instructions that you can call whenever you need it. Instead of writing the same code multiple times, you write a function once and call it as many times as needed.
+
+---
+
+## Declaring a Function
 
 ```javascript
 function greet() {
-    console.log("Hello!");
+    console.log("Hello, welcome to our cafe!");
 }
-
-greet();   // "Hello!"
-greet();   // "Hello!"
-greet();   // "Hello!"
 ```
 
-Without functions, you would need to copy and paste the same code every time you wanted to reuse it.
+- `function` is the keyword
+- `greet` is the function name
+- `{ }` contains the function body
 
 ---
 
-## Defining and Calling Functions
+## Calling a Function
+
+To run the function code, call it by name with parentheses:
 
 ```javascript
-// 1. Define (the recipe)
-function sayHello(name) {
-    return `Hello, ${name}!`;
-}
-
-// 2. Call (cook the recipe)
-let message = sayHello("Alice");
-console.log(message);   // "Hello, Alice!"
+greet();   // Output: Hello, welcome to our cafe!
+greet();   // Can be called multiple times
 ```
-
-- **Defining** creates the function — nothing runs yet
-- **Calling** executes the function with `()` — the code inside runs
-- A function can be called as many times as you need, with different arguments
 
 ---
 
 ## Parameters and Arguments
 
-Parameters are placeholders when you define the function. Arguments are the actual values you pass when calling it.
+Functions can accept input values through **parameters**:
 
 ```javascript
-// name and age are parameters
-function describe(name, age) {
-    return `${name} is ${age} years old.`;
+function greet(name) {
+    console.log("Hello, " + name + "!");
 }
 
-// "Alice" and 25 are arguments
-describe("Alice", 25);   // "Alice is 25 years old."
-describe("Bob", 30);     // "Bob is 30 years old."
+greet("Alice");   // Hello, Alice!
+greet("Bob");     // Hello, Bob!
 ```
 
-### Default Parameters
+- `name` is the **parameter** (placeholder in the function definition)
+- `"Alice"` is the **argument** (actual value passed when calling)
 
-Parameters can have default values:
+Multiple parameters:
 
 ```javascript
-function greet(name = "Guest") {
-    return `Hello, ${name}!`;
+function orderSum(item, quantity, price) {
+    let total = quantity * price;
+    console.log(quantity + "x " + item + " = $" + total);
 }
 
-greet("Alice");   // "Hello, Alice!"
-greet();          // "Hello, Guest!"
+orderSum("latte", 2, 4.5);   // 2x latte = $9
 ```
 
 ---
 
 ## Return Values
 
-Functions can send a value back using `return`. This lets you store and use the result.
+Functions can send a value back using `return`:
 
 ```javascript
-function add(a, b) {
-    return a + b;
+function calculateTotal(price, quantity) {
+    return price * quantity;
 }
 
-let result = add(5, 3);
-console.log(result);             // 8
-console.log(add(10, 20) * 2);    // 60
+let total = calculateTotal(4.5, 3);
+console.log("$" + total);   // $13.5
 ```
 
-### Functions Without return
-
-A function without `return` (or with an empty `return;`) returns `undefined`.
-
-```javascript
-function logMessage(msg) {
-    console.log(msg);
-    // No return — returns undefined
-}
-
-let result = logMessage("Hi");   // Prints "Hi", result is undefined
-```
-
-### Early Return
-
-Use `return` to exit a function early:
-
-```javascript
-function divide(a, b) {
-    if (b === 0) {
-        return "Cannot divide by zero";   // Exit early
-    }
-    return a / b;
-}
-
-divide(10, 0);   // "Cannot divide by zero"
-divide(10, 2);   // 5
-```
+Once `return` runs, the function stops executing.
 
 ---
 
-## Breaking Code into Functions
+## Why Use Functions?
 
-Instead of one long script, break your logic into small, single-purpose functions. This is the most important programming skill you will develop.
-
-### Before (One big block)
-
-```javascript
-let cart = [
-    { name: "Laptop", price: 1200, quantity: 1 },
-    { name: "Mouse", price: 25, quantity: 2 },
-    { name: "Keyboard", price: 80, quantity: 1 }
-];
-
-// Calculate items total
-let itemTotal = 0;
-for (let item of cart) {
-    itemTotal += item.price * item.quantity;
-}
-
-// Apply discount
-let discountRate = 0.1;
-let discount = itemTotal * discountRate;
-
-// Apply tax
-let taxRate = 0.1;
-let tax = (itemTotal - discount) * taxRate;
-
-// Final total
-let finalTotal = itemTotal - discount + tax;
-
-// Format currency
-let formattedTotal = `$${finalTotal.toFixed(2)}`;
-
-console.log(formattedTotal);
-```
-
-### After (Functions)
+- Avoid repeating code
+- Make changes in one place
+- Break complex problems into smaller pieces
+- Give descriptive names to blocks of code
 
 ```javascript
-function calculateItemTotal(cart) {
-    let total = 0;
-    for (let item of cart) {
-        total += item.price * item.quantity;
-    }
-    return total;
-}
-
-function applyDiscount(amount, rate) {
-    return amount * rate;
-}
-
-function applyTax(amount, rate) {
-    return amount * rate;
-}
-
-function formatCurrency(amount) {
-    return `$${amount.toFixed(2)}`;
-}
-
-// Now the main logic reads like a story:
-let cart = [
-    { name: "Laptop", price: 1200, quantity: 1 },
-    { name: "Mouse", price: 25, quantity: 2 },
-    { name: "Keyboard", price: 80, quantity: 1 }
-];
-
-let itemTotal = calculateItemTotal(cart);
-let discount = applyDiscount(itemTotal, 0.1);
-let tax = applyTax(itemTotal - discount, 0.1);
-let finalTotal = itemTotal - discount + tax;
-
-console.log(formatCurrency(finalTotal));
-```
-
-Each function does **one thing** and has a clear name. The main logic is easy to read and modify.
-
----
-
-## Function Expressions and Arrow Functions
-
-Functions can also be assigned to variables:
-
-```javascript
-// Function expression
-const greet = function(name) {
-    return `Hello, ${name}!`;
-};
-
-// Arrow function (shorter syntax)
-const greet = (name) => {
-    return `Hello, ${name}!`;
-};
-
-// Arrow function with implicit return
-const greet = (name) => `Hello, ${name}!`;
-```
-
-Arrow functions are common in React for event handlers and callbacks. They are covered in detail in the Next.js section.
-
----
-
-## Functions in React / Next.js
-
-Every React component is a function:
-
-```typescript
-// This is a function that returns JSX
-export default function Button({ label, onClick }) {
-    return (
-        <button onClick={onClick}>
-            {label}
-        </button>
-    );
+function displayTotal() {
+    let subtotal = calculateTotal(4.5, 2);
+    let tax = subtotal * 0.1;
+    console.log("Total with tax: $" + (subtotal + tax));
 }
 ```
-
-The same principles apply:
-- Components accept **props** (parameters)
-- Components **return** JSX (HTML-like syntax)
-- Break large components into smaller, single-purpose components — just like functions
-
----
-
-## Pure vs Impure Functions
-
-### Pure Functions
-
-A pure function always returns the same output for the same input and has no side effects. It does not modify anything outside itself.
-
-```javascript
-// Pure — same input always gives same output
-function add(a, b) {
-    return a + b;
-}
-
-// Pure — does not modify the original array
-function addItem(items, newItem) {
-    return [...items, newItem];
-}
-```
-
-### Impure Functions
-
-Impure functions have side effects — they modify external state, write to the console, or make network requests.
-
-```javascript
-let total = 0;
-
-// Impure — modifies external variable
-function addToTotal(amount) {
-    total += amount;
-}
-
-// Impure — side effect (console.log)
-function greet(name) {
-    console.log(`Hello, ${name}`);
-}
-```
-
-React components are impure by nature — they can use state, make API calls, and interact with the browser. But their **render logic** should be as pure as possible.
 
 ---
 
 ## Summary
 
-- Functions **group code** into reusable, named blocks
-- Define once with `function`, call many times with `()`
-- **Parameters** are placeholders; **arguments** are actual values
-- Use `return` to send a value back — a function without `return` gives `undefined`
-- **Break large logic into small functions** — each doing one thing
-- React components are **functions that return JSX**
+- Functions group reusable code and are called by name
+- Parameters let functions accept input
+- `return` sends a value back to the caller
+- Functions make code more organised and easier to maintain

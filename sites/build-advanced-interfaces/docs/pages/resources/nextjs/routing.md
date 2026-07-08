@@ -1,218 +1,119 @@
 # Routing
 
-Next.js uses a **file-system based router**. This means files and folders you create inside the `pages/` (or `app/`) directory automatically become URL routes. No configuration is needed.
+Routing in Next.js is based on the file system. The folders and files inside `app/` determine which pages exist and how URLs map to them.
 
 ---
 
-## How It Works
+## How File-Based Routing Works
+
+Every folder inside `app/` that contains a `page.tsx` file becomes a route:
 
 ```
-pages/
-├── index.tsx       →  /
-├── about.tsx       →  /about
-├── contact.tsx     →  /contact
-└── blog/
-    └── index.tsx   →  /blog
+app/
+├── page.tsx          →  /         (home page)
+├── about/
+│   └── page.tsx      →  /about
+├── products/
+│   └── page.tsx      →  /products
 ```
-
-Each file exports a default React component. When a user visits that route, the exported component renders.
 
 ---
 
 ## Static Routes
 
-A static route is a fixed URL path that always shows the same content.
+A static route is a page with a fixed URL. Create a folder and add a `page.tsx`:
 
-```typescript
-// pages/about.tsx
-export default function About() {
+```
+app/about/page.tsx
+```
+
+```tsx
+export default function AboutPage() {
     return (
         <main>
             <h1>About Us</h1>
-            <p>We build great software.</p>
+            <p>Learn about our cafe.</p>
         </main>
     );
 }
 ```
 
-Visiting `/about` renders this component. No routing code needed — the file name determines the URL.
-
-### Index Routes
-
-Files named `index.tsx` serve as the default page for their folder:
-
-- `pages/index.tsx` → `/`
-- `pages/blog/index.tsx` → `/blog`
+This page is available at `/about`.
 
 ---
 
 ## Dynamic Routes
 
-Dynamic routes let you match variable segments in the URL. Use square brackets `[param]` to define a dynamic segment.
+Dynamic routes use square brackets for the folder name. They match any value at that segment:
 
 ```
-pages/
-└── products/
-    ├── index.tsx       →  /products
-    └── [id].tsx        →  /products/1, /products/2, /products/42
+app/products/[id]/
+    └── page.tsx      →  /products/1, /products/42, /products/abc
 ```
 
-Any value in place of `[id]` matches this route.
+```tsx
+interface Props {
+    params: { id: string };
+}
 
-### Accessing the Dynamic Parameter
-
-Use the `useRouter` hook to read the parameter value:
-
-```typescript
-// pages/products/[id].tsx
-import { useRouter } from "next/router";
-
-export default function Product() {
-    const router = useRouter();
-    const { id } = router.query;
-
+export default function ProductPage({ params }: Props) {
     return (
         <main>
-            <h1>Product {id}</h1>
-            <p>Displaying details for product {id}.</p>
+            <h1>Product {params.id}</h1>
         </main>
     );
 }
 ```
 
-- `router.query` is an object containing all dynamic parameters
-- The parameter name matches the filename (`[id]` → `router.query.id`)
-
-### Multiple Dynamic Segments
-
-You can combine multiple dynamic parameters:
-
-```
-pages/
-└── blog/
-    └── [category]/
-        └── [slug].tsx   →  /blog/tech/my-post, /blog/sports/game-review
-```
-
-```typescript
-// pages/blog/[category]/[slug].tsx
-import { useRouter } from "next/router";
-
-export default function BlogPost() {
-    const router = useRouter();
-    const { category, slug } = router.query;
-
-    return (
-        <main>
-            <h1>{slug}</h1>
-            <p>Category: {category}</p>
-        </main>
-    );
-}
-```
+- The folder is named `[id]`
+- `params.id` contains the value from the URL
+- Visiting `/products/42` makes `params.id` equal `"42"`
 
 ---
 
-## Catch-All Routes
+## Creating a Multi-Page Site
 
-Use three dots `[...param]` to match multiple path segments:
+Here is what a site with two static routes and one dynamic route looks like:
 
 ```
-pages/
-└── docs/
-    └── [...slug].tsx   →  /docs, /docs/getting-started, /docs/api/auth
-```
-
-```typescript
-// pages/docs/[...slug].tsx
-import { useRouter } from "next/router";
-
-export default function Docs() {
-    const router = useRouter();
-    const { slug } = router.query;
-
-    // slug is an array: ["getting", "started"] for /docs/getting-started
-    return (
-        <main>
-            <h1>Documentation</h1>
-            <p>Path: {Array.isArray(slug) ? slug.join(" / ") : slug}</p>
-        </main>
-    );
-}
+app/
+├── layout.tsx
+├── page.tsx              →  /
+├── about/
+│   └── page.tsx          →  /about
+├── menu/
+│   └── page.tsx          →  /menu
+└── menu/[category]/
+    └── page.tsx          →  /menu/drinks, /menu/food
 ```
 
 ---
 
 ## Linking Between Pages
 
-Use the `Link` component for client-side navigation between routes.
+Use the `<Link>` component instead of `<a>` tags for client-side navigation:
 
-```typescript
+```tsx
 import Link from "next/link";
 
-export default function Home() {
+export default function Nav() {
     return (
         <nav>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
-            <Link href="/products/42">Product 42</Link>
+            <Link href="/menu">Menu</Link>
         </nav>
     );
 }
 ```
 
-`Link` prefetches pages in the background, making navigation feel instant.
-
-### Programmatic Navigation
-
-Use `router.push()` to navigate in response to an event:
-
-```typescript
-import { useRouter } from "next/router";
-
-export default function Login() {
-    const router = useRouter();
-
-    function handleLogin() {
-        // Perform login logic, then redirect:
-        router.push("/dashboard");
-    }
-
-    return <button onClick={handleLogin}>Log In</button>;
-}
-```
-
----
-
-## The App Router (Next.js 13+)
-
-Newer Next.js versions use the `app/` directory. The router works the same way, but folders replace files:
-
-```
-app/
-├── page.tsx          →  /
-├── about/
-│   └── page.tsx      →  /about
-└── products/
-    ├── page.tsx      →  /products
-    └── [id]/
-        └── page.tsx  →  /products/1, etc.
-```
-
-Special files in the App Router:
-
-| File | Purpose |
-|---|---|
-| `page.tsx` | The route's UI component |
-| `layout.tsx` | Shared layout wrapping child pages |
-| `loading.tsx` | Shown while the page loads |
+`<Link>` enables fast page transitions without a full browser reload.
 
 ---
 
 ## Summary
 
-- Next.js routes are determined by your **file structure** — no router configuration needed
-- **Static routes** use fixed filenames like `about.tsx`
-- **Dynamic routes** use `[param].tsx` for variable URL segments
-- **Catch-all routes** (`[...param].tsx`) match any number of segments
-- Use `<Link>` for navigation, `router.push()` for programmatic redirects
+- Static routes: create a folder with a `page.tsx` file
+- Dynamic routes: use `[param]` folder names, access via `params`
+- Use `<Link>` for navigating between pages
+- The file system determines the URL structure

@@ -38,6 +38,13 @@ window.SITES_DATA = {
       "title": "Build Advanced Interfaces",
       "description": "Build modern web applications with HTML, CSS, JavaScript, Next.js, and AI-assisted development tools.",
       "courses": ["diploma-of-it"]
+    },
+    {
+      "href": "/version-control",
+      "img": "./_assets/version-control.png",
+      "title": "Version Control",
+      "description": "Learn Git and version control workflows through the VS Code interface.",
+      "courses": ["diploma-of-it"]
     }
   ]
 };

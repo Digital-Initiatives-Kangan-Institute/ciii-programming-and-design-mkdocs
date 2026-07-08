@@ -1,173 +1,116 @@
 # Arrow Functions
 
-Arrow functions are a concise syntax for writing functions in JavaScript and TypeScript. They are widely used in React for event handlers, callbacks, and inline logic.
+Arrow functions are a shorter syntax for writing functions in JavaScript and TypeScript. They are widely used in React for event handlers, callbacks, and functional patterns.
 
 ---
 
-## Syntax
+## Traditional vs Arrow Syntax
 
-### Traditional Function
+Traditional function:
 
-```typescript
-function add(a: number, b: number): number {
+```javascript
+function add(a, b) {
     return a + b;
 }
 ```
 
-### Arrow Function
+Arrow function:
 
-```typescript
-const add = (a: number, b: number): number => {
+```javascript
+const add = (a, b) => {
     return a + b;
 };
 ```
 
-### Implicit Return
+---
 
-If the function body is a single expression, you can omit the braces and `return` keyword:
+## Concise Body
 
-```typescript
-const add = (a: number, b: number): number => a + b;
+If the function body only contains a return statement, you can use the concise syntax:
+
+```javascript
+const add = (a, b) => a + b;
 ```
 
-### Single Parameter
+No curly braces, no `return` keyword.
 
-Parentheses are optional when there is exactly one parameter:
+---
 
-```typescript
-const double = (n: number) => n * 2;
-const greet = (name: string) => `Hello, ${name}!`;
-```
+## Single Parameter
 
-### No Parameters
+If there is exactly one parameter, the parentheses can be omitted:
 
-Empty parentheses are required when there are no parameters:
+```javascript
+const double = n => n * 2;
 
-```typescript
-const getGreeting = () => "Hello, World!";
+// Same as:
+const double = (n) => {
+    return n * 2;
+};
 ```
 
 ---
 
-## Why Arrow Functions in React?
+## Arrow Functions in React
 
-Arrow functions are commonly used in React because they are shorter and have predictable `this` behaviour. They are especially useful as:
+Arrow functions are commonly used for event handlers and callbacks:
 
-### Inline Event Handlers
-
-```typescript
-<button onClick={() => setCount(count + 1)}>
-    Increment
-</button>
-
-<input onChange={(e) => setQuery(e.target.value)} />
+```tsx
+<button onClick={() => setCount(count + 1)}>Add</button>
 ```
 
-### Callbacks in Array Methods
+Passing arguments to a handler:
 
-```typescript
-const names = ["Alice", "Bob", "Charlie"];
-const nameLengths = names.map(name => name.length);
-const adults = users.filter(user => user.age >= 18);
+```tsx
+<button onClick={() => handleDelete(item.id)}>Delete</button>
 ```
 
-### Passing Extra Arguments to Handlers
-
-```typescript
-function handleDelete(id: number) {
-    console.log("Delete item:", id);
-}
-
-items.map(item => (
-    <button key={item.id} onClick={() => handleDelete(item.id)}>
-        Delete {item.name}
-    </button>
-));
-```
+Without the arrow function wrapper, `handleDelete(item.id)` would run immediately on render rather than on click.
 
 ---
 
-## Arrow Functions vs Traditional Functions
+## Arrow Functions in Array Methods
 
-| Feature | Traditional Function | Arrow Function |
-|---|---|---|
-| Syntax | `function name() {}` | `const name = () => {}` |
-| `this` binding | Dynamic (caller-dependent) | Lexical (from surrounding scope) |
-| `arguments` object | Available | Not available |
-| Constructor (`new`) | Can be used | Cannot be used |
-| Hoisting | Function declarations hoisted | Not hoisted (assigned to variable) |
-| Implicit return | No | Yes (single expressions) |
+Arrow functions make array operations cleaner:
 
----
-
-## Common Patterns
-
-### Transforming Data
-
-```typescript
+```javascript
 const prices = [10, 20, 30];
 const withTax = prices.map(price => price * 1.1);
-// [11, 22, 33]
+
+const affordable = prices.filter(price => price < 25);
 
 const total = prices.reduce((sum, price) => sum + price, 0);
-// 60
-```
-
-### Filtering
-
-```typescript
-const products = [
-    { name: "Laptop", price: 1200 },
-    { name: "Mouse", price: 25 },
-    { name: "Keyboard", price: 80 }
-];
-
-const affordable = products.filter(p => p.price < 100);
-// [{ name: "Mouse", price: 25 }, { name: "Keyboard", price: 80 }]
-```
-
-### Sorting
-
-```typescript
-const sorted = products.sort((a, b) => a.price - b.price);
-// Mouse (25), Keyboard (80), Laptop (1200)
 ```
 
 ---
 
-## Performance Consideration
+## Refactoring to Arrow Functions
 
-Arrow functions create a **new function reference on every render**. This is usually fine, but can cause unnecessary re-renders in performance-critical components.
+Before (traditional function):
 
-```typescript
-// Creates a new function on every render
-<ChildComponent onClick={() => doSomething(id)} />
-```
-
-If this causes issues, use `useCallback` to memoize the function:
-
-```typescript
-import { useCallback, useState } from "react";
-
-export default function Parent() {
-    const [count, setCount] = useState(0);
-
-    const handleClick = useCallback(() => {
-        setCount(c => c + 1);
-    }, []);   // Function identity stable across renders
-
-    return <ChildComponent onClick={handleClick} />;
+```tsx
+function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    console.log("Submitted");
 }
 ```
 
-Only use `useCallback` when you actually have a performance problem. For most components, inline arrow functions are perfectly acceptable.
+After (arrow function):
+
+```tsx
+const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log("Submitted");
+};
+```
+
+The arrow function syntax keeps the function assigned to a `const`, making it clear that `handleSubmit` should not be reassigned.
 
 ---
 
 ## Summary
 
-- Arrow functions use `() => {}` syntax with **implicit returns** for single expressions
-- They are **concise** — ideal for inline event handlers and array methods
-- Arrow functions do **not** have their own `this` — they inherit from surrounding scope
-- In React, use them for `onClick`, `onChange`, `.map()`, `.filter()`, etc.
-- For performance-sensitive handlers, memoize with `useCallback`
+- Arrow functions provide a shorter syntax: `(params) => { body }`
+- Concise body omits `{}` and `return` for single expressions
+- Widely used in React for event handlers and array methods
+- Refactoring to arrow functions can make code clearer and more consistent

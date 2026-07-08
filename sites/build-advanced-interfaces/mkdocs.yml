@@ -14,35 +14,52 @@ nav:
         - HTML Fundamentals: pages/resources/html-css/html-fundamentals.md
         - CSS Fundamentals: pages/resources/html-css/css-fundamentals.md
       - JavaScript:
-        - Variables and Control Flow: pages/resources/javascript/variables-and-control-flow.md
+        - Linking JavaScript: pages/resources/javascript/linking-javascript.md
+        - Variables and Data Types: pages/resources/javascript/variables.md
+        - Control Flow: pages/resources/javascript/control-flow.md
         - Functions: pages/resources/javascript/functions.md
         - Events and the DOM: pages/resources/javascript/events-and-dom.md
-        - Async JavaScript and Fetch: pages/resources/javascript/async-and-fetch.md
+        - Bootstrap: pages/resources/javascript/bootstrap.md
+      - AI-Assisted Development:
+        - AI-Assisted Development: pages/resources/ai-tools/ai-assisted-development.md
       - Web Architecture:
-        - Data, APIs, and the Frontend: pages/resources/architecture/data-apis-frontend.md
+        - How the Web Works: pages/resources/architecture/how-the-web-works.md
+        - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
         - Mock APIs: pages/resources/architecture/mock-apis.md
-        - Building a Login Page: pages/resources/architecture/building-login-page.md
-        - SSR and Frameworks: pages/resources/architecture/ssr-and-frameworks.md
-      - NextJS:
+        - Building Forms and Validation: pages/resources/architecture/forms-and-validation.md
+      - Next.js:
+        - What is React: pages/resources/nextjs/what-is-react.md
+        - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
         - Routing: pages/resources/nextjs/routing.md
-        - Layouts: pages/resources/nextjs/layouts.md
-        - TypeScript: pages/resources/nextjs/typescript.md
-        - Components: pages/resources/nextjs/components.md
-        - Events: pages/resources/nextjs/events.md
+        - Components and Layouts: pages/resources/nextjs/components-layouts.md
+        - Events and State: pages/resources/nextjs/events-and-state.md
         - Arrow Functions: pages/resources/nextjs/arrow-functions.md
-        - Hooks: pages/resources/nextjs/hooks.md
+        - Fetch, Async, and JSON: pages/resources/nextjs/fetch-async-json.md
+        - useState and useEffect: pages/resources/nextjs/usestate-useeffect.md
+        - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
+      - Component Libraries:
+        - Mantine UI: pages/resources/mantine/mantine.md
+      - Supabase:
+        - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
+        - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
+      - Deployment:
+        - Deploying Your Project: pages/resources/deployment/deploying.md
 
     - Tasks:
-      - Profile Page: pages/tasks/profile-page.md
-      - Style Your Profile: pages/tasks/style-your-profile.md
       - Cafe Website: pages/tasks/cafe-website.md
-      - Data and Decisions: pages/tasks/data-and-decisions.md
-      - Build a Calculator: pages/tasks/build-a-calculator.md
-      - JavaScript Interactivity: pages/tasks/javascript-interactivity.md
-      - Interactive Gallery: pages/tasks/interactive-gallery.md
-      - Weather Widget: pages/tasks/weather-widget.md
-      - Building a Login Page: pages/tasks/building-login-page.md
-      - NextJS Application: pages/tasks/nextjs-application.md
+      - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
+      - Agent-Assisted Coding Task: pages/tasks/agent-assisted-coding.md
+      - Fetch and Display API Data: pages/tasks/fetch-api-data.md
+      - Build and Improve a Login Page: pages/tasks/login-page.md
+      - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+      - Interactive Component: pages/tasks/interactive-component.md
+      - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
+      - Fetching Data with State: pages/tasks/fetching-data-with-state.md
+      - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+      - Mantine Component Library: pages/tasks/mantine-components.md
+      - Supabase as a CMS: pages/tasks/supabase-cms.md
+      - Deploy Your Project: pages/tasks/deploy-project.md
+      - Final Project: pages/tasks/final-project.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -50,7 +67,7 @@ theme:
   palette:
     primary: indigo
   features:
-    - toc.integrate 
+    - toc.integrate
     - navigation.sections
     - navigation.path
     - navigation.footer
@@ -63,7 +80,7 @@ plugins:
       increment_across_pages: true
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
-      restart_increment_after: 
+      restart_increment_after:
         - pages/tasks/cafe-website.md
 
 extra:

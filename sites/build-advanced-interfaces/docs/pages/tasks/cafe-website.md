@@ -1,148 +1,61 @@
 # Cafe Website
 
-Build a two-page cafe website from scratch using HTML and CSS.
-
----
-
-## Page 1: Home
+## Build the Home Page
 
 !!! abstract "Instructions"
-    Create a `index.html` page for a cafe called "The Daily Grind". The page should include:
+    Create the Home page for a cafe website.
 
-    - A header with the cafe name and a navigation bar linking to Home and Menu
-    - A hero section with a welcome message and a background colour
-    - A brief "About Us" paragraph
-    - Opening hours displayed in a list
+    Your page must include:
 
-    Use an external stylesheet (`style.css`) for all styling.
+    - A heading with the cafe name
+    - A welcome paragraph introducing the cafe
+    - At least one image
+    - A navigation section (links won't work yet — you will add the second page next)
 
-??? code "Starter Structure"
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Daily Grind</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>The Daily Grind</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-            </nav>
-        </header>
+    Link an external CSS file and use at least two selector types (element and class).
 
-        <section class="hero">
-            <!-- Your hero content here -->
-        </section>
+    Push your site to GitHub. See the [Version Control](/version-control) site if you need help with staging, committing, and pushing.
 
-        <section class="about">
-            <!-- Your about content here -->
-        </section>
-
-        <section class="hours">
-            <!-- Your hours content here -->
-        </section>
-
-        <footer>
-            <p>The Daily Grind - Your local cafe</p>
-        </footer>
-    </body>
-    </html>
-    ```
-
-??? hint "Hint - Hero Section"
-    Use a `<div>` with a background colour for the hero section. Add a heading and a paragraph inside it. Use padding to give it height.
-
-??? tip "Hint - Navigation Styling"
-    Style your navigation links with:
-
-    ```css
-    nav a {
-        text-decoration: none;
-        margin: 0 10px;
-        color: #333;
-    }
-    ```
+??? hint "Hint - Click to expand"
+    Start with the standard HTML document structure. Use `<h1>` for the cafe name and `<p>` for the welcome text. For the image, use `<img>` with `src` pointing to a local image file. Your CSS should style the heading and a class-based selector — think about what you want to highlight on the page.
 
 ---
 
-## Page 2: Menu
+## Add a Menu Page
 
 !!! abstract "Instructions"
-    Create a `menu.html` page that displays the cafe's menu. Include:
+    Create a second page for the cafe menu. Then link both pages together.
 
-    - The same header and navigation bar as the home page
-    - Menu items organised into categories (Coffee, Tea, Food)
-    - Each item should have a name, description, and price
-    - Use the same `style.css` stylesheet from the home page
+    Your menu page must include:
 
-??? code "Starter Structure"
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu - The Daily Grind</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>The Daily Grind</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-            </nav>
-        </header>
+    - At least **four items**, each with a name, description, and price
+    - At least one image
+    - Navigation links between the Home and Menu pages on both pages
 
-        <main>
-            <h2>Our Menu</h2>
+    Add a third selector type (ID) to your CSS so you now use element, class, and ID selectors.
 
-            <section class="menu-category">
-                <h3>Coffee</h3>
-                <!-- Add coffee items here -->
-            </section>
+    Push your site to GitHub. See the [Version Control](/version-control) site if you need help with staging, committing, and pushing.
 
-            <section class="menu-category">
-                <h3>Tea</h3>
-                <!-- Add tea items here -->
-            </section>
-
-            <section class="menu-category">
-                <h3>Food</h3>
-                <!-- Add food items here -->
-            </section>
-        </main>
-
-        <footer>
-            <p>The Daily Grind - Your local cafe</p>
-        </footer>
-    </body>
-    </html>
-    ```
-
-??? hint "Hint - Menu Item Layout"
-    Use a `<div>` with class `menu-item` for each item:
-
-    ```html
-    <div class="menu-item">
-        <h4>Espresso</h4>
-        <p>A rich and bold single-origin shot</p>
-        <span class="price">$4.00</span>
-    </div>
-    ```
+??? hint "Hint - Click to expand"
+    Create a new HTML file for the menu. Use anchor tags with `href` pointing to the other file (e.g. `<a href="index.html">Home</a>`) on both pages. For each menu item, think about how to structure the name, description, and price — a list or a series of sections. Your ID selector should be used on a unique element like a banner or footer.
 
 ---
 
-## Requirements Checklist
+## Add a Review Page
 
-- Two HTML pages that link to each other
-- One external `style.css` file shared by both pages
-- Use at least 3 different CSS selectors (element, class, id)
-- Include headings, paragraphs, lists, and links
-- Use a consistent colour scheme throughout
-- Test in VS Code with Live Preview
+!!! abstract "Instructions"
+    Create a third page for customer reviews. This page should have a form for submitting a review — the form does not need to work yet, just build the HTML and CSS structure.
+
+    Your review page must include:
+
+    - A **text input** for the reviewer's name with a label
+    - A **number input** for a rating out of 5 with a label
+    - A **textarea** for the review comment with a label
+    - A **submit button**
+    - A section below the form where reviews would appear
+    - Navigation linking to all three pages (Home, Menu, Reviews)
+
+    Push your updated site to GitHub. See the [Version Control](/version-control) site if you need help with staging, committing, and pushing.
+
+??? hint "Hint - Click to expand"
+    Every input needs a `<label>` with a `for` attribute matching the input's `id`. Wrap the form in a `<form>` element. The section below the form is where submitted reviews will eventually be displayed — for now, just add a heading like "What our customers say". Do not worry about making the form functional yet.

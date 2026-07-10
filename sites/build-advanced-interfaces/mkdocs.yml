@@ -20,8 +20,6 @@ nav:
         - Functions: pages/resources/javascript/functions.md
         - Events and the DOM: pages/resources/javascript/events-and-dom.md
         - Bootstrap: pages/resources/javascript/bootstrap.md
-      - AI-Assisted Development:
-        - AI-Assisted Development: pages/resources/ai-tools/ai-assisted-development.md
       - Web Architecture:
         - How the Web Works: pages/resources/architecture/how-the-web-works.md
         - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
@@ -30,6 +28,7 @@ nav:
       - Next.js:
         - What is React: pages/resources/nextjs/what-is-react.md
         - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
+        - npm Packages: pages/resources/nextjs/npm-packages.md
         - Routing: pages/resources/nextjs/routing.md
         - Components and Layouts: pages/resources/nextjs/components-layouts.md
         - Events and State: pages/resources/nextjs/events-and-state.md
@@ -54,7 +53,6 @@ nav:
     - Tasks:
       - Cafe Website: pages/tasks/cafe-website.md
       - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
-      - Agent-Assisted Coding Task: pages/tasks/agent-assisted-coding.md
       - Fetch and Display API Data: pages/tasks/fetch-api-data.md
       - Build and Improve a Login Page: pages/tasks/login-page.md
       - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
@@ -63,6 +61,7 @@ nav:
       - Fetching Data with State: pages/tasks/fetching-data-with-state.md
       - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
       - Mantine Component Library: pages/tasks/mantine-components.md
+      - React Confetti: pages/tasks/react-confetti.md
       - Supabase as a CMS: pages/tasks/supabase-cms.md
       - Deploy Your Project: pages/tasks/deploy-project.md
       - Final Project: pages/tasks/final-project.md

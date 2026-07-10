@@ -18,15 +18,23 @@ The public broker is free for anyone to use but has no authentication or access 
 
 ---
 
-## Including the Client Library
+## Installing the MQTT Library
 
-The HiveMQ JavaScript client is distributed via CDN. Add this `<script>` tag to your HTML file:
+Install the `mqtt` package via npm from inside your Next.js project:
 
-```html
-<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+```bash
+npm install mqtt
 ```
 
-This makes the global `mqtt` object available in your JavaScript.
+This adds the MQTT client library to your project's `package.json` and `node_modules`.
+
+The library exposes the same API as the CDN version but uses ES modules. Import it at the top of any file that needs it:
+
+```typescript
+import mqtt from "mqtt";
+```
+
+The `"use client"` directive is required when using MQTT in Next.js, since the browser WebSocket connection is a client-side operation.
 
 ---
 
@@ -34,10 +42,12 @@ This makes the global `mqtt` object available in your JavaScript.
 
 Use `mqtt.connect()` to establish a connection:
 
-```javascript
+```typescript
+import mqtt from "mqtt";
+
 const client = mqtt.connect("wss://broker.hivemq.com:8884/mqtt");
 
-client.on("connect", function () {
+client.on("connect", () => {
     console.log("Connected to MQTT broker");
 });
 ```
@@ -50,8 +60,8 @@ The `connect` event fires when the connection is successfully established. Only 
 
 Always handle the case where the connection fails:
 
-```javascript
-client.on("error", function (error) {
+```typescript
+client.on("error", (error: Error) => {
     console.error("Connection failed:", error);
 });
 ```
@@ -64,7 +74,7 @@ This ensures your application degrades gracefully if the broker is unreachable.
 
 Each client connecting to an MQTT broker should have a unique ID. If you do not specify one, a random ID is generated:
 
-```javascript
+```typescript
 const client = mqtt.connect("wss://broker.hivemq.com:8884/mqtt", {
     clientId: "my-app-" + Math.random().toString(16).slice(2)
 });
@@ -83,7 +93,7 @@ The `client` object returned by `mqtt.connect()` is your interface to the broker
 ## Summary
 
 - HiveMQ provides a free public MQTT broker at `wss://broker.hivemq.com:8884/mqtt`
-- The JavaScript library is loaded from a CDN with a `<script>` tag
+- Install the library with `npm install mqtt` and import it with `import mqtt from "mqtt"`
 - `mqtt.connect(url)` creates a connection and returns a client object
 - Wait for the `connect` event before performing MQTT operations
 - Handle the `error` event to manage connection failures

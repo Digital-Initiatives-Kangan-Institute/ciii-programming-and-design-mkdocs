@@ -15,119 +15,144 @@ The broker delivers each published message to every subscriber automatically.
 
 ---
 
-## HTML Structure
+## Setting Up
 
-A minimal chat interface needs an input field, a send button, and a display area:
+Install the MQTT library if you have not already:
 
-```html
-<div id="chat-container">
-    <div id="chat-display"></div>
-    <input id="message-input" type="text" placeholder="Type a message..." />
-    <button id="send-btn">Send</button>
-</div>
-
-<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+```bash
+npm install mqtt
 ```
+
+Create a new page at `app/chat/page.tsx` in your Next.js project. Add the `"use client"` directive since this component uses browser APIs.
+
+---
+
+## Component State
+
+Start with the component structure and state variables:
+
+```typescript
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import mqtt from "mqtt";
+
+interface ChatMessage {
+    sender: string;
+    text: string;
+    time: string;
+}
+
+export default function ChatPage() {
+    const [messages, setMessages] = useState<ChatMessage[]>([]);
+    const [input, setInput] = useState("");
+    const clientRef = useRef<ReturnType<typeof mqtt.connect> | null>(null);
+```
+
+- `messages` stores the array of chat messages as state
+- `input` tracks the current text in the input field
+- `clientRef` holds the MQTT client so it persists across re-renders
 
 ---
 
 ## Connecting and Subscribing
 
-Connect to the broker and subscribe to the chat topic:
+Use `useEffect` to connect once when the component mounts:
 
-```javascript
-const client = mqtt.connect("wss://broker.hivemq.com:8884/mqtt");
+```typescript
+    useEffect(() => {
+        clientRef.current = mqtt.connect("wss://broker.hivemq.com:8884/mqtt");
 
-client.on("connect", function () {
-    client.subscribe("chat/general");
-    console.log("Connected to chat");
-});
+        clientRef.current.on("connect", () => {
+            clientRef.current?.subscribe("chat/general");
+            console.log("Connected to chat");
+        });
+
+        clientRef.current.on("message", (topic: string, payload: Buffer) => {
+            const data: ChatMessage = JSON.parse(payload.toString());
+            setMessages((prev) => [...prev, data]);
+        });
+
+        return () => {
+            clientRef.current?.end();
+        };
+    }, []);
 ```
+
+The cleanup function in `useEffect` ends the connection when the component unmounts.
 
 ---
 
-## Publishing Chat Messages
+## Sending Messages
 
-Capture user input and publish it to the topic:
+Publish a JSON message containing the sender, text, and timestamp:
 
-```javascript
-let input = document.querySelector("#message-input");
-let sendBtn = document.querySelector("#send-btn");
+```typescript
+    function sendMessage() {
+        if (input.trim() === "" || !clientRef.current) return;
 
-sendBtn.addEventListener("click", function () {
-    if (input.value.trim() === "") return;
+        const message = {
+            sender: "User",
+            text: input,
+            time: new Date().toLocaleTimeString()
+        };
 
-    client.publish("chat/general", input.value);
-    input.value = "";
-});
-
-input.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        sendBtn.click();
+        clientRef.current.publish("chat/general", JSON.stringify(message));
+        setInput("");
     }
-});
 ```
 
-The `keypress` listener lets users send messages by pressing Enter.
+The message is serialised with `JSON.stringify()` before publishing.
 
 ---
 
-## Displaying Messages
+## Rendering the UI
 
-Listen for incoming messages and add them to the display:
+Return the JSX for the chat interface:
 
-```javascript
-let display = document.querySelector("#chat-display");
-
-client.on("message", function (topic, message) {
-    let msg = document.createElement("div");
-    msg.textContent = message.toString();
-    msg.classList.add("chat-message");
-    display.appendChild(msg);
-    display.scrollTop = display.scrollHeight;
-});
+```typescript
+    return (
+        <div>
+            <h1>Chat</h1>
+            <div style={{
+                border: "1px solid #ccc",
+                height: "300px",
+                overflowY: "scroll",
+                padding: "10px",
+                marginBottom: "10px"
+            }}>
+                {messages.map((msg, i) => (
+                    <div key={i}>
+                        <strong>{msg.sender}</strong>
+                        <span style={{ color: "gray", fontSize: "0.8em", marginLeft: "8px" }}>
+                            {msg.time}
+                        </span>
+                        <p style={{ margin: "4px 0" }}>{msg.text}</p>
+                    </div>
+                ))}
+            </div>
+            <input
+                type="text"
+                value={input}
+                placeholder="Type a message..."
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+            />
+            <button onClick={sendMessage}>Send</button>
+        </div>
+    );
+}
 ```
 
-Setting `scrollTop` keeps the display scrolled to the latest message.
-
----
-
-## Chat with JSON
-
-For a richer chat experience, send JSON messages with sender names and timestamps:
-
-```javascript
-sendBtn.addEventListener("click", function () {
-    let message = {
-        sender: "User123",
-        text: input.value,
-        time: new Date().toLocaleTimeString()
-    };
-
-    client.publish("chat/general", JSON.stringify(message));
-    input.value = "";
-});
-
-client.on("message", function (topic, message) {
-    let data = JSON.parse(message.toString());
-
-    let msg = document.createElement("div");
-    msg.classList.add("chat-message");
-    msg.innerHTML = `
-        <strong>${data.sender}</strong>
-        <span class="time">${data.time}</span>
-        <p>${data.text}</p>
-    `;
-    display.appendChild(msg);
-});
-```
+The `onKeyDown` handler lets users send messages by pressing Enter.
 
 ---
 
 ## Summary
 
-- MQTT chat works by having all clients publish and subscribe to the same topic
+- All chat participants publish and subscribe to the same topic
 - The broker handles routing each message to every subscriber automatically
-- Adding a `keypress` listener on the input allows sending with the Enter key
-- Setting `scrollTop` keeps the chat scrolled to the newest message
+- `useRef` keeps the MQTT client instance stable across React re-renders
+- `useEffect` with an empty dependency array connects once on mount
 - Sending JSON lets you include metadata like sender names and timestamps
+- Clean up the connection in `useEffect`'s return function to prevent memory leaks

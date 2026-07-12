@@ -65,20 +65,22 @@ nav:
         - Deploying Your Project: pages/resources/deployment/deploying.md
 
     - Tasks:
-      - Cafe Website: pages/tasks/cafe-website.md
-      - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
-      - Fetch and Display API Data: pages/tasks/fetch-api-data.md
-      - Build and Improve a Login Page: pages/tasks/login-page.md
-      - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
-      - Interactive Component: pages/tasks/interactive-component.md
-      - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
-      - Fetching Data with State: pages/tasks/fetching-data-with-state.md
-      - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
-      - Mantine Component Library: pages/tasks/mantine-components.md
-      - React Confetti: pages/tasks/react-confetti.md
-      - Supabase as a CMS: pages/tasks/supabase-cms.md
-      - Deploy Your Project: pages/tasks/deploy-project.md
-      - Final Project: pages/tasks/final-project.md
+      - HTML/CSS:
+        - Cafe Website: pages/tasks/cafe-website.md
+        - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
+        - Build and Improve a Login Page: pages/tasks/login-page.md
+      - JavaScript and APIs:
+        - Fetch and Display API Data: pages/tasks/fetch-api-data.md
+      - Next.js:
+        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+        - Interactive Component: pages/tasks/interactive-component.md
+        - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
+        - Fetching Data with State: pages/tasks/fetching-data-with-state.md
+        - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+      - Libraries and Integrations:
+        - Mantine Component Library: pages/tasks/mantine-components.md
+        - React Confetti: pages/tasks/react-confetti.md
+        - Supabase as a CMS: pages/tasks/supabase-cms.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

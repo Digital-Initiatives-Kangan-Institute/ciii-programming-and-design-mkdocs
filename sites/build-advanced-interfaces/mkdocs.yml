@@ -1,0 +1,106 @@
+site_name: Build Advanced Interfaces
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - HTML and CSS:
+        - HTML Fundamentals: pages/resources/html-css/html-fundamentals.md
+        - CSS Fundamentals: pages/resources/html-css/css-fundamentals.md
+      - JavaScript:
+        - Linking JavaScript: pages/resources/javascript/linking-javascript.md
+        - Variables and Data Types: pages/resources/javascript/variables.md
+        - Control Flow: pages/resources/javascript/control-flow.md
+        - Functions: pages/resources/javascript/functions.md
+        - Events and the DOM: pages/resources/javascript/events-and-dom.md
+        - Bootstrap: pages/resources/javascript/bootstrap.md
+      - Web Architecture:
+        - How the Web Works: pages/resources/architecture/how-the-web-works.md
+        - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
+        - Mock APIs: pages/resources/architecture/mock-apis.md
+        - Building Forms and Validation: pages/resources/architecture/forms-and-validation.md
+      - Next.js:
+        - What is React: pages/resources/nextjs/what-is-react.md
+        - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
+        - npm Packages: pages/resources/nextjs/npm-packages.md
+        - Routing: pages/resources/nextjs/routing.md
+        - Components and Layouts: pages/resources/nextjs/components-layouts.md
+        - Events and State: pages/resources/nextjs/events-and-state.md
+        - Arrow Functions: pages/resources/nextjs/arrow-functions.md
+        - Fetch, Async, and JSON: pages/resources/nextjs/fetch-async-json.md
+        - useState and useEffect: pages/resources/nextjs/usestate-useeffect.md
+        - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
+      - Component Libraries:
+        - Mantine UI: pages/resources/mantine/mantine.md
+      - MQTT:
+        - MQTT Overview: pages/resources/mqtt/mqtt-overview.md
+        - Connecting to HiveMQ: pages/resources/mqtt/connecting-to-hivemq.md
+        - Publishing and Subscribing: pages/resources/mqtt/publishing-and-subscribing.md
+        - Working with JSON: pages/resources/mqtt/working-with-json.md
+        - Real-Time Chat with MQTT: pages/resources/mqtt/mqtt-chat-example.md
+      - Supabase:
+        - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
+        - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
+      - Deployment:
+        - Deploying Your Project: pages/resources/deployment/deploying.md
+
+    - Tasks:
+      - Cafe Website: pages/tasks/cafe-website.md
+      - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
+      - Fetch and Display API Data: pages/tasks/fetch-api-data.md
+      - Build and Improve a Login Page: pages/tasks/login-page.md
+      - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+      - Interactive Component: pages/tasks/interactive-component.md
+      - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
+      - Fetching Data with State: pages/tasks/fetching-data-with-state.md
+      - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+      - Mantine Component Library: pages/tasks/mantine-components.md
+      - React Confetti: pages/tasks/react-confetti.md
+      - Supabase as a CMS: pages/tasks/supabase-cms.md
+      - Deploy Your Project: pages/tasks/deploy-project.md
+      - Final Project: pages/tasks/final-project.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - toc.integrate
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      restart_increment_after:
+        - pages/tasks/cafe-website.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

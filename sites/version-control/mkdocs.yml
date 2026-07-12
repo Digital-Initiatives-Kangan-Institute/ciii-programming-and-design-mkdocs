@@ -1,0 +1,63 @@
+site_name: Version Control
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - What is Version Control: pages/resources/version-control/what-is-vc.md
+      - Git with VS Code: pages/resources/version-control/git-in-vscode.md
+      - Branching Strategy: pages/resources/version-control/branching-strategy.md
+      - Git Tools and Clients: pages/resources/version-control/git-tools.md
+      - What is GitHub: pages/resources/version-control/what-is-github.md
+      - .gitignore: pages/resources/version-control/gitignore.md
+      - Merge Conflicts: pages/resources/version-control/merge-conflicts.md
+
+    - Tasks:
+      - Initialise and Commit: pages/tasks/initialise-and-commit.md
+      - Branch and Merge: pages/tasks/branch-and-merge.md
+      - Daily Workflow: pages/tasks/daily-workflow.md
+      - Working with a dev Branch: pages/tasks/working-with-dev.md
+      - Pull Request Workflow: pages/tasks/pull-request-workflow.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: blue
+  features:
+    - toc.integrate
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      restart_increment_after:
+        - pages/tasks/initialise-and-commit.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

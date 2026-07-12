@@ -10,9 +10,22 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - HTML and CSS:
-        - HTML Fundamentals: pages/resources/html-css/html-fundamentals.md
-        - CSS Fundamentals: pages/resources/html-css/css-fundamentals.md
+      - HTML:
+        - Introduction: pages/resources/html-css/html-fundamentals.md
+        - Document Structure: pages/resources/html-css/document-structure.md
+        - Text Elements: pages/resources/html-css/text-elements.md
+        - Links and Images: pages/resources/html-css/links-and-images.md
+        - Containers and Nesting: pages/resources/html-css/containers-and-nesting.md
+        - Lists: pages/resources/html-css/lists.md
+        - Tables: pages/resources/html-css/tables.md
+        - Forms and Inputs: pages/resources/html-css/forms-and-inputs.md
+      - CSS:
+        - Introduction: pages/resources/html-css/css-fundamentals.md
+        - Selectors and Specificity: pages/resources/html-css/selectors-and-specificity.md
+        - The Box Model: pages/resources/html-css/box-model.md
+        - Colours and Typography: pages/resources/html-css/colours-and-typography.md
+        - Flexbox Layout: pages/resources/html-css/flexbox.md
+        - Responsive Design: pages/resources/html-css/responsive-design.md
       - JavaScript:
         - Linking JavaScript: pages/resources/javascript/linking-javascript.md
         - Variables and Data Types: pages/resources/javascript/variables.md

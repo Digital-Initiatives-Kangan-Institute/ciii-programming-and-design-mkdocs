@@ -34,7 +34,8 @@ nav:
         - Events and the DOM: pages/resources/javascript/events-and-dom.md
         - Bootstrap: pages/resources/javascript/bootstrap.md
       - Web Architecture:
-        - How the Web Works: pages/resources/architecture/how-the-web-works.md
+        - The Client-Server Model: pages/resources/architecture/client-server-model.md
+        - JSON: pages/resources/architecture/json.md
         - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
         - Mock APIs: pages/resources/architecture/mock-apis.md
         - Building Forms and Validation: pages/resources/architecture/forms-and-validation.md

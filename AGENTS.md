@@ -152,6 +152,7 @@ Bullet points summarising key takeaways.
 - Use `***` or `---` as horizontal dividers between major sections
 - Code blocks: triple backticks with language (` ```html `, ` ```javascript `, ` ```bash `, ` ```css `, ` ```typescript `)
 - Tables: standard markdown tables for comparisons or reference
+- The `enumerate-headings` plugin auto-numbers all headings. Never put manual numbers in headings (e.g. use `## Syntax Rules` not `## 1. Syntax Rules`). Rely on the plugin for numbering.
 
 ### Task Pages
 

@@ -1,4 +1,4 @@
-# How the Web Works
+# The Client-Server Model
 
 Understanding the flow of data from server to screen helps you build better web applications. This page covers the fundamental architecture of the web.
 

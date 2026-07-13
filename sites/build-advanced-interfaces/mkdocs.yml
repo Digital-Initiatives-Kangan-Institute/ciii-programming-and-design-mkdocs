@@ -70,7 +70,7 @@ nav:
         - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
         - Cafe Site Login: pages/tasks/login-page.md
       - JavaScript and APIs:
-        - Fetch and Display API Data: pages/tasks/fetch-api-data.md
+        - Cafe Recipes Page: pages/tasks/fetch-api-data.md
       - Next.js:
         - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
         - Interactive Component: pages/tasks/interactive-component.md

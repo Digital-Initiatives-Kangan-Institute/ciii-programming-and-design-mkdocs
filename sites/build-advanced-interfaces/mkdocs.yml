@@ -68,7 +68,7 @@ nav:
       - HTML/CSS:
         - Cafe Website: pages/tasks/cafe-website.md
         - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
-        - Build and Improve a Login Page: pages/tasks/login-page.md
+        - Cafe Site Login: pages/tasks/login-page.md
       - JavaScript and APIs:
         - Fetch and Display API Data: pages/tasks/fetch-api-data.md
       - Next.js:

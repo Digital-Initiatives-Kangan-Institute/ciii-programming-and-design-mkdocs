@@ -20,6 +20,7 @@ This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Ea
 | `test-site` | Test Site | green | — |
 | `version-control` | Version Control | blue | cert3-in-it, diploma-of-it |
 | `ai-tools` | AI-Assisted Development | cyan | diploma-of-it |
+| `hardware-os` | Hardware & OS | red | cert3-in-it |
 | `build-advanced-interfaces` | Build Advanced Interfaces | indigo | diploma-of-it |
 
 ---
@@ -152,6 +153,7 @@ Bullet points summarising key takeaways.
 - Use `***` or `---` as horizontal dividers between major sections
 - Code blocks: triple backticks with language (` ```html `, ` ```javascript `, ` ```bash `, ` ```css `, ` ```typescript `)
 - Tables: standard markdown tables for comparisons or reference
+- The `enumerate-headings` plugin auto-numbers all headings. Never put manual numbers in headings (e.g. use `## Syntax Rules` not `## 1. Syntax Rules`). Rely on the plugin for numbering.
 
 ### Task Pages
 

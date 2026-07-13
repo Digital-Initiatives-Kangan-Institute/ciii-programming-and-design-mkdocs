@@ -212,4 +212,4 @@ This removes it from `node_modules/`, `package.json`, and `package-lock.json`.
 
 ## Activity
 
-[Try it: React Confetti Activity](/pages/tasks/react-confetti/){ .md-button }
+[Try it: React Confetti Activity](../../tasks/react-confetti.md){ .md-button }

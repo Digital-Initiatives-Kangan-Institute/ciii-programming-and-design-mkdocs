@@ -1,0 +1,61 @@
+site_name: Hardware & OS
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - Introduction to Operating Systems: pages/resources/intro-to-os.md
+      - Computer Hardware Components: pages/resources/hardware-components.md
+      - Raspberry Pi Zero: pages/resources/raspberry-pi-zero.md
+      - Hardware, Software, and Operating Systems: pages/resources/hardware-software-os.md
+      - Installing an Operating System: pages/resources/installing-os.md
+      - The Boot Process: pages/resources/boot-process.md
+      - Interfaces — GUI and Command Line: pages/resources/gui-cli.md
+      - Managing Software and Hardware: pages/resources/managing-software-hardware.md
+      - System Optimisation and Maintenance: pages/resources/system-optimisation.md
+      - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
+      - Implementing and Evaluating Technology: pages/resources/implementing-evaluating-tech.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: red
+  features:
+    - toc.integrate 
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      # restart_increment_after: 
+      #  - path/to/page.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

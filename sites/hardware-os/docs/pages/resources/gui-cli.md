@@ -74,7 +74,7 @@ These commands work across Windows (PowerShell/CMD) and Linux/macOS. Where the c
 | Action | Windows (CMD) | Linux / macOS |
 |---|---|---|
 | Create folder | `mkdir <name>` | `mkdir <name>` |
-| Create empty file | `type nul > file.txt` | `touch file.txt` |
+| Create empty file | — | `touch file.txt` (Linux/macOS) |
 | Copy file | `copy <src> <dest>` | `cp <src> <dest>` |
 | Move/rename file | `move <src> <dest>` | `mv <src> <dest>` |
 | Delete file | `del <file>` | `rm <file>` |
@@ -86,9 +86,9 @@ These commands work across Windows (PowerShell/CMD) and Linux/macOS. Where the c
 | Action | Windows (CMD) | Linux / macOS |
 |---|---|---|
 | Display hostname | `hostname` | `hostname` |
-| Show IP configuration | `ipconfig` | `ip a` or `ifconfig` |
-| List running processes | `tasklist` | `ps aux` |
-| Show disk usage | `chkdsk` | `df -h` |
+| Show IP configuration | `ipconfig` | `ip address` |
+| List running processes | `tasklist` | `ps` (and `ps -e` to show all) |
+| Show disk usage | `chkdsk` | `df` (and `df -h` for human-readable sizes) |
 | Clear screen | `cls` | `clear` |
 
 ### PowerShell vs Command Prompt
@@ -103,7 +103,7 @@ Windows offers two CLI environments:
 | Capability | Basic operations | Advanced administration |
 | Modern Windows | Still available | Recommended for new work |
 
-PowerShell commands use a verb-noun format (e.g. `Get-Process`, `Set-Location`) and can pipe objects rather than just text. It is the preferred CLI for Windows system administration.
+PowerShell uses a verb-noun format (e.g. `Get-Process`, `Set-Location`) and is the recommended CLI for Windows system administration.
 
 ***
 

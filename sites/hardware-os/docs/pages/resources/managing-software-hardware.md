@@ -41,18 +41,13 @@ The installer typically prompts for:
 
 ### Linux
 
-Linux distributions use package managers that download and install software from central repositories. This ensures compatibility and automatic updates.
+Linux distributions use package managers that download and install software from central repositories. This ensures compatibility and automatic updates. The command needs `sudo` because installing software affects the whole system — you will be asked for your password.
 
-| Distro | Package Manager | Install Command |
-|---|---|---|
-| Ubuntu / Debian | APT | `sudo apt install firefox` |
-| Fedora | DNF | `sudo dnf install firefox` |
-| Arch | Pacman | `sudo pacman -S firefox` |
-
-Additional methods on Linux include:
-- **Snap** and **Flatpak** — Sandboxed, cross-distro package formats
-- **AppImage** — Portable, single-file applications
-- **Compiling from source** — Download code and build it yourself (advanced)
+| Distro | Install Command |
+|---|---|
+| Ubuntu / Debian | `sudo apt install firefox` |
+| Fedora | `sudo dnf install firefox` |
+| Arch | `sudo pacman -S firefox` |
 
 ***
 
@@ -88,9 +83,8 @@ When you plug in a printer, the OS needs a driver that understands the printer's
 
 **Linux — Command line:**
 ```bash
-lspci -k          # List PCI devices and their kernel drivers
-lsusb             # List USB devices
-dmesg | tail      # View recent system messages (driver load info)
+lspci      # Lists internal hardware and their drivers
+lsusb      # Lists USB devices connected
 ```
 
 ***

@@ -39,10 +39,11 @@ For a deeper clean, use **Storage Sense** in Settings — it can automatically d
 
 ### Linux — Cleaning Up
 
+Linux keeps downloaded package files and system caches that can be cleaned. Use the graphical **Disk Usage Analyzer** tool, or run these commands in the terminal:
+
 ```bash
-sudo apt autoremove       # Remove unused dependencies
-sudo apt clean             # Clear package cache
-rm -rf ~/.cache/*          # Clear user cache (use with care)
+sudo apt autoremove    # Removes packages that are no longer needed
+sudo apt clean          # Clears the downloaded package cache
 ```
 
 ***
@@ -93,10 +94,11 @@ If the CPU is stuck at 100% or RAM is full, sort the Processes tab by that colum
 
 ### Linux — System Monitoring
 
+These terminal commands show what your computer is doing right now:
+
 ```bash
-top            # Real-time process list sorted by CPU usage
-htop           # Improved, interactive version (install with sudo apt install htop)
-free -h        # Show memory usage in human-readable format
+top             # Shows running processes and resource usage (press Q to quit)
+free -h         # Shows how much memory is used and free
 ```
 
 ***
@@ -137,9 +139,8 @@ Configure **Active hours** to prevent unexpected restarts during your working da
 ### Linux Updates
 
 ```bash
-sudo apt update          # Refresh the list of available updates
-sudo apt upgrade         # Install all available updates
-sudo apt dist-upgrade    # More comprehensive upgrade (handles dependency changes)
+sudo apt update          # Refreshes the list of available updates
+sudo apt upgrade         # Installs all available updates
 ```
 
 ### Third-Party Software
@@ -164,7 +165,7 @@ Windows automatically defragments HDDs on a weekly schedule. To check or run man
 ### Disk Error Checking
 
 - **Windows**: Right-click drive → Properties → Tools → Check
-- **Linux**: `sudo fsck /dev/sda1` (drive must be unmounted)
+- **Linux**: Use the **Disks** application (GUI) to check drive health
 
 ### Backup
 

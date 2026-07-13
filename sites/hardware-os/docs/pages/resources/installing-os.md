@@ -103,7 +103,14 @@ The installer copies files, installs features, and configures the system. This t
 
 After the OS is installed, there are several configuration steps to complete:
 
-1. **Install updates** — Run Windows Update or `sudo apt update && sudo apt upgrade` to get the latest security patches
+1. **Install updates** — Run Windows Update, or on Linux run:
+   
+   ```bash
+   sudo apt update
+   sudo apt upgrade
+   ```
+   
+   (`sudo` gives you administrator permissions — the terminal will ask for your password.)
 2. **Install drivers** — Check Device Manager (Windows) or Additional Drivers (Linux) for any missing drivers
 3. **Configure security** — Enable firewall, ensure antivirus is active (Windows Defender is built in)
 4. **Install essential software** — Web browser, office suite, communication tools

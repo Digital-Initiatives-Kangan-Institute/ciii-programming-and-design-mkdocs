@@ -16,6 +16,7 @@ nav:
       - Installing an Operating System: pages/resources/installing-os.md
       - The Boot Process: pages/resources/boot-process.md
       - Interfaces — GUI and Command Line: pages/resources/gui-cli.md
+      - Command Line Basics: pages/resources/command-line-basics.md
       - Managing Software and Hardware: pages/resources/managing-software-hardware.md
       - System Optimisation and Maintenance: pages/resources/system-optimisation.md
       - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
@@ -23,6 +24,7 @@ nav:
     - Tasks:
       - "Research: Hardware, OS, and Software Selection": pages/tasks/hardware-os-software-selection.md
       - "Research: Selecting Hardware for a Small Project": pages/tasks/selecting-project-hardware.md
+      - Creating Files and Folders on the Linux CLI: pages/tasks/creating-files-folders-cli.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

@@ -21,8 +21,8 @@ nav:
       - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
       - Implementing and Evaluating Technology: pages/resources/implementing-evaluating-tech.md
     - Tasks:
-      - Research: Hardware, OS, and Software Selection: pages/tasks/hardware-os-software-selection.md
-      - Research: Selecting Hardware for a Small Project: pages/tasks/selecting-project-hardware.md
+      - "Research: Hardware, OS, and Software Selection": pages/tasks/hardware-os-software-selection.md
+      - "Research: Selecting Hardware for a Small Project": pages/tasks/selecting-project-hardware.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

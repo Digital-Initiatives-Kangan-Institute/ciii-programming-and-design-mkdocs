@@ -13,9 +13,8 @@ A single-board computer (SBC) packs all the core components of a computer onto o
 - USB ports for peripherals
 - Video output (mini HDMI)
 - Storage via microSD card
-- GPIO pins for connecting sensors, LEDs, motors, and other electronics
 
-Unlike a desktop PC, there are no expansion slots, no separate graphics card, and no internal drive bays. Everything you need is on one board, and you add only what you need via USB or the GPIO header.
+Unlike a desktop PC, there are no expansion slots, no separate graphics card, and no internal drive bays. Everything you need is on one board, and you add only what you need via USB.
 
 ***
 
@@ -31,15 +30,30 @@ The Pi Zero is available in several variants:
 | Bluetooth | No | 4.1 | 4.2 |
 | Video Output | Mini HDMI | Mini HDMI | Mini HDMI |
 | USB | 1 × Micro-USB OTG | 1 × Micro-USB OTG | 1 × Micro-USB OTG |
-| GPIO | 40-pin (unpopulated) | 40-pin (unpopulated) | 40-pin (unpopulated) |
 | Storage | MicroSD | MicroSD | MicroSD |
 | Power | Micro-USB (5V) | Micro-USB (5V) | Micro-USB (5V) |
 | Size | 65 mm × 30 mm | 65 mm × 30 mm | 65 mm × 30 mm |
 
 The **Pi Zero 2 W** is the most capable current model, with a quad-core processor that handles light desktop use, web browsing, and programming tasks.
 
-!!! note
-    The GPIO pins on the Pi Zero come as unpopulated header holes. You need to solder on a 40-pin header if you want to connect electronic components. Pre-soldered versions are available from some retailers.
+***
+
+## Pi Zero vs a Normal Computer
+
+The Pi Zero works like any other computer, but there are important differences to be aware of:
+
+| Feature | Pi Zero 2 W | Typical Desktop / Laptop |
+|---|---|---|
+| **Size** | 65 mm × 30 mm (credit card sized) | Tower case or laptop chassis |
+| **Cost** | ~$25 AUD | $500–$2000+ AUD |
+| **CPU** | 1 GHz quad-core ARM | 2–5 GHz multi-core Intel/AMD |
+| **RAM** | 512 MB | 8–32 GB |
+| **Storage** | MicroSD card (you supply it) | Built-in SSD or HDD |
+| **Operating System** | Raspberry Pi OS (Linux) | Windows, macOS, or Linux |
+| **Power** | 2.5 W, powered via USB | 65–500+ W, plugged into mains |
+| **Expandability** | USB ports only; no internal slots | Internal PCIe slots, drive bays, RAM slots |
+
+The Pi Zero is not a replacement for a normal desktop or laptop. It is designed for projects where a full-sized computer would be too large, too expensive, or uses too much power. For everyday tasks like word processing, web browsing, and watching videos, a standard computer is the better choice.
 
 ***
 
@@ -89,44 +103,7 @@ ssh pi@raspberrypi.local
 
 Replace `raspberrypi.local` with the hostname you set in Imager, and `pi` with your username.
 
-***
-
-## The GPIO Header
-
-GPIO stands for **General Purpose Input/Output**. The 40-pin header lets the Pi Zero communicate with external electronic components — sensors, LEDs, buttons, motors, and displays.
-
-```text
-Pin layout (physical pin numbers):
- 3V3  (1)  (2)  5V
- SDA  (3)  (4)  5V
- SCL  (5)  (6)  GND
-  (7)  (8)  TXD
- GND  (9)  (10) RXD
- (11) (12)
- (13) (14) GND
- (15) (16)
- 3V3 (17) (18)
- (19) (20) GND
- (21) (22)
- (23) (24)
- GND (25) (26)
- (27) (28)
- (29) (30) GND
- (31) (32)
- (33) (34) GND
- (35) (36)
- (37) (38)
- GND (39) (40)
-```
-
-The GPIO pins can be programmed to:
-- **Read input** — Detect whether a button is pressed or a sensor is triggered
-- **Send output** — Turn an LED on or off, activate a relay, drive a motor
-- **Communicate** — Use protocols like I2C (pins 3, 5), SPI, and UART (pins 8, 10) to talk to more complex devices
-
-On the Raspberry Pi, GPIO pins are controlled through software. Python is the most common language for GPIO programming, using libraries such as **`gpiozero`** (for beginners) and **`RPi.GPIO`** (for more control).
-
-***
+---
 
 ## What Can You Do with a Pi Zero?
 
@@ -141,7 +118,6 @@ The Pi Zero's small size, low cost, and low power consumption make it ideal for 
 | **Media server** | Stream music, video, or photos to devices on your network |
 | **Portable NAS** | Turn a USB drive into network-attached storage |
 | **Weather station** | Connect temperature, humidity, and pressure sensors to log environmental data |
-| **Robot controller** | Use GPIO to drive motors and read sensors for a small robot |
 | **Desktop computer** | With a hub, keyboard, mouse, and monitor, browse the web and edit documents |
 
 ***
@@ -156,7 +132,6 @@ The Pi Zero's small size, low cost, and low power consumption make it ideal for 
 | Video | Mini HDMI | 2 × Micro HDMI | 2 × Micro HDMI |
 | Ethernet | No | Gigabit | Gigabit |
 | Wi-Fi | 2.4 GHz only | Dual-band (2.4/5 GHz) | Dual-band (2.4/5 GHz) |
-| GPIO | 40-pin (unpopulated) | 40-pin | 40-pin |
 | Price (approx.) | ~$25 AUD | ~$55–$120 AUD | ~$80–$130 AUD |
 | Best For | Embedded projects, low power | Desktop use, servers, general purpose | Desktop replacement, heavy workloads |
 
@@ -169,7 +144,5 @@ Choose the Pi Zero when size, cost, and power consumption are priorities. Choose
 - The Raspberry Pi Zero is a full computer on a single small board, starting at about $25 AUD
 - It runs Linux (Raspberry Pi OS) from a microSD card
 - Use Raspberry Pi Imager to write the OS and pre-configure Wi-Fi and SSH
-- The 40-pin GPIO header connects to sensors, LEDs, motors, and other electronics
-- GPIO pins are controlled through Python using `gpiozero` or `RPi.GPIO`
 - The Pi Zero excels at embedded, portable, and low-power projects
 - For desktop computing or heavier workloads, consider a Pi 4 or Pi 5 instead

@@ -60,10 +60,28 @@ The GPU handles rendering images, video, and 3D graphics. Many CPUs include inte
 
 ### Cooling
 
-CPUs and GPUs generate significant heat. Cooling solutions include:
+CPUs and GPUs generate significant heat that must be removed to prevent damage and keep the system stable. Cooling methods fall into two categories:
 
-- **Air cooling** — Heatsinks and fans
-- **Liquid cooling** — Closed-loop systems that use liquid to transfer heat away
+#### Passive Cooling
+
+Passive cooling relies on natural heat dissipation — no moving parts, no power, no noise. A **heatsink** is a block of metal (usually aluminium or copper) with fins that increase surface area. Heat travels from the component into the heatsink and radiates into the surrounding air.
+
+- Found in low-power devices like routers, thin clients, and the Raspberry Pi
+- Silent and maintenance-free
+- Less effective at removing large amounts of heat
+
+#### Active Cooling
+
+Active cooling uses powered components to force heat away. A fan blows air across a heatsink, dramatically increasing how much heat can be removed. Most desktop and laptop computers use active cooling.
+
+- Much more effective than passive cooling alone
+- Fans produce noise and can fail over time
+- Liquid cooling (see below) is a form of active cooling that uses a pump instead of a fan on the component itself
+
+Common active cooling solutions:
+
+- **Air cooling** — A heatsink paired with one or more fans. This is the standard solution for most computers.
+- **Liquid cooling** — A closed-loop system where a pump circulates liquid past the component to absorb heat, then through a radiator where fans cool the liquid. Used in high-performance and gaming PCs where air cooling is not enough.
 
 ***
 

@@ -96,6 +96,9 @@ JSON is the standard data format for APIs. It looks similar to JavaScript object
 - Keys and string values use double quotes
 - Supports objects `{}`, arrays `[]`, strings, numbers, booleans, and null
 
+!!! note ""
+    For a detailed guide on JSON syntax, data types, and working with `JSON.parse()` and `JSON.stringify()`, see the [JSON](../json.md) page.
+
 ---
 
 ## Summary

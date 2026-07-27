@@ -10,9 +10,22 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - HTML and CSS:
-        - HTML Fundamentals: pages/resources/html-css/html-fundamentals.md
-        - CSS Fundamentals: pages/resources/html-css/css-fundamentals.md
+      - HTML:
+        - Introduction: pages/resources/html-css/html-fundamentals.md
+        - Document Structure: pages/resources/html-css/document-structure.md
+        - Text Elements: pages/resources/html-css/text-elements.md
+        - Links and Images: pages/resources/html-css/links-and-images.md
+        - Containers and Nesting: pages/resources/html-css/containers-and-nesting.md
+        - Lists: pages/resources/html-css/lists.md
+        - Tables: pages/resources/html-css/tables.md
+        - Forms and Inputs: pages/resources/html-css/forms-and-inputs.md
+      - CSS:
+        - Introduction: pages/resources/html-css/css-fundamentals.md
+        - Selectors and Specificity: pages/resources/html-css/selectors-and-specificity.md
+        - The Box Model: pages/resources/html-css/box-model.md
+        - Colours and Typography: pages/resources/html-css/colours-and-typography.md
+        - Flexbox Layout: pages/resources/html-css/flexbox.md
+        - Responsive Design: pages/resources/html-css/responsive-design.md
       - JavaScript:
         - Linking JavaScript: pages/resources/javascript/linking-javascript.md
         - Variables and Data Types: pages/resources/javascript/variables.md
@@ -21,7 +34,8 @@ nav:
         - Events and the DOM: pages/resources/javascript/events-and-dom.md
         - Bootstrap: pages/resources/javascript/bootstrap.md
       - Web Architecture:
-        - How the Web Works: pages/resources/architecture/how-the-web-works.md
+        - The Client-Server Model: pages/resources/architecture/client-server-model.md
+        - JSON: pages/resources/architecture/json.md
         - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
         - Mock APIs: pages/resources/architecture/mock-apis.md
         - Building Forms and Validation: pages/resources/architecture/forms-and-validation.md
@@ -51,20 +65,22 @@ nav:
         - Deploying Your Project: pages/resources/deployment/deploying.md
 
     - Tasks:
-      - Cafe Website: pages/tasks/cafe-website.md
-      - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
-      - Fetch and Display API Data: pages/tasks/fetch-api-data.md
-      - Build and Improve a Login Page: pages/tasks/login-page.md
-      - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
-      - Interactive Component: pages/tasks/interactive-component.md
-      - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
-      - Fetching Data with State: pages/tasks/fetching-data-with-state.md
-      - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
-      - Mantine Component Library: pages/tasks/mantine-components.md
-      - React Confetti: pages/tasks/react-confetti.md
-      - Supabase as a CMS: pages/tasks/supabase-cms.md
-      - Deploy Your Project: pages/tasks/deploy-project.md
-      - Final Project: pages/tasks/final-project.md
+      - HTML/CSS:
+        - Cafe Website: pages/tasks/cafe-website.md
+        - Cafe Site Enhancements: pages/tasks/cafe-site-enhancements.md
+        - Cafe Site Login: pages/tasks/login-page.md
+      - JavaScript and APIs:
+        - Cafe Recipes Page: pages/tasks/fetch-api-data.md
+      - Next.js:
+        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+        - Interactive Component: pages/tasks/interactive-component.md
+        - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
+        - Fetching Data with State: pages/tasks/fetching-data-with-state.md
+        - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+      - Libraries and Integrations:
+        - Mantine Component Library: pages/tasks/mantine-components.md
+        - React Confetti: pages/tasks/react-confetti.md
+        - Supabase as a CMS: pages/tasks/supabase-cms.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

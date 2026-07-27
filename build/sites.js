@@ -40,6 +40,13 @@ window.SITES_DATA = {
       "courses": ["diploma-of-it"]
     },
     {
+      "href": "/hardware-os",
+      "img": "./_assets/hardware-os.png",
+      "title": "Hardware & OS",
+      "description": "Understand computer hardware components, operating systems, and how they work together.",
+      "courses": ["cert3-in-it"]
+    },
+    {
       "href": "/version-control",
       "img": "./_assets/version-control.png",
       "title": "Version Control",

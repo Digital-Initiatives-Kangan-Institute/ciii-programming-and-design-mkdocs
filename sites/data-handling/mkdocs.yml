@@ -1,0 +1,61 @@
+site_name: Data Handling
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: https://bki-di-portal.netlify.app/
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - What is Data?: pages/resources/what-is-data.md
+      - Raw Data: pages/resources/raw-data.md
+      - Transformation Techniques using Excel: pages/resources/excel-transformation-techniques.md
+      - Power Query Fundamentals: pages/resources/power-query.md
+      - Power Query Transformations: pages/resources/power-query-transformations.md
+      - Multiple Data Sources: pages/resources/multiple-sources.md
+      - Common Transformation Patterns: pages/resources/common-transform-patterns.md
+      - Unstructured Data: pages/resources/unstructured-data.md
+    # - Tasks:
+    #   - What is Data?: pages/tasks/what-is-data.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: blue grey
+  features:
+    - toc.integrate 
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      restart_increment_after: 
+       - pages/tasks/what-is-data.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

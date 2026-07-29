@@ -67,6 +67,13 @@ window.SITES_DATA = {
             "title": "Data Handling",
             "description": "Short Course in data handling and cleaning.  What's beyond basic Excel?",
             "courses": ["short-courses"]
+        },
+        {
+            "href": "/database-api",
+            "img": "./_assets/database-api.png",
+            "title": "Database and API",
+            "description": "Databases and API.  PostGres, Supabase, FastAPI and SQL",
+            "courses": ["diploma-of-it"]
         }
     ]
 };

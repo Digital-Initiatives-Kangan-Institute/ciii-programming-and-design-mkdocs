@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../raw-data/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
 <title>What is Data? - Data Handling</title>
@@ -164,6 +165,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#data-vs-information">
+<span class="md-ellipsis">
+      
+        Data vs Information
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-does-good-data-look-like">
 <span class="md-ellipsis">
       
@@ -247,19 +257,6 @@
       
     </span>
 </a>
-<nav aria-label="Tabular Data" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-of-good-tabular-data">
-<span class="md-ellipsis">
-      
-        Example of Good Tabular Data
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#one-observation-per-row">
@@ -345,19 +342,6 @@
       
     </span>
 </a>
-<nav aria-label="Class Activity" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#discussion-questions">
-<span class="md-ellipsis">
-      
-        Discussion Questions
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#key-takeaways">
@@ -371,38 +355,84 @@
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
 <span class="md-ellipsis">
     
   
-    Tasks
+    Raw Data
   
 
     
   </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
-            
-  
-    Tasks
-  
-
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
+</a>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tasks/what-is-data.md">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
 <span class="md-ellipsis">
     
   
-    What is Data?
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
   
 
     
@@ -444,29 +474,27 @@
 <h2 id="why-data-quality-matters"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Why Data Quality Matters</h2>
 <p>Before we can analyse, visualise, or report on data, we need to ensure the data is accurate and usable.</p>
 <p>A common saying in data analytics is:</p>
-<blockquote>
-<p>Garbage In, Garbage Out</p>
-</blockquote>
 <p>If poor quality data is entered into a system, poor quality information will be produced.</p>
-<p>Poor quality data can lead to:</p>
-<ul>
-<li>Incorrect reports</li>
-<li>Poor business decisions</li>
-<li>Failed automation</li>
-<li>Duplicate records</li>
-<li>Inaccurate dashboards</li>
-<li>Wasted time cleaning data</li>
-</ul>
+<p>Poor quality data can lead to:
+- Incorrect reports
+- Poor business decisions
+- Failed automation
+- Duplicate records
+- Inaccurate dashboards
+- Wasted time cleaning data</p>
+<h2 id="data-vs-information"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Data vs Information</h2>
+<p>In addition to poor data quality, we also need to consider the difference between data and information.
+<strong>Data</strong> has no context or meaning.  <strong>Information</strong> is data that has been processed and given context.</p>
+<p>For example, an address on <em>85 Smith St, Cremorne, Vic, 3121</em> is <strong>information</strong>.  This information is made up of <strong>data</strong> such as the street number, street name, suburb, state, and postcode - (85 | Smith St | Cremorne | Vic | 3121).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>Data transformation is often less about analysing data and more about fixing problems created by how humans enter and store information.</p>
+</div>
 <hr/>
-<h2 id="what-does-good-data-look-like"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> What Does Good Data Look Like?</h2>
+<h2 id="what-does-good-data-look-like"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> What Does Good Data Look Like?</h2>
 <p>Good data should have several important characteristics.</p>
-<h3 id="accurate"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Accurate</h3>
+<h3 id="accurate"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> Accurate</h3>
 <p>Data should reflect reality.</p>
-<p><strong>Example</strong></p>
 <table>
 <thead>
 <tr>
@@ -486,9 +514,8 @@
 </tbody>
 </table>
 <hr/>
-<h3 id="complete"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> Complete</h3>
+<h3 id="complete"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> Complete</h3>
 <p>Required information should be present.</p>
-<p><strong>Example</strong></p>
 <table>
 <thead>
 <tr>
@@ -512,7 +539,7 @@
 </table>
 <p>The second record is incomplete because the email address is missing.</p>
 <hr/>
-<h3 id="consistent"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> Consistent</h3>
+<h3 id="consistent"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> Consistent</h3>
 <p>Data should use the same format throughout the dataset.</p>
 <p><strong>Bad Example</strong></p>
 <table>
@@ -559,7 +586,7 @@
 </tbody>
 </table>
 <hr/>
-<h3 id="unique"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.4</span> Unique</h3>
+<h3 id="unique"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.4</span> Unique</h3>
 <p>Duplicate records should be avoided.</p>
 <p><strong>Bad Example</strong></p>
 <table>
@@ -572,23 +599,23 @@
 <tbody>
 <tr>
 <td>1001</td>
-<td>Anh Nguyen</td>
+<td>Jane Doe</td>
 </tr>
 <tr>
 <td>1001</td>
-<td>Anh Nguyen</td>
+<td>Jane Doe</td>
 </tr>
 </tbody>
 </table>
 <p>Duplicate records can lead to incorrect reporting and calculations.</p>
 <hr/>
-<h3 id="timely"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.5</span> Timely</h3>
+<h3 id="timely"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.5</span> Timely</h3>
 <p>Data should be current and up to date.</p>
 <p>Old information may no longer be useful for decision making.</p>
 <p><strong>Example</strong></p>
 <p>A customer's address from 10 years ago may no longer be valid.</p>
 <hr/>
-<h3 id="valid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.6</span> Valid</h3>
+<h3 id="valid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.6</span> Valid</h3>
 <p>Data should follow agreed business rules.</p>
 <p><strong>Examples</strong></p>
 <ul>
@@ -597,7 +624,7 @@
 <li>Dates must be valid calendar dates.</li>
 </ul>
 <hr/>
-<h2 id="data-and-computers"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Data and Computers</h2>
+<h2 id="data-and-computers"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Data and Computers</h2>
 <p>Humans can understand messy information surprisingly well.</p>
 <p>Computers cannot.</p>
 <p>Consider the following values:</p>
@@ -612,9 +639,9 @@ Vict.
 <p>A person understands these all refer to Victoria.</p>
 <p>A computer sees four completely different values.</p>
 <hr/>
-<h2 id="tabular-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Tabular Data</h2>
+<h2 id="tabular-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Tabular Data</h2>
 <p>Most systems work best when data is organised into rows and columns.</p>
-<h3 id="example-of-good-tabular-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4.1</span> Example of Good Tabular Data</h3>
+<p><strong>Example</strong> of Good Tabular Data</p>
 <table>
 <thead>
 <tr>
@@ -648,7 +675,7 @@ Vict.
 <p>Each row represents one record.</p>
 <p>Each column represents one attribute.</p>
 <hr/>
-<h2 id="one-observation-per-row"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> One Observation Per Row</h2>
+<h2 id="one-observation-per-row"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> One Observation Per Row</h2>
 <p>Each row should represent a single thing.</p>
 <p><strong>Good Example</strong></p>
 <table>
@@ -673,7 +700,7 @@ Vict.
 </tbody>
 </table>
 <hr/>
-<h2 id="one-attribute-per-column"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> One Attribute Per Column</h2>
+<h2 id="one-attribute-per-column"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> One Attribute Per Column</h2>
 <p>Each column should contain one piece of information.</p>
 <p><strong>Bad Example</strong></p>
 <table>
@@ -706,10 +733,10 @@ Vict.
 </tbody>
 </table>
 <hr/>
-<h2 id="common-spreadsheet-problems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Common Spreadsheet Problems</h2>
+<h2 id="common-spreadsheet-problems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> Common Spreadsheet Problems</h2>
 <p>Many Excel files are designed for people to read, not for computers to process.</p>
 <p>These files often contain problems that make transformation difficult.</p>
-<h3 id="multiple-tables-on-one-sheet"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7.1</span> Multiple Tables on One Sheet</h3>
+<h3 id="multiple-tables-on-one-sheet"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Multiple Tables on One Sheet</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -730,7 +757,7 @@ Inventory Table
 </code></pre></div></td></tr></table></div>
 <p>Computers generally expect a single table of data.</p>
 <hr/>
-<h3 id="blank-rows-and-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7.2</span> Blank Rows and Columns</h3>
+<h3 id="blank-rows-and-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> Blank Rows and Columns</h3>
 <p>Blank rows often break imports and calculations.</p>
 <p><strong>Bad Example</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -746,7 +773,7 @@ Priya
 Minh
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h3 id="merged-cells"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7.3</span> Merged Cells</h3>
+<h3 id="merged-cells"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.3</span> Merged Cells</h3>
 <p>Merged cells look nice in reports but make processing difficult.</p>
 <p><strong>Example</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Sales Report 2025
@@ -754,7 +781,7 @@ Minh
 <p>Merged across ten columns.</p>
 <p>This may look good for humans but creates issues for data tools.</p>
 <hr/>
-<h3 id="totals-inside-the-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7.4</span> Totals Inside the Data</h3>
+<h3 id="totals-inside-the-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.4</span> Totals Inside the Data</h3>
 <p><strong>Bad Example</strong></p>
 <table>
 <thead>
@@ -783,22 +810,28 @@ Minh
 </tbody>
 </table>
 <p>The Total row is not actual data and can cause problems during analysis.</p>
+<details class="example">
+<summary>Why are things such as totals, averages and maximum/minimum values not considered data?</summary>
+<p>Because they are not observations of a single thing.  They are calculations based on the data.</p>
+</details>
 <hr/>
-<h2 id="data-profiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> Data Profiling</h2>
-<p>Before cleaning data we should investigate it.</p>
-<p>Ask the following questions:</p>
+<h2 id="data-profiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.9</span> Data Profiling</h2>
+<p>Before cleaning data we should investigate it.
+ 
+Ask the following questions:</p>
 <ul>
 <li>What does each column represent?</li>
 <li>Are there missing values?</li>
 <li>Are there duplicate rows?</li>
 <li>Are formats consistent?</li>
 <li>Are there invalid values?</li>
-<li>Is every row describing the same thing?</li>
+<li>Is every row describing the same thing?
+ 
+This process is known as <strong>data profiling</strong>.</li>
 </ul>
-<p>This process is known as <strong>data profiling</strong>.</p>
 <hr/>
-<h2 id="class-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.9</span> Class Activity</h2>
-<p>Examine the supplied spreadsheet.</p>
+<h2 id="class-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.10</span> Class Activity</h2>
+<p>In the Excel file found <a href="../../../assets/Module1_Data_Quality_Activity.xlsx">here</a></p>
 <p>Identify:</p>
 <ul>
 <li>Missing values</li>
@@ -809,15 +842,8 @@ Minh
 <li>Multiple tables</li>
 <li>Merged cells</li>
 </ul>
-<h3 id="discussion-questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.9.1</span> Discussion Questions</h3>
-<ol>
-<li>Which issues would cause problems for Power Query?</li>
-<li>Which issues would cause incorrect reporting?</li>
-<li>Which issues could be fixed automatically?</li>
-<li>Which issues require human review?</li>
-</ol>
 <hr/>
-<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.10</span> Key Takeaways</h2>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.11</span> Key Takeaways</h2>
 <p>Good data is:</p>
 <ul>
 <li>Accurate</li>
@@ -836,16 +862,27 @@ Minh
 <li>Avoid report formatting</li>
 <li>Be easy for computers to process</li>
 </ul>
-<p>Remember:</p>
-<blockquote>
-<p>The goal of data transformation is to turn messy human-created spreadsheets into reliable machine-readable datasets.</p>
-</blockquote>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 </main>
 <footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Next: Raw Data" class="md-footer__link md-footer__link--next" href="../raw-data/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Raw Data
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">

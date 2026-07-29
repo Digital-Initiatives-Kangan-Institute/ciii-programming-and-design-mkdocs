@@ -18,6 +18,7 @@ nav:
       - Multiple Data Sources: pages/resources/multiple-sources.md
       - Common Transformation Patterns: pages/resources/common-transform-patterns.md
       - Unstructured Data: pages/resources/unstructured-data.md
+      - Extra Datasets: pages/resources/extra-datasets.md
     # - Tasks:
     #   - What is Data?: pages/tasks/what-is-data.md
 

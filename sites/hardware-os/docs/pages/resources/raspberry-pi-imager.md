@@ -2,6 +2,8 @@
 
 **Raspberry Pi Imager** is the official tool for writing operating system images to microSD cards for use with Raspberry Pi computers. It simplifies the process of downloading, preparing, and configuring an OS — all in one application.
 
+This guide uses the **Raspberry Pi Zero W** as the example device — a low-cost, compact single-board computer with built-in Wi-Fi and Bluetooth. The same process applies to any Raspberry Pi model, but the Pi Zero W is a common choice for learning and small projects due to its small size and affordable price. See the [Raspberry Pi Zero W](raspberry-pi-zero-w.md) page for more details on the hardware.
+
 ---
 
 ## Downloading and Installing
@@ -20,13 +22,23 @@ Writing an OS to a microSD card with Imager follows three steps:
 
 ### 1. Choose Device
 
-Click **Choose Device** and select the Raspberry Pi model you are writing for. This tells Imager which hardware the OS image should be optimised for.
+Click **Choose Device** and select the Raspberry Pi model you are writing for. This tells Imager which hardware the OS image should be optimised for. For a Pi Zero W, select **Raspberry Pi Zero / Zero W** from the list.
 
-If you are unsure which model you have, check the label printed on the circuit board — the model name is usually written in white text.
+![Choose Device menu with Raspberry Pi Zero selected](../../assets/rpi-img-select-device.png)
+
+If you are unsure which model you have, check the label printed on the circuit board — the model name is usually written in white text. The Pi Zero W is the small board with a single micro-USB port, a mini HDMI port, and built-in Wi-Fi — the wireless antenna is visible as a small trace on the board.
 
 ### 2. Choose OS
 
-Click **Choose OS** to browse the available operating systems. The main options are:
+Click **Choose OS** to browse the available operating systems. For Raspberry Pi OS Lite, click **Other general-purpose OS** (or **Raspberry Pi OS (other)** depending on your Imager version) to open the sub-menu:
+
+![Choose OS menu with Other general-purpose OS highlighted](../../assets/rpi-img-select-os-01.png)
+
+Then select **Raspberry Pi OS Lite** from the list:
+
+![Sub-menu showing Raspberry Pi OS Lite selected](../../assets/rpi-img-select-os-02.png)
+
+The other available options are:
 
 | Option | Description |
 |---|---|

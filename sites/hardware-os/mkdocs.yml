@@ -17,6 +17,7 @@ nav:
         - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
         - Raspberry Pi Zero W: pages/resources/raspberry-pi-zero-w.md
         - Raspberry Pi OS Lite: pages/resources/raspberry-pi-os-lite.md
+        - Enabling SSH: pages/resources/enabling-ssh.md
       - Operating Systems:
         - Introduction to Operating Systems: pages/resources/intro-to-os.md
         - Hardware, Software, and Operating Systems: pages/resources/hardware-software-os.md

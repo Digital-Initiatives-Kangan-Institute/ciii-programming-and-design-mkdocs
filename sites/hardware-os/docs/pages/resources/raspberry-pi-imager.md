@@ -113,17 +113,13 @@ When the process is complete, you will see a confirmation message. Click **Conti
 2. Connect peripherals (monitor, keyboard, mouse) if you are not running headless
 3. Connect power — the Pi will boot automatically
 
-If you pre-configured SSH and Wi-Fi in the Imager, you can connect remotely from another computer:
+If you pre-configured SSH and Wi-Fi in the Imager, you can connect remotely from another computer. First, find the Pi's IP address by checking your router's admin page, or by connecting a monitor and keyboard to the Pi and running `ifconfig`. Then connect with:
 
 ```bash
-ssh <username>@<hostname>.local
+ssh <username>@<ip-address>
 ```
 
-For example:
-
-```bash
-ssh pi@raspberrypi.local
-```
+Replace `<ip-address>` with the Pi's IP address and `<username>` with the username you set in the Imager.
 
 On the first connection, your computer may ask you to confirm the host key fingerprint. Type `yes` to continue.
 

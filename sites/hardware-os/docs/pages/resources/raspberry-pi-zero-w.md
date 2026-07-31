@@ -89,13 +89,13 @@ The Raspberry Pi runs Raspberry Pi OS (formerly called Raspbian), a Debian-based
 
 Use the **Raspberry Pi Imager** to write the OS to a microSD card. See the [Using Raspberry Pi Imager](raspberry-pi-imager.md) page for a full guide on downloading, installing, and using the tool — including how to pre-configure SSH, Wi-Fi, and user credentials for a headless setup.
 
-Once the OS is written and the Pi has booted, you can connect remotely:
+Once the OS is written and the Pi has booted, find its IP address and connect remotely:
 
 ```bash
-ssh <username>@raspberrypi.local
+ssh <username>@<ip-address>
 ```
 
-Replace `raspberrypi.local` with the hostname you set in Imager, and `<username>` with your chosen username. For details on using the OS, see [Raspberry Pi OS Lite](raspberry-pi-os-lite.md).
+Replace `<ip-address>` with the Pi's IP address (check your router's admin page or run `ifconfig` on the Pi with a monitor and keyboard). Replace `<username>` with your chosen username. For details on using the OS, see [Raspberry Pi OS Lite](raspberry-pi-os-lite.md).
 
 ***
 

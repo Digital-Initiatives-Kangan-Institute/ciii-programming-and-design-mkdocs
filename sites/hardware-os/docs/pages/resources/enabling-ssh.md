@@ -36,9 +36,9 @@ If you have a monitor and keyboard connected to the Pi (or can temporarily conne
     sudo reboot
     ```
 
-8. After the Pi restarts, SSH will be enabled and you can connect remotely:
+8. After the Pi restarts, SSH will be enabled. Find the Pi's IP address by checking your router's admin page or running `ifconfig`, then connect remotely:
     ```bash
-    ssh <username>@raspberrypi.local
+    ssh <username>@<ip-address>
     ```
 
 ---
@@ -60,4 +60,4 @@ This will show whether the SSH service is active and running.
 - You do not need to re-image the SD card to enable SSH
 - Run `sudo raspi-config`, go to Interface Options, and enable SSH
 - Reboot the Pi for the change to take effect
-- After enabling SSH, connect remotely with `ssh <username>@raspberrypi.local`
+- After enabling SSH, find the Pi's IP address and connect remotely with `ssh <username>@<ip-address>`

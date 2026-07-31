@@ -11,9 +11,12 @@ nav:
     - Resources:
       - Hardware:
         - Computer Hardware Components: pages/resources/hardware-components.md
-        - Raspberry Pi Zero: pages/resources/raspberry-pi-zero.md
         - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
         - Implementing and Evaluating Technology: pages/resources/implementing-evaluating-tech.md
+      - Raspberry Pi:
+        - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
+        - Raspberry Pi Zero W: pages/resources/raspberry-pi-zero-w.md
+        - Raspberry Pi OS Lite: pages/resources/raspberry-pi-os-lite.md
       - Operating Systems:
         - Introduction to Operating Systems: pages/resources/intro-to-os.md
         - Hardware, Software, and Operating Systems: pages/resources/hardware-software-os.md

@@ -16,6 +16,7 @@ nav:
       - Plan Mode in Agents: pages/resources/plan-mode.md
       - AGENTS.md: pages/resources/agent-project-files.md
       - Writing Effective Prompts: pages/resources/writing-effective-prompts.md
+      - Optimizing Token Usage: pages/resources/optimizing-token-usage.md
 
     - Tasks:
       - Plan a Feature with a Chatbot: pages/tasks/plan-with-chatbot.md

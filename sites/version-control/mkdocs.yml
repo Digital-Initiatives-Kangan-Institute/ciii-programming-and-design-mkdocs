@@ -19,6 +19,7 @@ nav:
       - Merge Conflicts: pages/resources/version-control/merge-conflicts.md
 
     - Tasks:
+      - Git Intro Walkthrough: pages/tasks/git-intro-walkthrough.md
       - Initialise and Commit: pages/tasks/initialise-and-commit.md
       - Branch and Merge: pages/tasks/branch-and-merge.md
       - Daily Workflow: pages/tasks/daily-workflow.md
@@ -43,7 +44,7 @@ plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:
-        - pages/tasks/initialise-and-commit.md
+        - pages/tasks/git-intro-walkthrough.md
 
 extra:
   generator: false

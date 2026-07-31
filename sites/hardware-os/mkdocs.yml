@@ -29,6 +29,10 @@ nav:
     - Tasks:
       - "Research: Hardware, OS, and Software Selection": pages/tasks/hardware-os-software-selection.md
       - "Research: Selecting Hardware for a Small Project": pages/tasks/selecting-project-hardware.md
+      - Raspberry Pi:
+        - Connecting to a Raspberry Pi via SSH: pages/tasks/connecting-via-ssh.md
+        - Navigating the Raspberry Pi CLI: pages/tasks/cli-navigation-raspberry-pi.md
+        - Installing and Managing Software on Raspberry Pi: pages/tasks/installing-software-raspberry-pi.md
       - Creating Files and Folders on the Linux CLI: pages/tasks/creating-files-folders-cli.md
 
 # Do not touch anything below this line unless you know what you are doing.

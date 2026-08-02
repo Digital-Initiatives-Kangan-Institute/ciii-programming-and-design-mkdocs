@@ -14,9 +14,10 @@ nav:
         - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
         - Implementing and Evaluating Technology: pages/resources/implementing-evaluating-tech.md
       - Raspberry Pi:
-        - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
         - Raspberry Pi Zero W: pages/resources/raspberry-pi-zero-w.md
+        - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
         - Raspberry Pi OS Lite: pages/resources/raspberry-pi-os-lite.md
+        - Using ifconfig: pages/resources/ifconfig.md
         - Enabling SSH: pages/resources/enabling-ssh.md
       - Operating Systems:
         - Introduction to Operating Systems: pages/resources/intro-to-os.md

@@ -20,15 +20,9 @@ Raspberry Pi OS Lite boots directly to a command-line login prompt. You interact
 
 ## Installing Raspberry Pi OS Lite
 
-The standard way to install Raspberry Pi OS Lite is with the **Raspberry Pi Imager** tool. See the [Using Raspberry Pi Imager](raspberry-pi-imager.md) page for a full guide on downloading, installing, and using the tool — including how to pre-configure SSH, Wi-Fi, and user credentials for a headless setup.
+The standard way to install Raspberry Pi OS Lite is with the **Raspberry Pi Imager** tool. See the [Using Raspberry Pi Imager](raspberry-pi-imager.md) page for a full guide on downloading, installing, and using the tool — including how to pre-configure Wi-Fi and user credentials for a headless setup.
 
-Once the OS is written and the Pi has booted, find its IP address and connect remotely:
-
-```bash
-ssh <username>@<ip-address>
-```
-
-Replace `<ip-address>` with the Pi's IP address (check your router's admin page or run `ifconfig` on the Pi with a monitor and keyboard). Replace `<username>` with your chosen username.
+Once the OS is written and the Pi has booted, you can connect to it remotely. See the [Connecting to a Raspberry Pi via SSH](../tasks/connecting-via-ssh.md) task for instructions on finding the Pi's IP address and connecting.
 
 ---
 

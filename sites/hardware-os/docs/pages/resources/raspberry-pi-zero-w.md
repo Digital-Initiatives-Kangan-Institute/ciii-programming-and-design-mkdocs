@@ -87,15 +87,9 @@ To get a Pi Zero W up and running, you will need:
 
 The Raspberry Pi runs Raspberry Pi OS (formerly called Raspbian), a Debian-based Linux distribution optimised for the Pi hardware. The recommended option for the Pi Zero W is **Raspberry Pi OS Lite** — a minimal version without a desktop environment.
 
-Use the **Raspberry Pi Imager** to write the OS to a microSD card. See the [Using Raspberry Pi Imager](raspberry-pi-imager.md) page for a full guide on downloading, installing, and using the tool — including how to pre-configure SSH, Wi-Fi, and user credentials for a headless setup.
+Use the **Raspberry Pi Imager** to write the OS to a microSD card. See the [Using Raspberry Pi Imager](raspberry-pi-imager.md) page for a full guide on downloading, installing, and using the tool — including how to pre-configure Wi-Fi and user credentials for a headless setup.
 
-Once the OS is written and the Pi has booted, find its IP address and connect remotely:
-
-```bash
-ssh <username>@<ip-address>
-```
-
-Replace `<ip-address>` with the Pi's IP address (check your router's admin page or run `ifconfig` on the Pi with a monitor and keyboard). Replace `<username>` with your chosen username. For details on using the OS, see [Raspberry Pi OS Lite](raspberry-pi-os-lite.md).
+For details on using the OS, see [Raspberry Pi OS Lite](raspberry-pi-os-lite.md). To connect to the Pi remotely, see the [Connecting to a Raspberry Pi via SSH](../tasks/connecting-via-ssh.md) task.
 
 ***
 
@@ -120,5 +114,5 @@ The Pi Zero W's small size, low cost, built-in Wi-Fi, and low power consumption 
 - The Raspberry Pi Zero W is a full computer on a single small board, costing around $15 AUD
 - It includes built-in Wi-Fi and Bluetooth — unlike the original Pi Zero
 - It runs Raspberry Pi OS Lite (Linux) from a microSD card
-- Use Raspberry Pi Imager to write the OS and pre-configure Wi-Fi and SSH
+- Use Raspberry Pi Imager to write the OS and pre-configure Wi-Fi and credentials
 - It excels at low-cost, connected, and low-power projects

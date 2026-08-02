@@ -19,9 +19,7 @@ Make sure you have:
 !!! abstract "Instructions"
     Before you can connect to the Pi, you need to find its IP address. There are two ways to do this — from the Pi itself, or from your router.
 
-    **From the Pi (if you have a keyboard and monitor):**
-
-    Run the following command to list network interfaces:
+    Run `ifconfig` on the Pi to find its IP address. See [Using ifconfig](../resources/ifconfig.md) for a full guide on reading the output.
 
     ```bash
     ifconfig
@@ -29,9 +27,7 @@ Make sure you have:
 
     Look for the `wlan0` section — this is the wireless interface. The IP address is shown on the line starting with `inet`. It will look something like `192.168.1.45`.
 
-    **From your router (if the Pi is headless):**
-
-    Log in to your router's admin page (usually by typing `192.168.1.1` or `192.168.0.1` into a web browser). Look for a list of connected devices — the Pi will appear with its hostname (default: `raspberrypi`) and its assigned IP address.
+    Alternatively, log in to your router's admin page (usually `192.168.1.1` or `192.168.0.1` in a web browser) and look for a list of connected devices.
 
     Write down the IP address — you will need it for all SSH connections.
 

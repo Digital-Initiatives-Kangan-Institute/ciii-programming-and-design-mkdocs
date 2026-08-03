@@ -1,0 +1,56 @@
+site_name: Program IoT Devices
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - Introduction to IoT: pages/resources/introduction-to-iot.md
+      - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
+      - Comments: pages/resources/comments.md
+      - Program Structure: pages/resources/program-structure.md
+    - Tasks:
+      - IoT Programming Activity: pages/tasks/iot-programming-activity.md
+      - Independent Practice: pages/tasks/class-activities.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: purple
+  features:
+    - toc.integrate
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      restart_increment_after:
+        - pages/tasks/iot-programming-activity.md
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

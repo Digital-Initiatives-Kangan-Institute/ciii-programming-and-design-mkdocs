@@ -59,6 +59,13 @@ window.SITES_DATA = {
       "title": "AI-Assisted Development",
       "description": "Use AI chatbots and agents to plan, build, and debug software effectively.",
       "courses": ["diploma-of-it"]
+    },
+    {
+      "href": "/program-iot-devices",
+      "img": "./_assets/program-iot-devices.png",
+      "title": "Program IoT Devices",
+      "description": "Introduction to IoT concepts and Arduino programming through structured activities and hands-on exercises.",
+      "courses": ["cert3-in-it", "diploma-of-it"]
     }
   ]
 };

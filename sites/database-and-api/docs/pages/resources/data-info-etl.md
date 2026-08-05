@@ -300,7 +300,7 @@ Common transformation tasks include:
 - Standardising formats
 - Splitting columns
 - Merging columns
-- Creating calculated fields
+- Remove calculated fields
 - Fixing data types
 
 This is often the most time-consuming stage of ETL.

@@ -1,0 +1,26 @@
+ProductID,ProductName,Category,UnitPrice,ProductTier
+P001,Laptop,Technology,202.78,Standard
+P002,Tablet,Technology,329.78,Premium
+P003,Monitor,Technology,828.29,Budget
+P004,Keyboard,Technology,824.06,Budget
+P005,Mouse,Technology,281.03,Budget
+P006,Printer,Technology,967.61,Standard
+P007,Desk,Furniture,327.15,Budget
+P008,Chair,Furniture,1096.46,Premium
+P009,Bookshelf,Furniture,1052.63,Standard
+P010,Filing Cabinet,Furniture,261.45,Standard
+P011,Meeting Table,Furniture,479.59,Premium
+P012,Office Stool,Furniture,554.95,Standard
+P013,Notebook,Stationery,174.44,Premium
+P014,Pen Pack,Stationery,677.15,Standard
+P015,Marker Set,Stationery,898.44,Standard
+P016,Folder Box,Stationery,1078.2,Standard
+P017,Sticky Notes,Stationery,439.5,Budget
+P018,Planner,Stationery,615.36,Budget
+P019,Coffee Machine,Appliances,908.89,Budget
+P020,Kettle,Appliances,190.19,Budget
+P021,Microwave,Appliances,952.16,Standard
+P022,Desk Lamp,Appliances,718.92,Standard
+P023,Fan,Appliances,462.89,Standard
+P024,Heater,Appliances,638.7,Premium
+P025,Installation Service,Services,150,Standard

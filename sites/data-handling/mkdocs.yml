@@ -18,6 +18,13 @@ nav:
       - Multiple Data Sources: pages/resources/multiple-sources.md
       - Common Transformation Patterns: pages/resources/common-transform-patterns.md
       - Unstructured Data: pages/resources/unstructured-data.md
+      - Introduction to Power BI: pages/resources/intro-power-bi.md
+      - Importing data into Power BI: pages/resources/power-bi-import-data.md
+      - What's a Semantic Model?: pages/resources/semantic-model.md
+      - Visualisations: pages/resources/visualising.md
+      - Slicers: pages/resources/slicers.md
+      - Drill Throughs: pages/resources/drill_through.md
+      - Dashboards: pages/resources/dashboards.md
     # - Tasks:
     #   - What is Data?: pages/tasks/what-is-data.md
 

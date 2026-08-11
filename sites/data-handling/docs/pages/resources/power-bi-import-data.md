@@ -6,6 +6,12 @@ Before data can be analysed and visualised, it must first be imported into Power
 
 In this module, students will learn how to connect Power BI to common data sources, load data into a report, and perform basic data preparation tasks using Power Query.
 
+Some files that we'll need for the next few modules:
+
+- [powerbi_customers](../../assets/powerbi_customers.csv)
+- [powerbi_products](../../assets/powerbi_products.csv)
+- [powerbi_sales](../../assets/powerbi_sales.csv)
+
 ---
 
 ## Learning Outcomes

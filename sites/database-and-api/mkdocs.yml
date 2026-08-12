@@ -13,10 +13,15 @@ nav:
       - Data, Information, Business Rules and ETL: pages/resources/data-info-etl.md
       - Redundancy: pages/resources/redundancy.md
       - ERDs part 1: pages/resources/erd-1.md
+      - Many to Many: pages/resources/many-to-many.md
+      - Composite Keys: pages/resources/composite-keys.md
+      - Data Types: pages/resources/data-types.md
+      - Supabase: pages/resources/supabase.md
     - Tasks:
       - Data, Information, Business Rules and ETL: pages/tasks/data-info-etl.md
       - Redundacy: pages/tasks/redundancy.md
       - ERD Tasks: pages/tasks/erd-tasks.md
+      - Many to Many: pages/tasks/many-to-many.md
         
 # Do not touch anything below this line unless you know what you are doing.
 theme:

@@ -22,6 +22,7 @@ This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Ea
 | `ai-tools` | AI-Assisted Development | cyan | diploma-of-it |
 | `hardware-os` | Hardware & OS | red | cert3-in-it |
 | `build-advanced-interfaces` | Build Advanced Interfaces | indigo | diploma-of-it |
+| `program-iot-devices` | Program IoT Devices | purple | cert3-in-it |
 
 ---
 

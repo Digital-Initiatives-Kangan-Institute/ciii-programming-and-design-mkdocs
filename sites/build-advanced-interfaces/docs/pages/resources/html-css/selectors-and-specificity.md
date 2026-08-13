@@ -50,6 +50,16 @@ A single element can have multiple classes:
 <div class="card featured">...</div>
 ```
 
+When multiple HTML elements share the same class, **all of them** receive the styles from that class:
+
+```html
+<p class="highlight">This paragraph gets yellow background.</p>
+<p class="highlight">So does this one.</p>
+<p class="highlight">And this one too — every element with class="highlight".</p>
+```
+
+This is what makes classes so powerful: define a style once and apply it to as many elements as you need.
+
 ### ID Selector
 
 Targets a single element with a specific `id`. Prefixed with `#` (hash):

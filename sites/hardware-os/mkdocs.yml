@@ -28,6 +28,9 @@ nav:
         - Command Line Basics: pages/resources/command-line-basics.md
         - Managing Software and Hardware: pages/resources/managing-software-hardware.md
         - System Optimisation and Maintenance: pages/resources/system-optimisation.md
+      - Virtual Machines:
+        - Introduction to Virtual Machines: pages/resources/virtual-machines.md
+        - Installing an OS in VirtualBox: pages/resources/virtualbox-installing-os.md
     - Tasks:
       - "Research: Hardware, OS, and Software Selection": pages/tasks/hardware-os-software-selection.md
       - "Research: Selecting Hardware for a Small Project": pages/tasks/selecting-project-hardware.md

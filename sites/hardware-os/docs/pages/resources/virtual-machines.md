@@ -103,6 +103,8 @@ VirtualBox Manager is the main user interface for creating, configuring, and man
 
 ![VirtualBox Manager window, showing a list of virtual machines](../../assets/vbox-manager.png)
 
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
+
 The main components of the window are:
 
 - **The machine list.** The left pane lists all of your virtual machines. If you have not created any yet, the list is empty.

@@ -1,4 +1,4 @@
-site_name: AI-Assisted Development
+site_name: Program IoT Devices
 
 # This text shows in the footer.
 copyright: Digital Initiatives - Bendigo Kangan Institute
@@ -10,24 +10,19 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - What is AI-Assisted Development: pages/resources/what-is-ai-assisted-dev.md
-      - AI Chatbots: pages/resources/ai-chatbots.md
-      - AI Agents: pages/resources/ai-agents.md
-      - Plan Mode in Agents: pages/resources/plan-mode.md
-      - AGENTS.md: pages/resources/agent-project-files.md
-      - Writing Effective Prompts: pages/resources/writing-effective-prompts.md
-      - Optimizing Token Usage: pages/resources/optimizing-token-usage.md
-
+      - Introduction to IoT: pages/resources/introduction-to-iot.md
+      - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
+      - Comments: pages/resources/comments.md
+      - Program Structure: pages/resources/program-structure.md
     - Tasks:
-      - Plan a Feature with a Chatbot: pages/tasks/plan-with-chatbot.md
-      - Complete a Task with an AI Agent: pages/tasks/task-with-agent.md
-      - Prompt Writing Practice: pages/tasks/prompt-writing-practice.md
+      - IoT Programming Activity: pages/tasks/iot-programming-activity.md
+      - Independent Practice: pages/tasks/class-activities.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
   palette:
-    primary: cyan
+    primary: purple
   features:
     - toc.integrate
     - navigation.sections
@@ -41,7 +36,7 @@ plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:
-        - pages/tasks/plan-with-chatbot.md
+        - pages/tasks/iot-programming-activity.md
 
 extra:
   generator: false

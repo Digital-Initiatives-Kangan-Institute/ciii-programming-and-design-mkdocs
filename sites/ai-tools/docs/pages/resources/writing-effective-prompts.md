@@ -93,6 +93,9 @@ To keep prompts efficient:
 - **Start new conversations** for unrelated tasks to reset the context window
 - **Use bullet points** instead of paragraphs when listing requirements
 
+!!! tip "Learn More"
+    For a detailed guide on managing token usage across all AI tools — including strategies for agents, project files, and breaking down large tasks — see the [Optimizing Token Usage](optimizing-token-usage.md) resource.
+
 ---
 
 ## Common Prompt Patterns

@@ -27,6 +27,7 @@ nav:
         - Flexbox Layout: pages/resources/html-css/flexbox.md
         - Responsive Design: pages/resources/html-css/responsive-design.md
       - JavaScript:
+        - Introduction: pages/resources/javascript/introduction.md
         - Linking JavaScript: pages/resources/javascript/linking-javascript.md
         - Variables and Data Types: pages/resources/javascript/variables.md
         - Control Flow: pages/resources/javascript/control-flow.md

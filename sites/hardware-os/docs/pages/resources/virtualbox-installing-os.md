@@ -28,6 +28,8 @@ Click **New** in the VirtualBox Manager window. The **Create Virtual Machine** w
 
 ![Create Virtual Machine wizard: Name and Operating System page](../../assets/vbox-create-vm-1.png)
 
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
+
 On the first wizard page:
 
 - **Name** — Give the VM a name. It appears in the machine list and is used for the VM's files on disk. Use an informative name that describes the OS and software, such as `Ubuntu 24.04 Web Server`.
@@ -41,6 +43,8 @@ Click **Next** to continue.
 ### (Optional) Unattended Guest OS Install
 
 ![Create Virtual Machine wizard: Unattended Guest OS Installation page](../../assets/vbox-create-vm-2.png)
+
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
 
 If you selected an ISO that supports **unattended installation**, this page lets VirtualBox install the guest OS automatically, with no further input from you:
 
@@ -57,6 +61,8 @@ Click **Next** to continue.
 
 ![Create Virtual Machine wizard: Hardware page](../../assets/vbox-create-vm-3.png)
 
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
+
 This page configures the virtual hardware:
 
 - **Base Memory** — The amount of RAM allocated to the VM every time it starts. This memory is taken from your host machine while the VM is running.
@@ -72,6 +78,8 @@ Click **Next** to continue.
 ### Virtual Hard Disk
 
 ![Create Virtual Machine wizard: Virtual Hard Disk page](../../assets/vbox-create-vm-4.png)
+
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
 
 A virtual hard disk is usually a large image file on your physical disk, presented to the VM as if it were a complete hard disk. You have three options:
 
@@ -112,6 +120,8 @@ Follow the on-screen instructions to install your OS. This is exactly the same p
 
 ![A virtual machine running in a window on the host desktop](../../assets/vbox-running.png)
 
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
+
 ***
 
 ## Using the Virtual Machine
@@ -125,6 +135,8 @@ Until you install the **Guest Additions**, either the VM or the rest of your com
 To return control of the keyboard and mouse to your host OS, press the **Host key**. By default this is the **right Ctrl** key on Windows and Linux, and the **left Command (⌘) key** on macOS. The current Host key is always shown at the bottom right of the VM window.
 
 ![Host key setting shown in the bottom right of the VirtualBox window](../../assets/vbox-hostkey.png)
+
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
 
 !!! tip "Guest Additions fix this"
     Installing the Guest Additions inside the guest removes the separate "guest" mouse pointer and lets your normal host mouse move seamlessly in and out of the VM window.
@@ -158,6 +170,8 @@ You can resize the VM window while it runs:
 When you click the **Close** button (or press **Host key + Q**) on the VM window, VirtualBox asks what to do. The three options are quite different:
 
 ![Close dialog asking whether to save state, shut down, or power off the VM](../../assets/vbox-close.png)
+
+<small class="img-credit">Image source: <a href="https://www.virtualbox.org/manual/ch01.html" target="_blank" rel="noopener">Oracle VM VirtualBox Manual — Chapter 1</a></small>
 
 | Option | Effect |
 |---|---|

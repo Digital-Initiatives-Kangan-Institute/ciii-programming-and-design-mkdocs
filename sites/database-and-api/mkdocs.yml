@@ -22,6 +22,7 @@ nav:
       - Redundacy: pages/tasks/redundancy.md
       - ERD Tasks: pages/tasks/erd-tasks.md
       - Many to Many: pages/tasks/many-to-many.md
+      - Supabase: pages/tasks/supabase.md
         
 # Do not touch anything below this line unless you know what you are doing.
 theme:

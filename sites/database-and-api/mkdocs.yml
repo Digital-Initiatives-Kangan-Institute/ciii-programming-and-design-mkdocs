@@ -1,0 +1,65 @@
+site_name: Database and API
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: https://bki-di-portal.netlify.app/
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - Data, Information, Business Rules and ETL: pages/resources/data-info-etl.md
+      - Redundancy: pages/resources/redundancy.md
+      - ERDs part 1: pages/resources/erd-1.md
+      - Many to Many: pages/resources/many-to-many.md
+      - Composite Keys: pages/resources/composite-keys.md
+      - Data Types: pages/resources/data-types.md
+      - Supabase: pages/resources/supabase.md
+    - Tasks:
+      - Data, Information, Business Rules and ETL: pages/tasks/data-info-etl.md
+      - Redundacy: pages/tasks/redundancy.md
+      - ERD Tasks: pages/tasks/erd-tasks.md
+      - Many to Many: pages/tasks/many-to-many.md
+      - Supabase: pages/tasks/supabase.md
+        
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  palette:
+    primary: orange
+  features:
+    - toc.integrate 
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      restart_increment_after: 
+        - pages/tasks/data-info-etl.md
+
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

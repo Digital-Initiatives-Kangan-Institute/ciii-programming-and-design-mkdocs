@@ -31,6 +31,7 @@ nav:
       - Virtual Machines:
         - Introduction to Virtual Machines: pages/resources/virtual-machines.md
         - Installing an OS in VirtualBox: pages/resources/virtualbox-installing-os.md
+        - Installing an OS in VMware: pages/resources/vmware-installing-os.md
     - Tasks:
       - "Research: Hardware, OS, and Software Selection": pages/tasks/hardware-os-software-selection.md
       - "Research: Selecting Hardware for a Small Project": pages/tasks/selecting-project-hardware.md

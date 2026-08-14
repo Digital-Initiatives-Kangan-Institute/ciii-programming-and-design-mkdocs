@@ -2,6 +2,8 @@
 
 An operating system (OS) is the most important piece of software on any computer. It manages all of the computer's hardware and software resources, and provides a platform for applications to run on. Without an operating system, a computer cannot function.
 
+![The operating system sits between the user and the hardware](../../assets/operating-system.png)
+
 ---
 
 ## What Does an Operating System Do?
@@ -27,6 +29,8 @@ There are many operating systems in use today, but three dominate the personal c
 
 Windows is the most widely used desktop operating system in business and education environments. It is known for broad hardware and software compatibility, and is pre-installed on most new PCs from major manufacturers.
 
+![Windows logo](../../assets/os-windows.png){ width="110" }
+
 **Key features:**
 - Familiar Start menu and taskbar interface
 - Extensive software library (Microsoft Office, Adobe Creative Suite, games)
@@ -37,6 +41,8 @@ Windows is the most widely used desktop operating system in business and educati
 
 macOS is Apple's operating system, designed exclusively for Mac computers. It is known for its clean design, tight integration with other Apple devices, and strong multimedia capabilities.
 
+![macOS logo](../../assets/os-macos.png){ width="110" }
+
 **Key features:**
 - Unified design language and gesture-based navigation
 - Built-in productivity apps (Pages, Numbers, Keynote)
@@ -46,6 +52,8 @@ macOS is Apple's operating system, designed exclusively for Mac computers. It is
 ### Linux
 
 Linux is a free and open-source operating system available in many different distributions (distros) such as Ubuntu, Fedora, and Debian. It powers everything from web servers and supercomputers to Android phones.
+
+![Linux logo](../../assets/os-linux.png){ width="110" }
 
 **Key features:**
 - Free to download, use, and modify

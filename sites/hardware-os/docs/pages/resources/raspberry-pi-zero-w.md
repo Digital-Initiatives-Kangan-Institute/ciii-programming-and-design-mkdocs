@@ -16,6 +16,12 @@ A single-board computer (SBC) packs all the core components of a computer onto o
 
 Unlike a desktop PC, there are no expansion slots, no separate graphics card, and no internal drive bays. Everything you need is on one board, and you add only what you need via USB.
 
+![A Raspberry Pi single-board computer](../../assets/raspberry-pi.jpg)
+
+Other single-board computer families include Orange Pi, Banana Pi, and the x86-based LattePanda, which can run Windows.
+
+![A LattePanda x86 single-board computer](../../assets/latte-panda.jpg)
+
 ***
 
 ## Raspberry Pi Zero W Specifications
@@ -33,6 +39,8 @@ Unlike a desktop PC, there are no expansion slots, no separate graphics card, an
 | Size | 65 mm × 30 mm |
 
 The Pi Zero W is not the most powerful model — the **Pi Zero 2 W** has a quad-core processor — but it is the most affordable option with built-in wireless connectivity.
+
+![A Raspberry Pi Zero W board](../../assets/raspberry-pi-zero-w.jpg)
 
 ***
 

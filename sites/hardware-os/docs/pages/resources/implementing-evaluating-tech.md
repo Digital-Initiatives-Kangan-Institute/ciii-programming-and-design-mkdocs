@@ -46,6 +46,8 @@ Test before releasing to all users:
 
 Start with a small pilot group before rolling out to the entire organisation.
 
+![Installing and testing a new technology before wider rollout](../../assets/implement-test.png)
+
 ***
 
 ## Using Features and Functions
@@ -110,6 +112,8 @@ After the technology has been in use for a period, evaluate whether it has deliv
 - **System metrics** — Uptime reports, response times, error logs
 - **Business metrics** — Time saved, costs reduced, output increased
 
+![Evaluating whether a technology delivers the expected benefits](../../assets/evaluate-performance.png)
+
 ---
 
 ## Environmental Considerations
@@ -132,6 +136,8 @@ Technology has an environmental impact throughout its lifecycle. Organisations s
 - Extend hardware lifespan through upgrades rather than full replacements
 - Print only when necessary; use duplex (double-sided) printing by default
 
+![Considering the environmental impact of technology across its lifecycle](../../assets/environmental-impact.png)
+
 ---
 
 ## Seeking and Responding to Feedback
@@ -144,6 +150,8 @@ Feedback from users and stakeholders is essential for continuous improvement.
 - **Interviews** — One-on-one conversations with key users
 - **Support ticket analysis** — What are people asking for help with?
 - **Usage analytics** — Which features are being used? Which are ignored?
+
+![Gathering feedback from users about a technology](../../assets/user-feedback.png)
 
 ### Responding to Feedback
 
@@ -167,6 +175,8 @@ A simple evaluation document should include:
 - Summary of user feedback
 - Performance against success criteria
 - Recommendations (keep, replace, upgrade, expand)
+
+![Reviewing and documenting the outcome of a technology implementation](../../assets/review-documentation.png)
 
 ---
 

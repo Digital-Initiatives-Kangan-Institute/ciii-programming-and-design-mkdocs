@@ -16,6 +16,8 @@ Optimisation improves:
 
 Optimisation is not a one-time task. It should be performed regularly — monthly for most users, more often on heavily used systems.
 
+![Improving a system's performance through regular maintenance](../../assets/optimising-system.png)
+
 ***
 
 ## Disk Cleanup

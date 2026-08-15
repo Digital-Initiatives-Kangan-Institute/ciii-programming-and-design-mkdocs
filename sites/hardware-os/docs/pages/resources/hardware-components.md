@@ -20,6 +20,8 @@ The CPU is the "brain" of the computer. It executes instructions from programs a
 
 Common manufacturers include Intel (Core i3, i5, i7, i9) and AMD (Ryzen 3, 5, 7, 9).
 
+![A central processing unit (CPU)](../../assets/cpu.png)
+
 ### Random Access Memory (RAM)
 
 RAM is the computer's short-term, high-speed working memory. When you open a program or file, it is loaded from storage into RAM so the CPU can access it quickly. RAM is volatile — its contents are lost when the computer is powered off.
@@ -27,6 +29,8 @@ RAM is the computer's short-term, high-speed working memory. When you open a pro
 - Measured in gigabytes (GB) — typical systems have 8 GB to 32 GB
 - More RAM allows more programs to run simultaneously without slowing down
 - Common types: DDR4, DDR5
+
+![Random Access Memory (RAM) modules](../../assets/ram.png)
 
 ### Storage Drives
 
@@ -39,6 +43,16 @@ Storage provides long-term, non-volatile space for the OS, applications, and use
 
 Modern systems typically use an SSD for the operating system and applications, with an optional HDD for bulk file storage.
 
+![A hard disk drive (HDD) with its casing removed to show the platters](../../assets/hdd.png)
+
+![A solid state drive (SSD)](../../assets/ssd.png)
+
+### Optical Drive
+
+An optical drive reads and writes removable discs such as CDs and DVDs. Once a standard feature, it is now less common as software is downloaded and media is streamed over the internet, but it remains useful for reading older discs.
+
+![An optical disc drive](../../assets/optical-drive.png)
+
 ### Motherboard
 
 The motherboard is the main circuit board that connects all components together. It provides:
@@ -50,17 +64,35 @@ The motherboard is the main circuit board that connects all components together.
 - USB headers, audio connectors, and power connections
 - The chipset that controls data flow between components
 
+![A motherboard showing the CPU socket, RAM slots, and expansion slots](../../assets/motherboard.png)
+
+### CMOS Battery
+
+The CMOS battery is a small coin-cell battery on the motherboard. It keeps power flowing to the chip that stores the system clock and firmware settings, so the date, time, and BIOS/UEFI configuration are not lost when the computer is switched off.
+
+![A coin-cell CMOS battery on a motherboard](../../assets/cmos-battery.png)
+
 ### Power Supply Unit (PSU)
 
 The PSU converts AC power from the wall outlet into the DC voltages that computer components require. It is rated by wattage — a typical office PC might use 300–500 W, while a high-end workstation could need 750 W or more.
+
+![A power supply unit (PSU) with its cables and connectors](../../assets/power-supply.jpg)
 
 ### Graphics Processing Unit (GPU)
 
 The GPU handles rendering images, video, and 3D graphics. Many CPUs include integrated graphics suitable for office work and web browsing. A dedicated GPU is needed for gaming, video editing, 3D modelling, and machine learning.
 
+### Expansion Cards
+
+Expansion cards add extra capability to a system by plugging into expansion slots on the motherboard. Common examples include a graphics card for more powerful graphics output, a sound card for improved audio, and a network card for wired or wireless connectivity.
+
+![An expansion card being inserted into a slot on the motherboard](../../assets/expansion-cards.png)
+
 ### Cooling
 
 CPUs and GPUs generate significant heat that must be removed to prevent damage and keep the system stable. Cooling methods fall into two categories:
+
+![A CPU cooler with a heatsink and fan](../../assets/cpu-cooler.png)
 
 #### Passive Cooling
 
@@ -83,11 +115,17 @@ Common active cooling solutions:
 - **Air cooling** — A heatsink paired with one or more fans. This is the standard solution for most computers.
 - **Liquid cooling** — A closed-loop system where a pump circulates liquid past the component to absorb heat, then through a radiator where fans cool the liquid. Used in high-performance and gaming PCs where air cooling is not enough.
 
+Case fans control the overall flow of air through the computer: intake fans draw cool air in, and exhaust fans push warm air out. Good airflow keeps every component cool, while dust build-up reduces cooling performance.
+
+![Case fans moving air through a computer case](../../assets/fans-airflow.png)
+
 ***
 
 ## External Hardware Components
 
 External components, also called peripherals, connect to the computer from outside the case.
+
+![Common external peripherals: monitor, keyboard, mouse, and webcam](../../assets/external-peripherals.png)
 
 ### Input Devices
 
@@ -128,6 +166,10 @@ External devices connect through standard ports:
 | **DisplayPort** | Similar to HDMI with one notched corner | High-resolution computer monitors |
 | **Ethernet (RJ45)** | Wide, with clip | Wired network connection |
 | **3.5 mm Audio Jack** | Round | Headphones, speakers, microphones |
+
+The rear input/output (I/O) panel of a desktop computer groups many of these ports together:
+
+![The rear I/O panel of a desktop computer](../../assets/io-panel.png)
 
 ***
 

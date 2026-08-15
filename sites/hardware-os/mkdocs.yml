@@ -13,6 +13,9 @@ nav:
         - Computer Hardware Components: pages/resources/hardware-components.md
         - Identifying Industry Technologies: pages/resources/identifying-industry-tech.md
         - Implementing and Evaluating Technology: pages/resources/implementing-evaluating-tech.md
+        - Technology Trends and Industry Standards: pages/resources/technology-trends-and-standards.md
+        - Gathering and Evaluating Technology Information: pages/resources/gathering-and-evaluating-technology-information.md
+        - Workplace and Legal Requirements: pages/resources/workplace-and-legal-requirements.md
       - Raspberry Pi:
         - Raspberry Pi Zero W: pages/resources/raspberry-pi-zero-w.md
         - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
@@ -28,6 +31,7 @@ nav:
         - Command Line Basics: pages/resources/command-line-basics.md
         - Managing Software and Hardware: pages/resources/managing-software-hardware.md
         - System Optimisation and Maintenance: pages/resources/system-optimisation.md
+        - Optimisation Tools and Vendor Utilities: pages/resources/optimisation-tools-and-vendor-utilities.md
       - Virtual Machines:
         - Introduction to Virtual Machines: pages/resources/virtual-machines.md
         - Installing an OS in VirtualBox: pages/resources/virtualbox-installing-os.md

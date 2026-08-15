@@ -56,6 +56,8 @@ To install an OS, you need bootable installation media. The process:
 !!! note
     The steps below describe a general installation flow. Exact screens and options vary between operating systems and versions.
 
+![An operating system being installed on a computer](../../assets/installing-os.png)
+
 ### Step 1: Boot from Installation Media
 
 1. Insert the USB drive and restart the computer
@@ -128,6 +130,8 @@ Confirm that the OS is correctly installed and functioning:
 - Network connectivity works (test with a web browser)
 - Sound and display output are working
 - User account can log in and perform basic tasks
+
+![Checking that a newly installed system starts and runs correctly](../../assets/check-functionality.png)
 
 ---
 

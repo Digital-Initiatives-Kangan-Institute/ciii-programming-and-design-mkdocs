@@ -15,6 +15,8 @@ The Information and Communications Technology industry encompasses:
 
 Technology choices made by an organisation directly affect its productivity, security, costs, and ability to compete. Making informed decisions requires systematic research and evaluation.
 
+![A range of hardware, software, and services make up industry-specific technology](../../assets/industry-technology.png)
+
 ***
 
 ## Current Technology Trends
@@ -139,6 +141,10 @@ Organisational requirements shape technology decisions. Common factors include:
 | **Existing infrastructure** | New technology must integrate with what is already in place |
 | **Staff skills** | The organisation must be able to support and use the technology |
 | **Growth plans** | Technology should scale as the organisation grows |
+
+Identifying a genuine business need is the starting point for any technology upgrade:
+
+![Identifying an organisational need before upgrading technology](../../assets/technology-upgrades.png)
 
 ---
 

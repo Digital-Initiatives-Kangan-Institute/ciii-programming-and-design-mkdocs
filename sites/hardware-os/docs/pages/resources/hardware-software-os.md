@@ -51,6 +51,8 @@ Application software helps users perform specific tasks. It includes:
 
 Application software is what most users interact with day-to-day. It relies on the system software underneath to actually get things done.
 
+![Application software such as a web browser and word processor running on an operating system](../../assets/application-software.png)
+
 ***
 
 ## How the OS Bridges Hardware and Software

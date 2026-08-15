@@ -55,6 +55,8 @@ Linux distributions use package managers that download and install software from
 
 A device driver is software that tells the operating system how to communicate with a specific piece of hardware. Without the correct driver, hardware either will not work or will work with limited functionality.
 
+![A driver acting as the communication layer between the operating system and hardware](../../assets/drivers.png)
+
 ### How Drivers Work
 
 ```text

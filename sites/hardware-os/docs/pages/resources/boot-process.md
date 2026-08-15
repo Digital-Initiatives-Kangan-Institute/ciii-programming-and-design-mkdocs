@@ -7,16 +7,47 @@ When you press the power button on a computer, a precise sequence of events take
 ## Overview of Boot Stages
 
 ```text
-Power On  →  POST  →  BIOS/UEFI  →  Boot Loader  →  Kernel  →  Login Screen
+Power On → BIOS/UEFI → POST → Boot Device → Kernel Loads → Kernel Runs → Services Start → Login/UI
 ```
 
 Each stage prepares the system for the next. If any stage fails, the computer will not start correctly.
 
+![The eight stages of the boot process, from power on to the login screen](../../assets/boot-process.jpg)
+
 ---
 
-## Stage 1: Power-On Self-Test (POST)
+## Stage 1: Power On
 
-The moment power reaches the motherboard, the system runs a Power-On Self-Test. This is a diagnostic routine stored in the firmware that checks whether critical hardware is present and functioning.
+The moment the power button is pressed, electricity reaches the motherboard and the CPU begins executing its first instructions. Nothing has been checked or loaded yet — this stage simply gets the hardware started.
+
+***
+
+## Stage 2: BIOS / UEFI Firmware
+
+As soon as the CPU starts, control passes to the system firmware. The firmware prepares the basic hardware the computer needs to get going — the keyboard, display, and storage.
+
+### BIOS (Basic Input/Output System)
+
+BIOS is the older firmware standard, used in PCs for decades. It:
+- Has a text-based setup interface (press Del/F2 during startup)
+- Uses the Master Boot Record (MBR) partitioning scheme
+- Supports drives up to 2 TB
+- Is limited to 16-bit real mode during boot
+
+### UEFI (Unified Extensible Firmware Interface)
+
+UEFI is the modern replacement for BIOS. It:
+- Has a graphical setup interface with mouse support
+- Uses the GUID Partition Table (GPT)
+- Supports drives larger than 2 TB
+- Provides Secure Boot to protect against malware
+- Boots faster than legacy BIOS
+
+***
+
+## Stage 3: Power-On Self-Test (POST)
+
+The firmware runs a Power-On Self-Test — a diagnostic routine stored in the firmware that checks whether critical hardware is present and functioning.
 
 POST verifies:
 - CPU is working
@@ -37,32 +68,9 @@ A successful POST usually produces a single short beep and the manufacturer's lo
 
 ***
 
-## Stage 2: BIOS / UEFI Firmware
+## Stage 4: Boot Device
 
-After POST completes, control passes to the system firmware.
-
-### BIOS (Basic Input/Output System)
-
-BIOS is the older firmware standard, used in PCs for decades. It:
-- Has a text-based setup interface (press Del/F2 during startup)
-- Uses the Master Boot Record (MBR) partitioning scheme
-- Supports drives up to 2 TB
-- Is limited to 16-bit real mode during boot
-
-### UEFI (Unified Extensible Firmware Interface)
-
-UEFI is the modern replacement for BIOS. It:
-- Has a graphical setup interface with mouse support
-- Uses the GUID Partition Table (GPT)
-- Supports drives larger than 2 TB
-- Provides Secure Boot to protect against malware
-- Boots faster than legacy BIOS
-
-The firmware looks for a storage device marked as bootable, reads the boot sector (MBR) or EFI System Partition (GPT), and hands off to the boot loader.
-
-***
-
-## Stage 3: The Boot Loader
+Once the POST passes, the firmware looks for a storage device marked as bootable, reads its boot sector (MBR) or EFI System Partition (GPT), and hands control to the boot loader stored there.
 
 The boot loader is a small program that loads the operating system kernel into memory.
 
@@ -84,22 +92,34 @@ On most Linux systems:
 
 ***
 
-## Stage 4: Kernel Loading
+## Stage 5: Kernel Loads
 
-The kernel is the core of the operating system. Once loaded:
+The boot loader loads the operating system's **kernel** into memory. The kernel is the core of the operating system — the part that manages the hardware and lets every other program run.
 
-1. The kernel initialises hardware drivers for CPU, memory, storage, and devices
+***
+
+## Stage 6: Kernel Runs
+
+Once the kernel is in memory, it starts doing its job:
+
+1. It initialises hardware drivers for CPU, memory, storage, and devices
 2. It mounts the root file system (the drive partition containing the OS)
 3. It starts the first user-space process:
    - On Windows: **Session Manager (`smss.exe`)** which then starts **`winlogon.exe`**
    - On Linux: **`init`** (or `systemd` on modern distributions)
-4. Essential system services are launched — networking, audio, display manager, security
+4. From here on, the kernel manages memory, devices, files, and programs on an ongoing basis
+
+***
+
+## Stage 7: Services Start
+
+With the kernel running, essential system services are launched — networking, security, device services, audio, and the display manager.
 
 During this stage, Windows displays the spinning dots and logo; Linux displays scrolling boot messages (unless a splash screen hides them).
 
 ***
 
-## Stage 5: Login and User Session
+## Stage 8: Login and User Interface
 
 Once system services are running, the login screen appears:
 
@@ -140,9 +160,9 @@ After login, user-specific startup programs run — applications set to launch a
 
 ## Summary
 
-- The boot process has five stages: POST, firmware, boot loader, kernel, and login
-- POST checks that essential hardware is working before anything else
+- The boot process has eight stages: power on, firmware, POST, boot device, kernel loads, kernel runs, services start, and login
+- The firmware prepares basic hardware and the POST checks that essential components are working
 - BIOS is the older firmware standard; UEFI is the modern replacement with more features
-- The boot loader (Windows Boot Manager or GRUB) loads the OS kernel
-- The kernel initialises drivers, services, and presents the login screen
+- The boot device stage starts the boot loader (Windows Boot Manager or GRUB), which then loads the kernel
+- Once the kernel runs, services start and the login screen appears
 - Understanding the boot process helps diagnose startup problems

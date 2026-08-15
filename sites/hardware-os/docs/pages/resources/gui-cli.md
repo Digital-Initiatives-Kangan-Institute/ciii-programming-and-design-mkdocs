@@ -2,6 +2,8 @@
 
 Every operating system provides at least one way for users to interact with it. The two main types of interface are the Graphical User Interface (GUI) and the Command Line Interface (CLI). Both serve the same purpose — letting you control the computer — but they work in different ways and are suited to different tasks.
 
+![A graphical user interface and a command line interface side by side](../../assets/gui-cli.png)
+
 ---
 
 ## What is a Graphical User Interface?

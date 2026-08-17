@@ -76,11 +76,11 @@ window.SITES_DATA = {
             "courses": ["diploma-of-it"]
         },
         {
-        "href": "/program-iot-devices",
-        "img": "./_assets/program-iot-devices.png",
-        "title": "Program IoT Devices",
-        "description": "Introduction to IoT concepts and Arduino programming through structured activities and hands-on exercises.",
-        "courses": ["cert3-in-it", "diploma-of-it"]
-      }
+            "href": "/program-iot-devices",
+            "img": "./_assets/program-iot-devices.png",
+            "title": "Program IoT Devices",
+            "description": "Introduction to IoT concepts and Arduino programming through structured activities and hands-on exercises.",
+            "courses": ["diploma-of-it"]
+        }
     ]
 };

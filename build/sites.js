@@ -69,7 +69,7 @@ window.SITES_DATA = {
             "courses": ["short-courses"]
         },
         {
-            "href": "/database-api",
+            "href": "/database-and-api",
             "img": "./_assets/database-api.png",
             "title": "Database and API",
             "description": "Databases and API.  PostGres, Supabase, FastAPI and SQL",

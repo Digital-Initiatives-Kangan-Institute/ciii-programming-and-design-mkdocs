@@ -17,13 +17,16 @@ nav:
       - Composite Keys: pages/resources/composite-keys.md
       - Data Types: pages/resources/data-types.md
       - Supabase: pages/resources/supabase.md
+      - SQL: pages/resources/sql-1.md
+      - Joins: pages/resources/sql-join.md
     - Tasks:
       - Data, Information, Business Rules and ETL: pages/tasks/data-info-etl.md
       - Redundacy: pages/tasks/redundancy.md
       - ERD Tasks: pages/tasks/erd-tasks.md
       - Many to Many: pages/tasks/many-to-many.md
       - Supabase: pages/tasks/supabase.md
-        
+      - SQL: pages/tasks/sql-1.md
+      - Joins: pages/tasks/sql-join.md
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material

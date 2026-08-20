@@ -55,6 +55,21 @@ This will show whether the SSH service is active and running.
 
 ---
 
+## Alternative Ways to Enable SSH
+
+- **From Raspberry Pi Imager** — in OS customisation → SERVICES, tick **Enable SSH** when writing the image.
+- **Manually** — before first boot, place an empty file named `ssh` (no extension) in the root of the `boot` partition on the microSD card. The Pi will enable SSH on boot. You can create this file on a computer before inserting the card into the Pi.
+
+To connect using the Pi's hostname instead of its IP address:
+
+```bash
+ssh <username>@raspberrypi.local
+```
+
+To disable SSH again, run `sudo raspi-config` → Interface Options → SSH → **No**.
+
+---
+
 ## Summary
 
 - You do not need to re-image the SD card to enable SSH

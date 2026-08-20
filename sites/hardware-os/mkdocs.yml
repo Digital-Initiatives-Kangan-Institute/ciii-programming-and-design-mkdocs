@@ -20,8 +20,11 @@ nav:
         - Raspberry Pi Zero W: pages/resources/raspberry-pi-zero-w.md
         - Using Raspberry Pi Imager: pages/resources/raspberry-pi-imager.md
         - Raspberry Pi OS Lite: pages/resources/raspberry-pi-os-lite.md
+        - Configuring Wi-Fi: pages/resources/configuring-wifi.md
         - Enabling SSH: pages/resources/enabling-ssh.md
         - Using ifconfig: pages/resources/ifconfig.md
+        - Listing Hardware and USB Devices: pages/resources/listing-hardware-usb-devices.md
+        - Working with Text Editors: pages/resources/text-editors.md
       - Operating Systems:
         - Introduction to Operating Systems: pages/resources/intro-to-os.md
         - Hardware, Software, and Operating Systems: pages/resources/hardware-software-os.md
@@ -43,6 +46,7 @@ nav:
         - Connecting to a Raspberry Pi via SSH: pages/tasks/connecting-via-ssh.md
         - Navigating the Raspberry Pi CLI: pages/tasks/cli-navigation-raspberry-pi.md
         - Installing and Managing Software on Raspberry Pi: pages/tasks/installing-software-raspberry-pi.md
+        - Customising the Message of the Day (MOTD): pages/tasks/customising-motd.md
       - Creating Files and Folders on the Linux CLI: pages/tasks/creating-files-folders-cli.md
 
 # Do not touch anything below this line unless you know what you are doing.

@@ -12,6 +12,9 @@ Before you begin, make sure your system is up to date by running:
 sudo apt update && sudo apt upgrade -y
 ```
 
+!!! warning "The upgrade will take a while"
+    On a Raspberry Pi Zero W the first `sudo apt upgrade` will take a while — often 15 minutes or more — because the single-core CPU and 512 MB of RAM have to download and install every available update. A slow SD card or network connection can make it even longer. Do not switch off the Pi or close the SSH session while it is running; interrupting it can leave the system in a broken state.
+
 ---
 
 ## Exercise 1: Searching for Packages

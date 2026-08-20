@@ -38,6 +38,19 @@ sudo apt update
 
 This command downloads the latest package information (names, versions, dependencies) from the repositories. It does **not** install or upgrade any packages — it only refreshes the list of what is available.
 
+### The Store-Catalogue Analogy
+
+A good way to understand `apt update` is to think of the repositories as a store and APT as the shopper. Running `sudo apt update` is like picking up the store's **latest catalogue** — it fetches the current list of every available package and its **version number**.
+
+The catalogue works like a store's price list, except that the **prices are version numbers**. After `apt update`, the Pi's local catalogue lists the newest versions from the repository instead of the old ones:
+
+![Diagram showing the apt catalogue before and after running apt update — old version numbers are replaced with the current ones](../../assets/apt-catalogue-before-after.jpeg)
+
+- **Before `apt update`** — the local catalogue still lists the older versions.
+- **After `apt update`** — the catalogue lists the current versions available in the repository.
+
+Importantly, `apt update` only **refreshes the catalogue** — it does not install or change anything on the Pi. Installing the newer versions is the job of the next step, `apt upgrade`.
+
 ### Upgrading Installed Packages
 
 ```bash
@@ -55,6 +68,28 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 The `-y` flag automatically answers "yes" to any prompts, which is useful for scripted or remote sessions.
+
+### What Not to Run
+
+Some upgrade commands are more aggressive and should be avoided for routine updates:
+
+| Command | Why to avoid it |
+|---|---|
+| `sudo apt full-upgrade` | A more aggressive upgrade that can install and **remove** packages to complete a full system/distro change. |
+| `sudo apt-get dist-upgrade` | The older name for the same idea as `full-upgrade`. |
+| `sudo rpi-update` | Installs **experimental/bleeding-edge firmware**. Only for special testing cases, not normal updates. |
+
+If you only need routine updates to existing software, `apt update` + `apt upgrade` is the safe, standard combination.
+
+### Verifying Your Version
+
+Check the operating system and firmware versions:
+
+```bash
+cat /etc/os-release     # operating system name and version
+uname -a                # kernel version
+vcgencmd version        # Raspberry Pi firmware version
+```
 
 ***
 
@@ -132,6 +167,7 @@ Here are some commonly used packages on a headless Raspberry Pi:
 | `curl` | Tool for transferring data from URLs |
 | `wget` | Tool for downloading files from the web |
 | `htop` | Interactive process viewer (better than `top`) |
+| `btop` | Interactive system/resource monitor |
 | `tmux` | Terminal multiplexer — run multiple sessions in one window |
 | `python3` | Python programming language (pre-installed on most images) |
 | `build-essential` | GCC, make, and other tools for compiling software |

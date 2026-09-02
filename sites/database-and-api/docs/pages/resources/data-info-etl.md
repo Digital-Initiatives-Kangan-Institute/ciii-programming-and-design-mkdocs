@@ -1,18 +1,5 @@
 # Data vs Information, Business Rules, ETL and Power Query
 
-## Learning Outcomes
-
-By the end of this topic, students should be able to:
-
-- Explain the difference between data and information.
-- Describe how information supports decision-making.
-- Identify business rules from a business scenario.
-- Explain the purpose of ETL (Extract, Transform, Load).
-- Describe common data transformation activities.
-- Explain how Power Query can be used as a data transformation tool.
-
----
-
 ## Why This Matters
 
 Organisations collect large amounts of data every day.
@@ -33,7 +20,7 @@ Understanding data, information, business rules and ETL helps ensure that report
 
 ## Data vs Information
 
-### What is Data?
+**What is Data?**
 
 Data consists of raw facts, values or observations that have little meaning on their own.
 
@@ -47,7 +34,7 @@ Examples:
 
 This table contains data, but it does not yet provide insights or answer business questions.
 
-### Characteristics of Data
+**Characteristics of Data**
 
 - Raw and unprocessed
 - May contain errors
@@ -65,7 +52,7 @@ Examples:
 
 ---
 
-### What is Information?
+**What is Information?**
 
 Information is data that has been processed, organised or analysed to provide meaning.
 
@@ -77,7 +64,7 @@ Using the previous example:
 
 These results are information because they help support decisions.
 
-### Characteristics of Information
+**Characteristics of Information**
 
 - Meaningful
 - Organised
@@ -87,7 +74,7 @@ These results are information because they help support decisions.
 
 ---
 
-### From Data to Information
+## From Data to Information
 
 Raw Data
 
@@ -169,7 +156,7 @@ These findings are information because they support planning and funding decisio
 
 ## Business Rules
 
-### What Are Business Rules?
+**What Are Business Rules?**
 
 Business rules are statements that define or constrain how an organisation operates.
 
@@ -179,7 +166,7 @@ Business rules help ensure that data remains accurate, consistent and meaningful
 
 ---
 
-### Why Are Business Rules Important?
+**Why Are Business Rules Important?**
 
 Business rules help organisations:
 
@@ -191,7 +178,7 @@ Business rules help organisations:
 
 ---
 
-### Examples of Business Rules
+**Examples of Business Rules**
 
 **School Scenario**
 
@@ -214,7 +201,7 @@ Business rules help organisations:
 
 ---
 
-### Identifying Business Rules
+## Identifying Business Rules
 
 Business rules often contain words such as:
 
@@ -261,7 +248,7 @@ Identify:
 
 ## Understanding ETL
 
-### What is ETL?
+**What is ETL?**
 
 ETL stands for:
 
@@ -273,7 +260,7 @@ ETL is a common process used to prepare data for reporting, analysis and busines
 
 ---
 
-### Extract
+**Extract**
 
 Extracting means collecting data from source systems.
 
@@ -289,7 +276,7 @@ At this stage, data is often incomplete, inconsistent or poorly structured.
 
 ---
 
-### Transform
+**Transform**
 
 Transforming means cleaning, correcting and preparing data.
 
@@ -307,7 +294,7 @@ This is often the most time-consuming stage of ETL.
 
 ---
 
-### Load
+**Load**
 
 Loading means placing transformed data into a destination system.
 
@@ -323,7 +310,7 @@ The goal is to make the data available for business use.
 
 ---
 
-### Example ETL Process
+## Example ETL Process
 
 **Extract**
 
@@ -344,8 +331,6 @@ The cleaned data is loaded into a reporting workbook used by council staff.
 
 ## Introduction to Data Transformation
 
-### What is Data Transformation?
-
 Data transformation is the process of changing data into a format that is suitable for analysis.  Transformation is the process that we'll most be focusing on in this topic as it's where development tends to interface with data.
 
 Raw data is rarely perfect.
@@ -359,7 +344,7 @@ Transformation improves:
 
 ---
 
-### Example: Raw Data
+**Example: Raw Data**
 
 | Name | Suburb | Survey Score |
 |--------|--------|--------|
@@ -375,7 +360,7 @@ Problems:
 
 ---
 
-### Example: Transformed Data
+**Example: Transformed Data**
 
 | Name | Suburb | Survey Score |
 |--------|--------|--------|
@@ -387,9 +372,7 @@ The data is now more suitable for reporting and analysis.
 
 ---
 
-### Common Transformations
-
-**Remove Duplicates**
+## Common Transformations
 
 - Identify and remove repeated records.
 - Fill or Manage Missing Values
@@ -410,8 +393,6 @@ Download and open the dataset [solar_data.csv](../../assets/solar_data.csv)
 
 ## Power Query
 
-### What is Power Query?
-
 Power Query is a data transformation and preparation tool included with Microsoft Excel.
 
 It allows users to:
@@ -424,7 +405,7 @@ It allows users to:
 
 ---
 
-### Why Use Power Query?
+**Why Use Power Query?**
 
 Manual spreadsheet cleaning can be:
 
@@ -438,7 +419,7 @@ This makes it ideal for ETL processes.
 
 ---
 
-### Typical Power Query Workflow
+## Typical Power Query Workflow
 
 1. Connect to a data source.
 2. Review data quality.
@@ -450,7 +431,7 @@ This makes it ideal for ETL processes.
 
 ---
 
-### Common Power Query Transformations
+## Common Power Query Transformations
 
 - Remove Duplicates
     - Removes repeated records.
@@ -473,7 +454,7 @@ This makes it ideal for ETL processes.
 
 ---
 
-### Benefits of Power Query
+## Benefits of Power Query
 
 - Reduces manual effort
 - Improves consistency

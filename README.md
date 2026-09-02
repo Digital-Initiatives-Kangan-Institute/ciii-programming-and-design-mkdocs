@@ -1,5 +1,5 @@
 # MkDocs Sites
-This repository contains the mkdocs sites for the Certificate III in Information Technology qualification.
+This repository contains a collection of MkDocs sites hosting training material for a range of IT courses and programs.
 
 ## Usage
 1. Clone this repository
@@ -8,5 +8,5 @@ This repository contains the mkdocs sites for the Certificate III in Information
 3. Run `./create.sh` to create a new site
 4. Run `./serve.sh` to start the dev server for a site
 
-## Authoring
-To help you author pages, read the [AUTHORING.md](./AUTHORING.md) guide.
+## Getting Started
+For full setup, authoring, Markdown, and branching instructions, read the [GUIDE.md](./GUIDE.md) guide.

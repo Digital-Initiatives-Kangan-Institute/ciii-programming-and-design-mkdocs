@@ -1,0 +1,122 @@
+{
+    "properties": [
+        {
+            "id": 101,
+            "street_no": "15",
+            "street_name": "King Street",
+            "suburb": "Broadmeadows",
+            "state": "VIC",
+            "postcode": "3047",
+            "monthly_rent": 1800,
+            "owners": [
+                {
+                    "id": 201,
+                    "first_name": "John",
+                    "last_name": "Smith",
+                    "dob": "1975-03-12",
+                    "phone_number": "0412345678"
+                },
+                {
+                    "id": 202,
+                    "first_name": "Mary",
+                    "last_name": "Smith",
+                    "dob": "1978-09-25",
+                    "phone_number": "0423456789"
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "street_no": "42",
+            "street_name": "Highland Drive",
+            "suburb": "Craigieburn",
+            "state": "VIC",
+            "postcode": "3064",
+            "monthly_rent": 2200,
+            "owners": [
+                {
+                    "id": 203,
+                    "first_name": "David",
+                    "last_name": "Nguyen",
+                    "dob": "1980-11-08",
+                    "phone_number": "0434567890"
+                }
+            ]
+        },
+        {
+            "id": 103,
+            "street_no": "7",
+            "street_name": "Oak Avenue",
+            "suburb": "Reservoir",
+            "state": "VIC",
+            "postcode": "3073",
+            "monthly_rent": 1950,
+            "owners": [
+                {
+                    "id": 202,
+                    "first_name": "Mary",
+                    "last_name": "Smith",
+                    "dob": "1978-09-25",
+                    "phone_number": "0423456789"
+                },
+                {
+                    "id": 204,
+                    "first_name": "Sarah",
+                    "last_name": "Wilson",
+                    "dob": "1985-04-18",
+                    "phone_number": "0445678901"
+                }
+            ]
+        },
+        {
+            "id": 104,
+            "street_no": "88",
+            "street_name": "Grevillea Road",
+            "suburb": "Sunbury",
+            "state": "VIC",
+            "postcode": "3429",
+            "monthly_rent": 2400,
+            "owners": [
+                {
+                    "id": 201,
+                    "first_name": "John",
+                    "last_name": "Smith",
+                    "dob": "1975-03-12",
+                    "phone_number": "0412345678"
+                },
+                {
+                    "id": 205,
+                    "first_name": "Emma",
+                    "last_name": "Taylor",
+                    "dob": "1988-07-30",
+                    "phone_number": "0456789012"
+                }
+            ]
+        },
+        {
+            "id": 105,
+            "street_no": "23",
+            "street_name": "Parkview Drive",
+            "suburb": "Glenroy",
+            "state": "VIC",
+            "postcode": "3046",
+            "monthly_rent": 2100,
+            "owners": [
+                {
+                    "id": 204,
+                    "first_name": "Sarah",
+                    "last_name": "Wilson",
+                    "dob": "1985-04-18",
+                    "phone_number": "0445678901"
+                },
+                {
+                    "id": 205,
+                    "first_name": "Emma",
+                    "last_name": "Taylor",
+                    "dob": "1988-07-30",
+                    "phone_number": "0456789012"
+                }
+            ]
+        }
+    ]
+}

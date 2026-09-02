@@ -21,6 +21,7 @@ nav:
       - Joins: pages/resources/sql-join.md
       - ORM: pages/resources/orm.md
       - PostGrest Introduction: pages/resources/postgrest-intro.md
+      - Aggregates: pages/resources/aggregates.md
     - Tasks:
       - Data, Information, Business Rules and ETL: pages/tasks/data-info-etl.md
       - Redundacy: pages/tasks/redundancy.md

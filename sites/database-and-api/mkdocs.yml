@@ -22,6 +22,8 @@ nav:
       - ORM: pages/resources/orm.md
       - PostGrest Introduction: pages/resources/postgrest-intro.md
       - Aggregates: pages/resources/aggregates.md
+      - Aggregates and Joins: pages/resources/aggregates-joins.md
+      - PostGrest Aggregate Functions: pages/resources/postgrest-aggregates/md
     - Tasks:
       - Data, Information, Business Rules and ETL: pages/tasks/data-info-etl.md
       - Redundacy: pages/tasks/redundancy.md
@@ -32,6 +34,8 @@ nav:
       - Joins: pages/tasks/sql-join.md
       - ORM: pages/tasks/orm.md
       - PostGrest Introduction: pages/tasks/postgrest-intro.md
+      - Aggregates: pages/tasks/aggregates.md
+      - Aggregates and Joins: pages/tasks/aggregates-join.md
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
